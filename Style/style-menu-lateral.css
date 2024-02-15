@@ -25,3 +25,8 @@ header nav div {
 
     gap: 10px;
 }
+
+header nav div img {
+    width: 61px;
+    height: 62px;
+}
