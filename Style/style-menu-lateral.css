@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+.tamanho-menu {
+    width: 327px;
+}
 
 header {
     display: flex;
@@ -57,3 +60,35 @@ header button {
     background: #171612;
 }
 
+main nav {
+    padding: 18px 20px;
+}
+
+main nav ul {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    text-decoration: none;
+}
+
+main nav a img {
+    width: 52px;
+    width: 52px;
+}
+
+main nav a p {
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 800;
+}
