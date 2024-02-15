@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: poppins;
 }
 
 
@@ -24,4 +25,8 @@ header nav div {
     align-items: center;
 
     gap: 10px;
+}
+
+header nav div a{
+    font-family: raleway;
 }
