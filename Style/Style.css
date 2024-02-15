@@ -39,6 +39,7 @@ ul li input {
     border-radius: 10px;
 
     padding: 0 15px;
+    outline: none;
 }
 
 ul li input::placeholder {
