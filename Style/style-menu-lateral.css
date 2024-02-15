@@ -5,7 +5,7 @@
 }
 
 .tamanho-menu {
-    width: 327px;
+    width: 78%;
 }
 
 header {
@@ -72,6 +72,10 @@ main nav ul {
     gap: 15px;
 }
 
+main nav ul li {
+    width: fit-content;
+}
+
 main nav ul li a {
     display: flex;
     align-items: center;
@@ -91,4 +95,28 @@ main nav a p {
     font-family: Raleway;
     font-size: 16px;
     font-weight: 800;
+}
+
+footer {
+    border-radius: 0px 10px 10px 0px;
+    background: #171612;
+
+    color: #FFF787;
+    font-family: Raleway;
+    font-size: 18px;
+
+    max-width: 288px;
+    padding: 20.5px 32px;
+    text-align: center;
+}
+
+footer p {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+footer a {
+    color: #FFF787;
+    font-weight: 400;
+    text-decoration: none;
 }
