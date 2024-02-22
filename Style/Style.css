@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: poppins;
 }
 
 header {
@@ -50,5 +49,4 @@ ul li input::placeholder {
 #search-icon{
 position: absolute;
 right: 13px;
-
 }

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="Style/Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #F2E63D;
+        }
+
+        header {
+            background-color: #F2E63D;
+            padding: 20px 0 13.5px;
+
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        #logo-img-mobile {
+            display: block;
+            margin: 0 auto;
+        }
+
+
+        header ul {
+            list-style: none;
+            width: 100%;
+
+            display: flex;
+            gap: 18px;
+        }
+
+        header ul li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 2;
+            position: relative;
+        }
+
+        ul li input {
+            width: 100%;
+            height: 31px;
+
+            border: none;
+            border-radius: 10px;
+
+            padding: 0 15px;
+            outline: none;
+        }
+
+        ul li input::placeholder {
+            padding: 0 15px;
+        }
+
+        #search-icon {
+            position: absolute;
+            right: 13px;
+        }
+
+
+        main>section {
+            margin: 0 auto;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            text-align: center;
+
+            max-width: 276px;
+        }
+
+        main>section h2 {
+            color: #000;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        main>section p {
+            color: #000;
+            font-family: sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        main>iframe {
+            width: 100%;
+            height: 212px;
+            border: 3px #000;
+            border-style: dashed none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1><img id="logo-img-mobile" src="../assets/icons/Letreiro.png" alt="logo-quebrada-lounge-mobile"></h1>
+
+        <nav>
+            <ul>
+                <li><a href=""><img src="../assets/icons/Menu Hamburguer.png" alt=""></a></li>
+
+                <li><input type="text" placeholder="Pesquisar...">
+                    <img id="search-icon" src="assets/icons/pesquisa-de-lupa-mobile.png" alt="">
+                </li>
+                <li><a href=""><img src="../assets/icons/Icone-Carrinho.png" alt=""></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+
+            <h2>
+                Venha nos visitar
+            </h2>
+
+            <p>
+                Aberto de Quarta-feira a Domingo
+                Das 18:00 às 00:30h
+            </p>
+
+        </section>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.295622796691!2d-46.72316072377011!3d-23.449798757504773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cefbc5c5487481%3A0xf0e86da1b07bc889!2sR.%20Horma%2C%20158%20-%20Jardim%20Pirituba%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002984-000!5e0!3m2!1spt-BR!2sbr!4v1708622569334!5m2!1spt-BR!2sbr"
+             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </main>
+
+</body>
+
+</html>
