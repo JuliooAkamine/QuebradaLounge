@@ -3,11 +3,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style-fale-conosco.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background: #F2E63D;
+    width: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    /* Zera os espaçamentos de todos os elemntos */
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* 
+    BOX-SIZING: Sem esse atributo a margin, padding etc, influenciam na medida final de um bloco.
+    Por exemplo, se uma div tem 300px por igual, caso adicione um padding de 20px, continuará sendo 300px.
+    Sem esse atributo, ficaria 320px de div.
+    */
+}
+
+header {
+    background: #F2E63D;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding-top: 20px;
+}
+
+#logo-img-mobile {
+    /* Método para deixar um elemento alinhado ao centro do bloco pai */
+
+    display: block;
+    margin: 0 auto;
+}
+
+
+header nav {
+    padding: 15px 2% 8px;
+    max-width: 100%;
+}
+
+header div {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Faz com que a parte do fomulário/input pesquisar toque a maior parte do bloco */
+    align-items: center;
+    gap: 15px;
+}
+
+header form {
+    position: relative;
+}
+
+header input {
+    position: relative;
+    
+    width: 100%;
+    height: 40px;
+
+    border: 0;
+    border-radius: 10px;
+    background: #FFF;
+    padding: 0 13px;
+    outline: 0;
+
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+header form::after {
+    /* Adiciona um botão flutuante ao input, absoluto a tag form */
+
+    content: url(../assets/icons/pesquisa-de-lupa-mobile.png);
+    position: absolute;
+    right: 13px;
+    top: 9px;
+}
+
+
+header input::placeholder {
+    color: rgba(0, 0, 0, 0.40);
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+header form label {
+    /* 
+    Usado para esconder a tag label, para fins de design do site, sem perder a acessibilidade 
+    */
+
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* PARTE FOOTER */
+
+.hidden {
+    /* UTILIZE ESTA CLASSE NA TAG HTML PARA ESCONDE-LA ENQUANTO FAZ OUTRAS PARTES DO SITE */
+
+    /* Atualmente sendo utilizada no FOOTER */
+
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+footer {
+    background-color: #171612;
+    color: #fff;
+
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+footer section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+footer nav {
+    max-width: 182px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+footer h3 {
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+footer a, footer p {
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+footer a::before {
+    content: url(../assets/icons/instagram-icon.svg);
+    margin-right: 4px;
+}
+
+footer .footer-payment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footer-payment-icons {
+    width: 225px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0 16px;
+}
+
+.mobile-app ul {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+
+
+/* estilização banner*/
+body>img{
+    width: 100vw;
+}
+
+/* estilização formulario */
+#container{
+    display: flex;
+    justify-content: center;
+    margin-top: 59px;
+}
+body>#container>form{
+    /* estilização de posicionamento do form */
+    display: flex;
+    flex-direction: column;
+    max-width: 356px;
+    padding: 12px 28px 37px;
+
+    /* estilização borda */
+    border-radius: 22px;
+    border: 2px solid #FFF;
+    background: #F2D43D;
+}
+/* estilização do titulo */
+body>#container>form>h1{
+    margin-top: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.input-form{
+width: 296px;
+height: 113px;
+
+}
+
+/* estilização do input email */
+#input-email{
+margin-top: 12px;
+width: 296px;
+height: 39px;
+padding: 15px 20px;
+align-items: center;
+
+border-radius: 22px;
+background: #FFF;
+box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.25);
+border: none;
+}
+
+/* estilização da textarea mensagem */
+#input-text{
+    margin-top: 18px;
+    padding-left: 20px;
+    padding-top: 15px;
+
+    border-radius: 22px;
+    background: #FFF;
+    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+}
+
+/* estilização para todos botões da página */
+.botao-geral{ 
+    width: 148px;
+    padding: 7px 20px;
+    margin-top: 11px;
+    border-radius: 22px;
+    background: #000;
+    
+    /* estilização do texto dentro do botão */
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+     line-height: normal;
+
+}
+#container-socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+    
+}
+.socials{
+    display: flex;
+    margin-top: 6%;
+    margin-left: 100px;
+
+}
+
+#social-phone{
+    margin-top: 22px;
+}
+
+
+
+    </style>
 
     <title>Fale Conosco</title>
 
