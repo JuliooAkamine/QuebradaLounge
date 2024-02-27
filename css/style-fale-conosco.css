@@ -5,8 +5,11 @@
     font-family: poppins;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
     background: #F2E63D;
+    width: 100%;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
@@ -273,7 +276,23 @@ border: none;
      line-height: normal;
 
 }
+#container-socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+    
+}
+.socials{
+    display: flex;
+    margin-top: 6%;
+    margin-left: 100px;
 
+}
 
+#social-phone{
+    margin-top: 22px;
+}
 
 
