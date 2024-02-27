@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça seu login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: poppins ;
+        }
+
+        body {
+            background-color: #F2E63D;
+        }
+
+        /*Estilização do header  */
+        header {
+            background: #F2E63D;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            padding-top: 20px;
+        }
+
+        #logo-img-mobile {
+            /* Método para deixar um elemento alinhado ao centro do bloco pai */
+
+            display: block;
+            margin: 0 auto;
+        }
+
+
+        header nav {
+            padding: 15px 2% 8px;
+            max-width: 100%;
+        }
+
+        header div {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            /* Faz com que a parte do fomulário/input pesquisar toque a maior parte do bloco */
+            align-items: center;
+            gap: 15px;
+        }
+
+        header form {
+            position: relative;
+        }
+
+        header input {
+            position: relative;
+
+            width: 100%;
+            height: 40px;
+
+            border: 0;
+            border-radius: 10px;
+            background: #FFF;
+            padding: 0 13px;
+            outline: 0;
+
+            font-family: Poppins;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        header form::after {
+            /* Adiciona um botão flutuante ao input, absoluto a tag form */
+
+            content: url(../assets/icons/pesquisa-de-lupa-mobile.png);
+            position: absolute;
+            right: 13px;
+            top: 9px;
+        }
+
+
+        header input::placeholder {
+            color: rgba(0, 0, 0, 0.40);
+            font-family: Poppins;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        header form label {
+            /* 
+    Usado para esconder a tag label, para fins de design do site, sem perder a acessibilidade 
+    */
+
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        /* fim estilização header */
+
+
+
+        /* Estilização do footer */
+        .hidden {
+            /* UTILIZE ESTA CLASSE NA TAG HTML PARA ESCONDE-LA ENQUANTO FAZ OUTRAS PARTES DO SITE */
+
+            /* Atualmente sendo utilizada no FOOTER */
+
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        footer {
+            margin-top: 200px;
+            position: relative;
+
+            background-color: #171612;
+            color: #fff;
+
+            padding: 13px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            gap: 20px;
+        }
+
+
+        footer section {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        footer nav {
+            max-width: 182px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+        }
+
+        footer h3 {
+            color: #FFF;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        footer .text-wrapper a,
+        footer .text-wrapper p {
+            color: #FFF;
+            font-family: Raleway;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        footer .text-wrapper a::before {
+            content: url(../assets/icons/instagram-icon.svg);
+            margin-right: 4px;
+        }
+
+        footer .footer-payment {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer .footer-payment-icons {
+            width: 225px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 0 16px;
+        }
+
+        .mobile-app ul {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        #icone-flutuante {
+            position: absolute;
+            top: -30px;
+            right: 8px;
+        }
+
+        #icone-flutuante a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            text-decoration: none;
+
+            color: #000;
+            font-family: Poppins;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        #icone-flutuante a img {
+            transition: 500ms;
+        }
+
+        #icone-flutuante a:hover img {
+            transform: scale(1.1);
+            transition: 500ms;
+        }
+
+        /* fim estilização footer */
+
+        main{
+            display: flex;
+            justify-content: center;
+
+        }
+
+        #form-login{
+            width: 322px;
+            height: 324px;
+            padding: 10px;
+
+            
+
+            border-radius: 22px;
+            border: 3px solid #FFF;
+            background: #F2D43D;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        .input-login{
+            width: 289px;
+            height: 30px;
+            border-radius: 18px;
+            background: #FFF;
+            border: none;
+            padding-left: 15px;
+            
+            
+
+        }
+
+        #container-input{
+            margin-top: 37px;
+        }
+
+        body main form .login-text h1{
+           font-size: 20px;
+           text-align: center;
+
+        }
+
+        body main form .login-text p{
+            font-size: 12px;
+            text-align: center;
+            margin-top: 7px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><img id="logo-img-mobile" src="../assets/icons/Letreiro.png" alt="logo-quebrada-lounge-mobile"></h1>
+
+        <nav>
+            <div>
+
+                <img src="../assets/icons/Menu Hamburguer.png" alt="Icone de menu Hamburguer">
+                <form action="#">
+                    <label for="barra-pesquisa">Pesquise o produto</label>
+                    <input id="barra-pesquisa" type="text" name="barra-pesquisa" placeholder="Pesquisar...">
+                </form>
+                <img src="../assets/icons/Icone-Carrinho.png" alt="Icone de carrinho">
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <form id="form-login" action="#">
+            <div class="login-text">
+                <h1>Acesse sua conta</h1>
+                <p>Tenha acesso aos seus produtos favoritos, carrinhos de compras, notificações, andamento de compras e muito mais.</p>
+            </div>
+
+            <div id="container-input">
+                <input class="input-login" type="email" placeholder="Email">
+                <input style="margin-top: 15px;" class="input-login" type="password" placeholder="Senha">
+                <p>Esqueci minha senha</p>
+            </div>
+
+            <div>
+                <button>Entrar</button>
+                <p>Criar conta</p>
+            </div>
+        </form>
+
+
+
+    </main>
+
+    <footer class="hidden">
+
+        <div id="icone-flutuante">
+            <a href="">
+                <span>Entre em contato</span>
+                <img src="../assets/icons/whatsapp-icon.svg" alt="Icone do WhatsApp">
+            </a>
+        </div>
+
+        <section>
+            <nav>
+                <div class="text-wrapper">
+                    <h3>HORÁRIO DE ATENDIEMNTO</h3>
+                    <p>De Qua. a Dom. das 18:00h ás 23:30h</p>
+                </div>
+                <div class="text-wrapper">
+                    <h3>NOS SIGA NO INSTAGRAM</h3>
+                    <a href="#">@lider_quebradaloungebar</a>
+                </div>
+                <div class="text-wrapper">
+                    <h3>LOCALIZAÇÃO</h3>
+                    <p>Rua Horma, 158 - São Paulo - SP CEP: 02984-000</p>
+                </div>
+            </nav>
+            <div class="footer-payment">
+                <h3>FORMAS DE PAGAMENTO</h3>
+                <div class="footer-payment-icons">
+                    <img src="../assets/icons/payment-icon-mastercard.png" alt="Bandeira MasterCard">
+                    <img src="../assets/icons/payment-icon-visa.png" alt="Bandeira Visa">
+                    <img src="../assets/icons/payment-icon-pix.png" alt="Bandeira Pix">
+                    <img src="../assets/icons/payment-icon-elo.png" alt="Bandeira Elo">
+                    <img src="../assets/icons/payment-icon-american.png" alt="Bandeira American Express">
+                </div>
+            </div>
+        </section>
+
+        <div class="mobile-app">
+            <h3>BAIXE NOSSO APLICATIVO </h3>
+            <ul>
+                <img src="../assets/icons/apple-store-badge.png" alt="Badge da App Store">
+                <img src="../assets/icons/google-play-badge.png" alt="Badge do Google Play Store">
+            </ul>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
