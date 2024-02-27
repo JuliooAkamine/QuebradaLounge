@@ -96,7 +96,7 @@ header input::placeholder {
     line-height: normal;
 }
 
-header form label {
+.label-escondido {
     /* 
     Usado para esconder a tag label, para fins de design do site, sem perder a acessibilidade 
     */
@@ -104,8 +104,9 @@ header form label {
     position: absolute;
     width: 1px;
     height: 1px;
-    overflow: hidden;
+    display: none;
 }
+
 
 /* PARTE FOOTER */
 
@@ -229,6 +230,16 @@ footer .footer-payment-icons {
     transform: scale(1.1);
     transition: 500ms;
 }
+
+/* Parte de estilização de formulários */
+.input-wrapper input {
+    width: 100%;
+}
+
+.agrupamento-lateral {
+    display: flex;
+    justify-content: space-between;
+}
         </style>
 
 </head>
@@ -243,7 +254,7 @@ footer .footer-payment-icons {
 
                 <img src="../assets/icons/menu-icon.svg" alt="Icone de menu Hamburguer">
                 <form action="#">
-                    <label for="barra-pesquisa">Pesquise o produto</label>
+                    <label class="label-escondido" for="barra-pesquisa">Pesquise o produto</label>
                     <input id="barra-pesquisa" type="text" name="barra-pesquisa" placeholder="Pesquisar...">
                 </form>
                 <img src="../assets/icons/carrinho-icon.svg" alt="Icone de carrinho">
@@ -256,7 +267,40 @@ footer .footer-payment-icons {
         
         <form action="#">
             <fieldset>
-                <legend>Castra-se</legend>
+                <legend>Cadastre-se</legend>
+
+                <div class="agrupamento-lateral">
+                    <div class="input-wrapper">
+                        <label class="label-escondido" for="name-input-cadastreSe">Nome</label>
+                        <input id="name-input-cadastreSe" type="text" placeholder="Nome">
+                    </div>
+                    <div class="input-wrapper">
+                        <label class="label-escondido" for="sobrenome-input-cadastreSe">Sobrenome</label>
+                        <input id="sobrenome-input-cadastreSe" type="text" placeholder="Sobrenome">
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <label class="label-escondido" for="cpf-input-cadastreSe">CPF</label>
+                    <input id="cpf-input-cadastreSe" type="number" placeholder="CPF">
+                </div>
+                <div class="input-wrapper">
+                    <label class="label-escondido" for="email-input-cadastreSe">E-mail</label>
+                    <input id="email-input-cadastreSe" type="email" placeholder="E-mail">
+                </div>
+                <div class="input-wrapper">
+                    <label class="label-escondido" for="email-input-cadastreSe">Número de celular</label>
+                    <input id="email-input-cadastreSe" type="celular" placeholder="Confirmar senha">
+                </div>
+                <div class="agrupamento-lateral">
+                    <div class="input-wrapper">
+                        <label class="label-escondido" for="senha-input-cadastreSe">Senha</label>
+                        <input id="senha-input-cadastreSe" type="password" placeholder="Senha">
+                    </div>
+                    <div class="input-wrapper">
+                        <label class="label-escondido" for="confirmarSenha-input-cadastreSe">Senha</label>
+                        <input id="confirmarSenha-input-cadastreSe" type="password" placeholder="Confirmar senha">
+                    </div>
+                </div>
 
 
             </fieldset>
