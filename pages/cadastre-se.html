@@ -1,4 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     /* Zera os espaçamentos de todos os elemntos */
@@ -149,7 +164,7 @@ footer h3 {
     line-height: normal;
 }
 
-footer .text-wrapper a, .text-wrapper footer p {
+footer .text-wrapper a, footer .text-wrapper p {
     color: #FFF;
     font-family: Raleway;
     font-size: 12px;
@@ -214,3 +229,88 @@ footer .footer-payment-icons {
     transform: scale(1.1);
     transition: 500ms;
 }
+        </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1><img id="logo-img-mobile" src="/assets/icons/logo-mobile.svg" alt="logo-quebrada-lounge-mobile"></h1>
+
+        <nav>
+            <div>
+
+                <img src="../assets/icons/menu-icon.svg" alt="Icone de menu Hamburguer">
+                <form action="#">
+                    <label for="barra-pesquisa">Pesquise o produto</label>
+                    <input id="barra-pesquisa" type="text" name="barra-pesquisa" placeholder="Pesquisar...">
+                </form>
+                <img src="../assets/icons/carrinho-icon.svg" alt="Icone de carrinho">
+
+            </div>
+        </nav>
+    </header>
+
+    <div id="form-cadastreSe">
+        
+        <form action="#">
+            <fieldset>
+                <legend>Castra-se</legend>
+
+
+            </fieldset>
+
+
+        </form>
+
+    </div>
+
+    <footer class="hidden">
+
+            <div id="icone-flutuante">
+                <a href="">
+                    <span>Entre em contato</span>
+                    <img src="../assets/icons/whatsapp-icon.svg" alt="Icone do WhatsApp">
+                </a>
+            </div>
+
+            <section>
+                <nav>
+                    <div class="text-wrapper">
+                        <h3>HORÁRIO DE ATENDIEMNTO</h3>
+                        <p>De Qua. a Dom. das 18:00h ás 23:30h</p>
+                    </div>
+                    <div class="text-wrapper">
+                        <h3>NOS SIGA NO INSTAGRAM</h3>
+                        <a href="#">@lider_quebradaloungebar</a>
+                    </div>
+                    <div class="text-wrapper">
+                        <h3>LOCALIZAÇÃO</h3>
+                        <p>Rua Horma, 158 - São Paulo - SP CEP: 02984-000</p>
+                    </div>
+                </nav>
+                <div class="footer-payment">
+                    <h3>FORMAS DE PAGAMENTO</h3>
+                    <div class="footer-payment-icons">
+                        <img src="../assets/icons/payment-icon-mastercard.png" alt="Bandeira MasterCard">
+                        <img src="../assets/icons/payment-icon-visa.png" alt="Bandeira Visa">
+                        <img src="../assets/icons/payment-icon-pix.png" alt="Bandeira Pix">
+                        <img src="../assets/icons/payment-icon-elo.png" alt="Bandeira Elo">
+                        <img src="../assets/icons/payment-icon-american.png" alt="Bandeira American Express">
+                    </div>
+                </div>
+            </section>
+
+            <div class="mobile-app">
+                <h3>BAIXE NOSSO APLICATIVO </h3>
+                <ul>
+                    <img src="../assets/icons/apple-store-badge.png" alt="Badge da App Store">
+                    <img src="../assets/icons/google-play-badge.png" alt="Badge do Google Play Store">
+                </ul>
+            </div>
+
+    </footer>
+</body>
+
+</html>
