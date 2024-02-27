@@ -27,219 +27,319 @@
     */
 }
 
-/* PARTE TOPO */
-header {
-    background: #F2E63D;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    padding-top: 20px;
-}
+    /* PARTE TOPO */
+    header {
+        background: #F2E63D;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding-top: 20px;
+    }
 
-#logo-img-mobile {
-    /* Método para deixar um elemento alinhado ao centro do bloco pai */
+    #logo-img-mobile {
+        /* Método para deixar um elemento alinhado ao centro do bloco pai */
 
-    display: block;
-    margin: 0 auto;
-}
+        display: block;
+        margin: 0 auto;
+    }
 
 
-header nav {
-    padding: 15px 2% 8px;
-    max-width: 100%;
-}
+    header nav {
+        padding: 15px 2% 8px;
+        max-width: 100%;
+    }
 
-header div {
-    display: grid;
-    grid-template-columns: auto 1fr auto; /* Faz com que a parte do fomulário/input pesquisar toque a maior parte do bloco */
-    align-items: center;
-    gap: 15px;
-}
+    header div {
+        display: grid;
+        grid-template-columns: auto 1fr auto; /* Faz com que a parte do     fomulário/input pesquisar toque a maior parte do bloco */
+        align-items: center;
+        gap: 15px;
+    }
 
-header form {
-    position: relative;
-}
+    header form {
+        position: relative;
+    }
 
-header input {
-    position: relative;
+    header input {
+        position: relative;
+
+        width: 100%;
+        height: 40px;
+
+        border: 0;
+        border-radius: 10px;
+        background: #FFF;
+        padding: 0 13px;
+        outline: 0;
+
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    header form::after {
+        /* Adiciona um botão flutuante ao input, absoluto a tag form */
+
+        content: url(../assets/icons/pesquisa-de-lupa-mobile.png);
+        position: absolute;
+        right: 13px;
+        top: 9px;
+    }
+
+
+    header input::placeholder {
+        color: rgba(0, 0, 0, 0.40);
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .label-escondido {
+        /* 
+        Usado para esconder a tag label, para fins de design do site, sem   perder a acessibilidade 
+        */
+
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        display: none;
+    }
+
+
+    /* PARTE FOOTER */
+
+    .hidden {
+        /* UTILIZE ESTA CLASSE NA TAG HTML PARA ESCONDE-LA ENQUANTO FAZ     OUTRAS PARTES DO SITE */
+
+        /* Atualmente sendo utilizada no FOOTER */
+
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        opacity: 0;
+    }
+
+    footer {
+        position: relative;
+
+        background-color: #171612;
+        color: #fff;
+
+        padding: 20px 0 26px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 20px;
+    }
+
+
+    footer section {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    footer nav {
+        max-width: 182px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    footer h3 {
+        color: #FFF;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    footer .text-wrapper a, footer .text-wrapper p {
+        color: #FFF;
+        font-family: Raleway;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    footer .text-wrapper a::before {
+        content: url(../assets/icons/instagram-icon.svg);
+        margin-right: 4px;
+    }
+
+    footer .footer-payment {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .footer-payment-icons {
+        width: 225px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0 16px;
+    }
+
+    .mobile-app ul {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    #icone-flutuante {
+        position: absolute;
+        top: -30px;
+        right: 8px;
+    }
+
+    #icone-flutuante a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-decoration: none;
+
+        color: #000;
+        font-family: Poppins;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    #icone-flutuante a img {
+        transition: 500ms;
+    }
+
+    #icone-flutuante a:hover img {
+        transform: scale(1.1);
+        transition: 500ms;
+    }
+
+    /* Parte de estilização de formulários */
+    #form-cadastreSe {
+        margin: 50px 4%;
+    }
+
+    .formulario {
+        padding: 27px 3%;
+        max-width: 650px;
+
+        border-radius: 22px;
+        border: 3px solid #FFF;
+        background: #F2D43D;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .formulario fieldset {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        border: none;
+    }
+
+    .formulario fieldset legend {
+        text-align: center;
+        color: #000;
+        font-family: Poppins;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+        margin-bottom: 37px;
+    }
+
+
+    .agrupamento-lateral-inputs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 17.5px;
+    }
+
+    .input-wrapper input {
+        height: 32.5px;
+        width: 100%;
+        border: none;
+        border-radius: 12px;
+        background-color: #fff;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        outline: none;
+
+        color: #000;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding-left: 8px;
+    }
+
+    .input-wrapper input::placeholder {
+        color: #0000006d;
+        text-shadow: none;
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .agrupamento-lateral-button {
+        margin-top: 35px;
+
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 5%;
+    }
+
+    .button-global {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 12px;
+        background-color: #000;
+
+        color: #FFF;
+        text-align: center;
+        font-family: Raleway;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .hyperlink-formulario {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .hyperlink-formulario>a {
+        color: #000;
+        text-decoration: none;
+        font-family: Raleway;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
     
-    width: 100%;
-    height: 40px;
 
-    border: 0;
-    border-radius: 10px;
-    background: #FFF;
-    padding: 0 13px;
-    outline: 0;
-
-    font-family: Poppins;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-header form::after {
-    /* Adiciona um botão flutuante ao input, absoluto a tag form */
-
-    content: url(../assets/icons/pesquisa-de-lupa-mobile.png);
-    position: absolute;
-    right: 13px;
-    top: 9px;
-}
-
-
-header input::placeholder {
-    color: rgba(0, 0, 0, 0.40);
-    font-family: Poppins;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.label-escondido {
-    /* 
-    Usado para esconder a tag label, para fins de design do site, sem perder a acessibilidade 
-    */
-
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    display: none;
-}
-
-
-/* PARTE FOOTER */
-
-.hidden {
-    /* UTILIZE ESTA CLASSE NA TAG HTML PARA ESCONDE-LA ENQUANTO FAZ OUTRAS PARTES DO SITE */
-
-    /* Atualmente sendo utilizada no FOOTER */
-
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    opacity: 0;
-}
-
-footer {
-    margin-top: 200px;
-    position: relative;
-
-    background-color: #171612;
-    color: #fff;
-
-    padding: 13px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    gap: 20px;
-}
-
-
-footer section {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-footer nav {
-    max-width: 182px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 13px;
-}
-
-footer h3 {
-    color: #FFF;
-    text-align: center;
-    font-family: Poppins;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-footer .text-wrapper a, footer .text-wrapper p {
-    color: #FFF;
-    font-family: Raleway;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-footer .text-wrapper a::before {
-    content: url(../assets/icons/instagram-icon.svg);
-    margin-right: 4px;
-}
-
-footer .footer-payment {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-footer .footer-payment-icons {
-    width: 225px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0 16px;
-}
-
-.mobile-app ul {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-#icone-flutuante {
-    position: absolute;
-    top: -30px;
-    right: 8px;
-}
-
-#icone-flutuante a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    text-decoration: none;
-
-    color: #000;
-    font-family: Poppins;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-
-#icone-flutuante a img {
-    transition: 500ms;
-}
-
-#icone-flutuante a:hover img {
-    transform: scale(1.1);
-    transition: 500ms;
-}
-
-/* Parte de estilização de formulários */
-.input-wrapper input {
-    width: 100%;
-}
-
-.agrupamento-lateral {
-    display: flex;
-    justify-content: space-between;
-}
         </style>
 
 </head>
@@ -265,11 +365,11 @@ footer .footer-payment-icons {
 
     <div id="form-cadastreSe">
         
-        <form action="#">
+        <form action="#" class="formulario">
             <fieldset>
                 <legend>Cadastre-se</legend>
 
-                <div class="agrupamento-lateral">
+                <div class="agrupamento-lateral-inputs">
                     <div class="input-wrapper">
                         <label class="label-escondido" for="name-input-cadastreSe">Nome</label>
                         <input id="name-input-cadastreSe" type="text" placeholder="Nome">
@@ -291,7 +391,7 @@ footer .footer-payment-icons {
                     <label class="label-escondido" for="email-input-cadastreSe">Número de celular</label>
                     <input id="email-input-cadastreSe" type="celular" placeholder="Confirmar senha">
                 </div>
-                <div class="agrupamento-lateral">
+                <div class="agrupamento-lateral-inputs">
                     <div class="input-wrapper">
                         <label class="label-escondido" for="senha-input-cadastreSe">Senha</label>
                         <input id="senha-input-cadastreSe" type="password" placeholder="Senha">
@@ -302,15 +402,24 @@ footer .footer-payment-icons {
                     </div>
                 </div>
 
-
             </fieldset>
+
+            <div class="agrupamento-lateral-button">
+                <button class="button-global">
+                    Cadastrar
+                </button>
+
+                <div class="hyperlink-formulario">
+                    <a href="">Já tem uma conta? Entre aqui</a>
+                </div>
+            </div>
 
 
         </form>
 
     </div>
 
-    <footer class="hidden">
+    <footer>
 
             <div id="icone-flutuante">
                 <a href="">
@@ -349,8 +458,8 @@ footer .footer-payment-icons {
             <div class="mobile-app">
                 <h3>BAIXE NOSSO APLICATIVO </h3>
                 <ul>
-                    <img src="../assets/icons/apple-store-badge.png" alt="Badge da App Store">
-                    <img src="../assets/icons/google-play-badge.png" alt="Badge do Google Play Store">
+                    <img src="../assets/icons/apple-store-badge.svg" alt="Badge da App Store">
+                    <img src="../assets/icons/google-play-badge.svg" alt="Badge do Google Play Store">
                 </ul>
             </div>
 
