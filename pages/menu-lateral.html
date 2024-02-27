@@ -8,82 +8,201 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Style/style-menu-lateral.css">
     <title>Menu-lateral</title>
+
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* PARTE DO OVERLAY DO MENU */
+#sidenav-overlay {
+    width: 325px;
+}
+
+#menu-header {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+
+    height: 251px;
+    background: #F2E63D;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    padding: 20px 15px;
+}
+
+#menu-header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#menu-header nav div {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+#menu-header nav div img {
+    width: 61px;
+    height: 62px;
+}
+
+#menu-header nav div a {
+    color: #000;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+#menu-header button {
+    width: 100%;
+    height: 48px;
+
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 700;
+
+    border: none;
+    border-radius: 12px;
+    background: #171612;
+}
+
+#menu-nav nav {
+    padding: 18px 20px;
+}
+
+#menu-nav nav ul {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#menu-nav nav ul li {
+    width: fit-content;
+}
+
+#menu-nav nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    text-decoration: none;
+}
+
+#menu-nav nav a img {
+    width: 52px;
+    width: 52px;
+}
+
+#menu-nav nav a p {
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+#menu-footer {
+    border-radius: 0px 10px 10px 0px;
+    background: #171612;
+
+    color: #FFF787;
+    font-family: Raleway;
+    font-size: 18px;
+
+    max-width: 288px;
+    padding: 20.5px 32px;
+    text-align: center;
+}
+
+#menu-footer p {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+#menu-footer a {
+    color: #FFF787;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+    </style>
  </head>
- <body class="#">
 
-    <header>
+ <body>
 
-         <nav>
-
-            <div>
-                <img src="/assets/icons/PROFILE-ICON.png" alt="Logo Quebrada Lounge">
-                <a href="#">Entrar</a>
-            </div>
-
-            <img src="/Logo.png" alt="Logo Quebrada Lounge">
-
-         </nav>
-
-         <button>
-            Promoções
-         </button>
-
-    </header>
-
-    <main>
-
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">
-                        <img src="/assets/icons/image 15.png" alt="Icone da página home">
-                        <p>Inicio</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="/assets/icons/image 9.png" alt="Icone da página home">
-                        <p>Produtos</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="/assets/icons/image 16.png" alt="Icone da página home">
-                        <p>Localização</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="/assets/icons/image 10.png" alt="Icone da página home">
-                        <p>Shows</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="/assets/icons/image 17.png" alt="Icone da página home">
-                        <p>Fale conoscos</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="/assets/icons/image 18.png" alt="Icone da página home">
-                        <p>Nos conheçaa</p>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-    </main>
-
-    <footer>
-
-        <p>Nos siga no instagram</p>
-        <a href="https://www.instagram.com/lider_quebradaloungebar/" target="_blank">@lider_quebradaloungebar</a>
-
-    </footer>
-
+    <!-- MENU LATERAL-SLIDER -->
+    <div id="sidenav-overlay">
+        <div id="menu-header">
+             <nav>
+                <div>
+                    <img src="/assets/icons/perfil-icon.svg" alt="Logo Quebrada Lounge">
+                    <a href="#">Entrar</a>
+                </div>
+                <img src="/assets/icons/logo-desktop.svg" alt="Logo Quebrada Lounge">
+             </nav>
+             <button>
+                Promoções
+             </button>
+        </div>
+        <div id="menu-nav">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/icons/inicio-icon.png" alt="Icone da página home">
+                            <p>Inicio</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/icons/produtos-icon.png" alt="Icone da página home">
+                            <p>Produtos</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/icons/localizacao-icon.png" alt="Icone da página home">
+                            <p>Localização</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/icons/shows-icon.png" alt="Icone da página home">
+                            <p>Shows</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/icons/faleCosnosco.png" alt="Icone da página home">
+                            <p>Fale conoscos</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/icons/nosConheca.png" alt="Icone da página home">
+                            <p>Nos conheçaa</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="menu-footer">
+            <p>Nos siga no instagram</p>
+            <a href="https://www.instagram.com/lider_quebradaloungebar/" target="_blank">@lider_quebradaloungebar</a>
+        </div>
+    </div>
     
  </body>
  </html> 
