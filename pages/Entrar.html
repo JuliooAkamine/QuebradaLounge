@@ -10,12 +10,16 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: poppins ;
+            
         }
 
         body {
@@ -121,7 +125,7 @@
         }
 
         footer {
-            margin-top: 200px;
+            margin-top: 10%;
             position: relative;
 
             background-color: #171612;
@@ -232,53 +236,164 @@
 
         /* fim estilização footer */
 
-        main{
-            display: flex;
-            justify-content: center;
+      #main-form{
+        height: 70vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-family: poppins ;
+        align-items: center;
+      }
 
-        }
+      #form-login{
+
+        width: 65%;
+        height: 58%;
+        
+        display: flex;
+        flex-direction: column;
+        
+
+        border-radius: 22px;
+        border: 3px solid #FFF;
+        background: #F2D43D;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      }
+
+      .login-text h1{
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+        color: #000;
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: normal;
+      }
+
+      .login-text p{
+       width: 80%;
+        height: 49px;
+        margin: auto;
+
+        margin-top: 7px;
+        color: #000;
+        text-align: center;
+        font-family: poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      #container-input{
+       margin: auto;
+       width: 93%;
+      }
+
+
+      .input-login{
+        
+        width:100%;
+        height: 30px;
+
+        margin-top: 37px;
+        padding-left: 10px;
+        
+       
+
+        border-radius: 18px;
+        background: #FFF;
+        border: none;
+
+      }
+
+      #container-input p{
+        margin-top: 15px;
+      }
+      
+      #container-btn{
+       
+        display: flex;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+        
+
+      }
+        
+      .btn-global{
+        font-family: poppins;
+        width: 93%;
+        height: 40px;
+        border-radius: 50px;
+        border: none;
+        font-weight: 600;
+        font-size: 1em;
+
+        border-radius: 12px;
+        background: #000;
+        color: white;
+
+      }
+
+      #container-btn>p{
+        margin-left: 12px;
+      }
+
+      @media screen and (min-width:700px){
+       #form-login{
+        width: 58%;
+        
+       }
+
+       .input-login{
+        height: 40px;
+       }
+
+       .login-text h1{
+        font-size: 1.5em;
+        
+       }
+        .login-text p{
+        font-size: 1.1em;
+        
+       }
+
+       #form-login{
+        height: 60%;
+       }
+       
+      }
+
+      @media screen and (min-width:950px) {
 
         #form-login{
-            width: 322px;
-            height: 324px;
-            padding: 10px;
-
+            height: 400px;
+            width: 500px;
             
-
-            border-radius: 22px;
-            border: 3px solid #FFF;
-            background: #F2D43D;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         }
 
-        .input-login{
-            width: 289px;
-            height: 30px;
-            border-radius: 18px;
-            background: #FFF;
-            border: none;
-            padding-left: 15px;
-            
-            
+        .login-text h1{
+        font-size: 2em;
+        
+       }
+        .login-text p{
+        font-size: 1em;
+        
+       }
 
-        }
+       .input-login{
+        font-size: 20px;
+        
+       }
 
-        #container-input{
-            margin-top: 37px;
-        }
 
-        body main form .login-text h1{
-           font-size: 20px;
-           text-align: center;
+        
+      }
 
-        }
-
-        body main form .login-text p{
-            font-size: 12px;
-            text-align: center;
-            margin-top: 7px;
-
-        }
+        
     </style>
 </head>
 
@@ -300,7 +415,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-form">
 
         <form id="form-login" action="#">
             <div class="login-text">
@@ -314,8 +429,8 @@
                 <p>Esqueci minha senha</p>
             </div>
 
-            <div>
-                <button>Entrar</button>
+            <div id="container-btn">
+                <button class="btn-global">Entrar</button>
                 <p>Criar conta</p>
             </div>
         </form>
@@ -324,7 +439,7 @@
 
     </main>
 
-    <footer class="hidden">
+    <footer class="#">
 
         <div id="icone-flutuante">
             <a href="">
