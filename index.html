@@ -4,82 +4,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- API DE FONTES DO GOOGLE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- LINK PARA ADICIONAR FAVICON -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.svg">
+    <!-- LINK COM O CSS PRINCIPAL -->
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="/JS/script.js"></script>
 
+    <title>Fale Cosco</title>
 </head>
 
 <body>
-
+    
     <header>
-        <h1><img id="logo-img-mobile" src="assets/icons/Letreiro.png" alt="logo-quebrada-lounge-mobile"></h1>
+        <h1><img id="logo-img-mobile" src="../assets/icons/Letreiro.png" alt="logo-quebrada-lounge-mobile"></h1>
 
         <nav>
             <div>
 
-                <img src="assets/icons/Menu Hamburguer.png" alt="Icone de menu Hamburguer">
+                <img src="../assets/icons/Menu Hamburguer.png" alt="Icone de menu Hamburguer" onclick="openNav()">
                 <form action="#">
-                    <label for="barra-pesquisa">Pesquise o produto</label>
+                    <label for="barra-pesquisa" class="label-escondido">Pesquise o produto</label>
                     <input id="barra-pesquisa" type="text" name="barra-pesquisa" placeholder="Pesquisar...">
                 </form>
-                <img src="assets/icons/Icone-Carrinho.png" alt="Icone de carrinho">
+                <img src="../assets/icons/Icone-Carrinho.png" alt="Icone de carrinho">
 
             </div>
         </nav>
     </header>
 
-    
+    <!-- MENU LATERAL-SLIDER -->
+    <div id="fechar-menu" onclick="closeNav()"></div>
 
-    <footer class="">
-
-            <div id="icone-flutuante">
-                <a href="">
-                    <span>Entre em contato</span>
-                    <img src="assets/icons/whatsapp-icon.svg" alt="Icone do WhatsApp">
-                </a>
-            </div>
-
-            <section>
-                <nav>
-                    <div class="text-wrapper">
-                        <h3>HORÁRIO DE ATENDIEMNTO</h3>
-                        <p>De Qua. a Dom. das 18:00h ás 23:30h</p>
-                    </div>
-                    <div class="text-wrapper">
-                        <h3>NOS SIGA NO INSTAGRAM</h3>
-                        <a href="#">@lider_quebradaloungebar</a>
-                    </div>
-                    <div class="text-wrapper">
-                        <h3>LOCALIZAÇÃO</h3>
-                        <p>Rua Horma, 158 - São Paulo - SP CEP: 02984-000</p>
-                    </div>
-                </nav>
-                <div class="footer-payment">
-                    <h3>FORMAS DE PAGAMENTO</h3>
-                    <div class="footer-payment-icons">
-                        <img src="assets/icons/payment-icon-mastercard.png" alt="Bandeira MasterCard">
-                        <img src="assets/icons/payment-icon-visa.png" alt="Bandeira Visa">
-                        <img src="assets/icons/payment-icon-pix.png" alt="Bandeira Pix">
-                        <img src="assets/icons/payment-icon-elo.png" alt="Bandeira Elo">
-                        <img src="assets/icons/payment-icon-american.png" alt="Bandeira American Express">
-                    </div>
+    <div id="sidenav-overlay">
+        <div id="menu-header">
+             <nav>
+                <div>
+                    <img src="/assets/icons/perfil-icon.svg" alt="Logo Quebrada Lounge">
+                    <a href="pages/entrar.html">Entrar</a> <!-- LOGIN -->
                 </div>
-            </section>
-
-            <div class="mobile-app">
-                <h3>BAIXE NOSSO APLICATIVO </h3>
+                <img src="/assets/icons/logo-desktop.svg" alt="Logo Quebrada Lounge">
+             </nav>
+             <button>
+                Promoções
+             </button>
+        </div>
+        <div id="menu-nav">
+            <nav>
                 <ul>
-                    <img src="assets/icons/apple-store-badge.png" alt="Badge da App Store">
-                    <img src="assets/icons/google-play-badge.png" alt="Badge do Google Play Store">
+                    <li>
+                        <a href="index.html"> <!-- HOME -->
+                            <img src="/assets/icons/inicio-icon.png" alt="Icone da página home">
+                            <p>Inicio</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"> <!-- PRODUCTS -->
+                            <img src="/assets/icons/produtos-icon.png" alt="Icone da página home">
+                            <p>Produtos</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/localizacao.html"> <!-- LOCATION -->
+                            <img src="/assets/icons/localizacao-icon.png" alt="Icone da página home">
+                            <p>Localização</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/shows.html"> <!-- SHOWS -->
+                            <img src="/assets/icons/shows-icon.png" alt="Icone da página home">
+                            <p>Shows</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/fale-conosco.html"> <!-- Contact us -->
+                            <img src="/assets/icons/faleCosnosco.png" alt="Icone da página home">
+                            <p>Fale conoscos</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/nos-conheca.html"> <!-- KNOW US -->
+                            <img src="/assets/icons/nosConheca.png" alt="Icone da página home">
+                            <p>Nos conheça</p>
+                        </a>
+                    </li>
                 </ul>
+            </nav>
+        </div>
+        <div id="menu-footer">
+            <p>Nos siga no instagram</p>
+            <a href="https://www.instagram.com/lider_quebradaloungebar/" target="_blank">@lider_quebradaloungebar</a>
+        </div>
+    </div>
+
+    <footer class="#">
+
+        <div id="icone-flutuante">
+            <a href="">
+                <span>Entre em contato</span>
+                <img src="../assets/icons/whatsapp-icon.svg" alt="Icone do WhatsApp">
+            </a>
+        </div>
+
+        <section>
+            <nav>
+                <div class="text-wrapper">
+                    <h3>HORÁRIO DE ATENDIEMNTO</h3>
+                    <p>De Qua. a Dom. das 18:00h ás 23:30h</p>
+                </div>
+                <div class="text-wrapper">
+                    <h3>NOS SIGA NO INSTAGRAM</h3>
+                    <a href="#" class="link-style-none">@lider_quebradaloungebar</a>
+                </div>
+                <div class="text-wrapper">
+                    <h3>LOCALIZAÇÃO</h3>
+                    <p>Rua Horma, 158 - São Paulo - SP CEP: 02984-000</p>
+                </div>
+            </nav>
+            <div class="footer-payment">
+                <h3>FORMAS DE PAGAMENTO</h3>
+                <div class="footer-payment-icons">
+                    <img src="../assets/icons/payment-icon-mastercard.png" alt="Bandeira MasterCard">
+                    <img src="../assets/icons/payment-icon-visa.png" alt="Bandeira Visa">
+                    <img src="../assets/icons/payment-icon-pix.png" alt="Bandeira Pix">
+                    <img src="../assets/icons/payment-icon-elo.png" alt="Bandeira Elo">
+                    <img src="../assets/icons/payment-icon-american.png" alt="Bandeira American Express">
+                </div>
             </div>
+        </section>
+
+        <div class="mobile-app">
+            <h3>BAIXE NOSSO APLICATIVO </h3>
+            <ul>
+                <img src="../assets/icons/apple-store-badge.png" alt="Badge da App Store">
+                <img src="../assets/icons/google-play-badge.png" alt="Badge do Google Play Store">
+            </ul>
+        </div>
 
     </footer>
+
 </body>
 
 </html>

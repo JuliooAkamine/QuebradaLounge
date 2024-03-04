@@ -46,6 +46,10 @@ header div {
     gap: 15px;
 }
 
+header div img:first-child {
+    cursor: pointer;
+}
+
 header form {position: relative;}
 
 header input {
@@ -83,6 +87,149 @@ header input::placeholder {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+/* PARTE DO OVERLAY DO MENU */
+#fechar-menu { /* Abri um elemento atrás do side nav, para dar um efeito de escurecimento, e adicionar um elemento clicavel fora do side nav, para poder fechalo */
+    background-color: #000;
+    opacity: 0.5;
+    position: fixed;
+    width: 0;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#sidenav-overlay {
+    /* width: 325px; */
+    background-color: #fff;
+    width: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: ease-in-out 300ms;
+}
+
+#sidenav-overlay::-webkit-scrollbar {
+    /* Tirar a barra de rolagem de um elemento */
+    width: 0;
+}
+
+#menu-header {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+
+    height: 251px;
+    background: #F2E63D;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    padding: 20px 15px;
+}
+
+#menu-header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#menu-header nav div {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+#menu-header nav div img {
+    width: 61px;
+    height: 62px;
+}
+
+#menu-header nav div a {
+    color: #000;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+#menu-header button {
+    width: 100%;
+    height: 48px;
+
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 700;
+
+    border: none;
+    border-radius: 12px;
+    background: #171612;
+}
+
+#menu-nav nav {
+    padding: 18px 20px;
+}
+
+#menu-nav nav ul {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#menu-nav nav ul li {
+    width: fit-content;
+}
+
+#menu-nav nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    text-decoration: none;
+}
+
+#menu-nav nav a img {
+    width: 52px;
+    width: 52px;
+}
+
+#menu-nav nav a p {
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+#menu-footer {
+    border-radius: 0px 10px 10px 0px;
+    background: #171612;
+
+    color: #FFF787;
+    font-family: Raleway;
+    font-size: 18px;
+
+    max-width: 288px;
+    padding: 20.5px 32px;
+    text-align: center;
+}
+
+#menu-footer p {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+#menu-footer a {
+    color: #FFF787;
+    font-weight: 400;
+    text-decoration: none;
 }
 
 
@@ -228,7 +375,7 @@ header input::placeholder {
     line-height: normal;
 }
 
-/* Contato Fale conosco */
+/* Parte de contatos  do formulario 'Fale conosco' */
 #formas-de-contatos {display: flex;flex-direction: column;gap: 22px;}
 #formas-de-contatos .contato-wrapper {display: flex;align-items: center;gap: 10px;}
 .contato-wrapper>a {color: #171612;font-family: Raleway;font-size: 16px;
