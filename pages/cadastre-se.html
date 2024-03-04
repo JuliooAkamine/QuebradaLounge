@@ -5,365 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- API DE FONTES DO GOOGLE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
-* {
-    /* Zera os espaçamentos de todos os elemntos */
-
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* 
-    BOX-SIZING: Sem esse atributo a margin, padding etc, influenciam na medida final de um bloco.
-    Por exemplo, se uma div tem 300px por igual, caso adicione um padding de 20px, continuará sendo 300px.
-    Sem esse atributo, ficaria 320px de div.
-    */
-}
-
-    body {
-        width: 100%;
-        background-color: #F2E63D;
-    }
-
-    /* PARTE TOPO */
-    header {
-        background: #F2E63D;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        padding-top: 20px;
-    }
-
-    #logo-img-mobile {
-        /* Método para deixar um elemento alinhado ao centro do bloco pai */
-
-        display: block;
-        margin: 0 auto;
-    }
-
-
-    header nav {
-        padding: 15px 2% 8px;
-        max-width: 100%;
-    }
-
-    header div {
-        display: grid;
-        grid-template-columns: auto 1fr auto; /* Faz com que a parte do     fomulário/input pesquisar toque a maior parte do bloco */
-        align-items: center;
-        gap: 15px;
-    }
-
-    header form {
-        position: relative;
-    }
-
-    header input {
-        position: relative;
-
-        width: 100%;
-        height: 40px;
-
-        border: 0;
-        border-radius: 10px;
-        background: #FFF;
-        padding: 0 13px;
-        outline: 0;
-
-        font-family: Poppins;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-
-    header form::after {
-        /* Adiciona um botão flutuante ao input, absoluto a tag form */
-
-        content: url(../assets/icons/pesquisa-de-lupa-mobile.png);
-        position: absolute;
-        right: 13px;
-        top: 9px;
-    }
-
-
-    header input::placeholder {
-        color: rgba(0, 0, 0, 0.40);
-        font-family: Poppins;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-
-    .label-escondido {
-        /* 
-        Usado para esconder a tag label, para fins de design do site, sem   perder a acessibilidade 
-        */
-
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        display: none;
-    }
-
-
-    /* PARTE FOOTER */
-
-    .hidden {
-        /* UTILIZE ESTA CLASSE NA TAG HTML PARA ESCONDE-LA ENQUANTO FAZ     OUTRAS PARTES DO SITE */
-
-        /* Atualmente sendo utilizada no FOOTER */
-
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        opacity: 0;
-    }
-
-    footer {
-        position: relative;
-
-        background-color: #171612;
-        color: #fff;
-
-        padding: 20px 0 26px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        gap: 20px;
-    }
-
-
-    footer section {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    footer nav {
-        max-width: 182px;
-
-        display: flex;
-        flex-direction: column;
-        gap: 13px;
-    }
-
-    footer h3 {
-        color: #FFF;
-        text-align: center;
-        font-family: Poppins;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-    }
-
-    footer .text-wrapper a, footer .text-wrapper p {
-        color: #FFF;
-        font-family: Raleway;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-
-    footer .text-wrapper a::before {
-        content: url(../assets/icons/instagram-icon.svg);
-        margin-right: 4px;
-    }
-
-    footer .footer-payment {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    footer .footer-payment-icons {
-        width: 225px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 0 16px;
-    }
-
-    .mobile-app ul {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-    }
-
-    #icone-flutuante {
-        position: absolute;
-        top: -30px;
-        right: 8px;
-    }
-
-    #icone-flutuante a {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        text-decoration: none;
-
-        color: #000;
-        font-family: Poppins;
-        font-size: 10px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-    }
-
-    #icone-flutuante a img {
-        transition: 500ms;
-    }
-
-    #icone-flutuante a:hover img {
-        transform: scale(1.1);
-        transition: 500ms;
-    }
-
-    /* Parte de estilização de formulários */
-    #form-cadastreSe {
-        margin: 50px 4%;
-    }
-
-    .formulario {
-        padding: 27px 3%;
-        max-width: 650px;
-
-        border-radius: 22px;
-        border: 3px solid #FFF;
-        background: #F2D43D;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    }
-
-    .formulario fieldset {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        border: none;
-    }
-
-    .formulario fieldset legend {
-        text-align: center;
-        color: #000;
-        font-family: Poppins;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-
-        margin-bottom: 8px;
-    }
-
-    .formulario fieldset p {
-        color: #000;
-        text-align: center;
-        font-family: Raleway;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-
-        margin-bottom: 37px;
-    }
-
-
-    .agrupamento-lateral-inputs {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 17.5px;
-    }
-
-    .input-wrapper input {
-        height: 32.5px;
-        width: 100%;
-        border: none;
-        border-radius: 12px;
-        background-color: #fff;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        outline: none;
-
-        color: #000;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        font-family: Poppins;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        padding-left: 8px;
-    }
-
-    .input-wrapper input::placeholder {
-        color: #0000006d;
-        text-shadow: none;
-        font-family: Poppins;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-
-    .agrupamento-lateral-button {
-        margin-top: 35px;
-
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 5%;
-    }
-
-    .button-global {
-        padding: 8px 12px;
-        max-width: fit-content;
-        border: none;
-        border-radius: 12px;
-        background-color: #000;
-
-        color: #FFF;
-        text-align: center;
-        font-family: Raleway;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-    }
-
-    .hyperlink-formulario {
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-    }
-
-    .hyperlink-formulario>a {
-        color: #000;
-        text-decoration: none;
-        font-family: Raleway;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-    
-
-        </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- LINK COM O CSS PRINCIPAL -->
+    <link rel="stylesheet" href="../css/style.css">
 
 </head>
 
 <body>
 
+    <!-- Header -->
     <header>
         <h1><img id="logo-img-mobile" src="/assets/icons/logo-mobile.svg" alt="logo-quebrada-lounge-mobile"></h1>
 
@@ -381,6 +34,7 @@
         </nav>
     </header>
 
+    <!-- Formulário cadastre-se -->
     <div id="form-cadastreSe">
         
         <form action="#" class="formulario">
@@ -391,33 +45,33 @@
                 <div class="agrupamento-lateral-inputs">
                     <div class="input-wrapper">
                         <label class="label-escondido" for="name-input-cadastreSe">Nome</label>
-                        <input id="name-input-cadastreSe" type="text" placeholder="Nome">
+                        <input id="name-input-cadastreSe" type="text" placeholder="Nome" required>
                     </div>
                     <div class="input-wrapper">
                         <label class="label-escondido" for="sobrenome-input-cadastreSe">Sobrenome</label>
-                        <input id="sobrenome-input-cadastreSe" type="text" placeholder="Sobrenome">
+                        <input id="sobrenome-input-cadastreSe" type="text" placeholder="Sobrenome" required>
                     </div>
                 </div>
                 <div class="input-wrapper">
                     <label class="label-escondido" for="cpf-input-cadastreSe">CPF</label>
-                    <input id="cpf-input-cadastreSe" type="number" placeholder="CPF">
+                    <input id="cpf-input-cadastreSe" type="number" placeholder="CPF" required>
                 </div>
                 <div class="input-wrapper">
                     <label class="label-escondido" for="email-input-cadastreSe">E-mail</label>
-                    <input id="email-input-cadastreSe" type="email" placeholder="E-mail">
+                    <input id="email-input-cadastreSe" type="email" placeholder="E-mail" required>
                 </div>
                 <div class="input-wrapper">
                     <label class="label-escondido" for="email-input-cadastreSe">Número de celular</label>
-                    <input id="email-input-cadastreSe" type="celular" placeholder="Confirmar senha">
+                    <input id="phone-input-cadastreSe" type="celular" placeholder="Número de celular" required>
                 </div>
                 <div class="agrupamento-lateral-inputs">
                     <div class="input-wrapper">
                         <label class="label-escondido" for="senha-input-cadastreSe">Senha</label>
-                        <input id="senha-input-cadastreSe" type="password" placeholder="Senha">
+                        <input id="senha-input-cadastreSe" type="password" placeholder="Senha" required>
                     </div>
                     <div class="input-wrapper">
                         <label class="label-escondido" for="confirmarSenha-input-cadastreSe">Senha</label>
-                        <input id="confirmarSenha-input-cadastreSe" type="password" placeholder="Confirmar senha">
+                        <input id="confirmarSenha-input-cadastreSe" type="password" placeholder="Confirmar senha" required>
                     </div>
                 </div>
 
@@ -433,11 +87,11 @@
                 </div>
             </div>
 
-
         </form>
 
     </div>
 
+    <!-- Footer -->
     <footer>
 
             <div id="icone-flutuante">

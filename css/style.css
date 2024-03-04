@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
 * {
     /* Zera os espaçamentos de todos os elemntos */
 
@@ -12,12 +10,21 @@
     */
 }
 
-/* PARTE TOPO */
-header {
-    background: #F2E63D;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    padding-top: 20px;
+:root {
+    --cor-primaria: #F2E63D;
+    --background-forms: #F2D43D;
 }
+
+/* Classes globais */
+.label-escondido {position: absolute; width: 1px; height: 1px; overflow: hidden;}
+.link-style-none {text-decoration: none;}
+#bloco-banner {padding: 30px 5%;}
+#bloco-banner .banner-global {width: 100%;border-radius: 10px;}
+
+body {background-color: var(--cor-primaria); width: 100%;}
+
+/* PARTE TOPO */
+header {background: var(--cor-primaria); box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); padding-top: 20px;}
 
 #logo-img-mobile {
     /* Método para deixar um elemento alinhado ao centro do bloco pai */
@@ -39,9 +46,7 @@ header div {
     gap: 15px;
 }
 
-header form {
-    position: relative;
-}
+header form {position: relative;}
 
 header input {
     position: relative;
@@ -71,7 +76,6 @@ header form::after {
     top: 9px;
 }
 
-
 header input::placeholder {
     color: rgba(0, 0, 0, 0.40);
     font-family: Poppins;
@@ -81,31 +85,172 @@ header input::placeholder {
     line-height: normal;
 }
 
-header form label {
-    /* 
-    Usado para esconder a tag label, para fins de design do site, sem perder a acessibilidade 
-    */
 
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+/* Parte de estilização de formulários */
+
+#form-cadastreSe, #form-faleConosco, #form-entrar {
+    margin: 50px 4%;
+}
+
+#form-faleConosco {
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+}
+
+.formulario {
+    padding: 27px 3%;
+    max-width: 650px;
+
+    border-radius: 22px;
+    border: 3px solid #FFF;
+    background: var(--background-forms);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.formulario fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: none;
+}
+
+.formulario fieldset legend {
+    text-align: center;
+    color: #000;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    margin-bottom: 8px;
+}
+
+.formulario fieldset p {
+    color: #000;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    margin-bottom: 37px;
+}
+
+
+.agrupamento-lateral-inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 17.5px;
+}
+
+.input-wrapper input, .input-wrapper textarea {
+    height: 32.5px;
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    outline: none;
+
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 8px;
+}
+
+.input-wrapper textarea {
+    padding-top: 8px;
+    height: 142px;
+}
+
+
+.input-wrapper input::placeholder, .input-wrapper textarea::placeholder {
+    color: #0000006d;
+    text-shadow: none;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.agrupamento-lateral-button {
+    margin-top: 35px;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5%;
+}
+
+.button-global {
+    margin-top: 13px;
+    padding: 8px 12px;
+    max-width: fit-content;
+    border: none;
+    border-radius: 12px;
+    background-color: #000;
+
+    color: #FFF;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* HOVER */
+.button-global:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.hyperlink-formulario {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.hyperlink-formulario>a {
+    color: #000;
+    text-decoration: none;
+    font-family: Raleway;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Contato Fale conosco */
+#formas-de-contatos {display: flex;flex-direction: column;gap: 22px;}
+#formas-de-contatos .contato-wrapper {display: flex;align-items: center;gap: 10px;}
+.contato-wrapper>a {color: #171612;font-family: Raleway;font-size: 16px;
+font-style: normal;font-weight: 400;line-height: normal;}
+
+/* Esqueci minha senha ENTRAR */
+.formulario fieldset a {
+    width: fit-content;
+    color: #000;
+    font-family: Raleway;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* links formularios */
+.formulario a:hover {
+    opacity: 0.6;
 }
 
 /* PARTE FOOTER */
-
-.hidden {
-    /* UTILIZE ESTA CLASSE NA TAG HTML PARA ESCONDE-LA ENQUANTO FAZ OUTRAS PARTES DO SITE */
-
-    /* Atualmente sendo utilizada no FOOTER */
-
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    opacity: 0;
-}
-
 footer {
     margin-top: 200px;
     position: relative;
@@ -121,7 +266,6 @@ footer {
 
     gap: 20px;
 }
-
 
 footer section {
     text-align: center;
@@ -149,7 +293,7 @@ footer h3 {
     line-height: normal;
 }
 
-footer .text-wrapper a, .text-wrapper footer p {
+footer .text-wrapper a, footer .text-wrapper p {
     color: #FFF;
     font-family: Raleway;
     font-size: 12px;
