@@ -5,14 +5,6 @@ function openNav() {
 
     // Oculta a barra de rolagem do corpo da página
     document.body.style.overflow = "hidden";
-
-    // Adiciona o ouvinte de evento de rolagem
-    preventDefaultScrollFunction = function(e) {
-        e.preventDefault();
-        window.scrollTo(0, 0);
-    };
-    // Defina uma variável global para armazenar a função de rolagem
-    window.addEventListener('scroll', preventDefaultScrollFunction);
 }
 
 // Função para desaparecer o menu lateral
@@ -22,9 +14,4 @@ function closeNav() {
     
     // Restaura a barra de rolagem do corpo da página
     document.body.style.overflow = "auto";
-
-    // Remove o ouvinte de evento de rolagem que impede a rolagem
-    if (preventDefaultScrollFunction) {
-        window.removeEventListener('scroll', preventDefaultScrollFunction);
-    }
 }
