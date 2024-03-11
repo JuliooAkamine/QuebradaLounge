@@ -1,552 +1,717 @@
 * {
-    /* Zera os espaçamentos de todos os elemntos */
+  /* Zera os espaçamentos de todos os elemntos */
 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* 
     BOX-SIZING: Sem esse atributo a margin, padding etc, influenciam na medida final de um bloco.
     Por exemplo, se uma div tem 300px por igual, caso adicione um padding de 20px, continuará sendo 300px.
     Sem esse atributo, ficaria 320px de div.
     */
 }
+/* importando fonte local Roadstore */
+@font-face {
+  font-family: roadstore;
+  src: url(../assets/fonts/ROADSTORE\ Dafont.ttf);
+}
 
 :root {
-    --cor-primaria: #F2E63D;
-    --background-forms: #F2D43D;
+  --cor-primaria: #f2e63d;
+  --background-forms: #f2d43d;
 }
 
 /* Classes globais */
-.label-escondido {position: absolute; width: 1px; height: 1px; overflow: hidden;}
-.link-style-none {text-decoration: none;}
-#bloco-banner {padding: 30px 5%;}
-#bloco-banner .banner-global {width: 100%;border-radius: 10px;}
-
-body {background-color: var(--cor-primaria); width: 100%;}
-
-/* PARTE TOPO */
-header {background: var(--cor-primaria); box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); padding-top: 20px;}
-
-#logo-img-mobile {
-    /* Método para deixar um elemento alinhado ao centro do bloco pai */
-
-    display: block;
-    margin: 0 auto;
+.label-escondido {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.link-style-none {
+  text-decoration: none;
+}
+#bloco-banner {
+  padding: 30px 5%;
+}
+#bloco-banner .banner-global {
+  width: 100%;
+  border-radius: 10px;
 }
 
+body {
+  background-color: var(--cor-primaria);
+  width: 100%;
+}
+
+/* PARTE TOPO */
+header {
+  background: var(--cor-primaria);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding-top: 20px;
+}
+
+#logo-img-mobile {
+  /* Método para deixar um elemento alinhado ao centro do bloco pai */
+
+  display: block;
+  margin: 0 auto;
+}
 
 header nav {
-    padding: 15px 2% 8px;
-    max-width: 100%;
+  padding: 15px 2% 8px;
+  max-width: 100%;
 }
 
 header div {
-    display: grid;
-    grid-template-columns: auto 1fr auto; /* Faz com que a parte do fomulário/input pesquisar toque a maior parte do bloco */
-    align-items: center;
-    gap: 15px;
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* Faz com que a parte do fomulário/input pesquisar toque a maior parte do bloco */
+  align-items: center;
+  gap: 15px;
 }
 
 header div img:first-child {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-header form {position: relative;}
+header form {
+  position: relative;
+}
 
 header input {
-    position: relative;
-    
-    width: 100%;
-    height: 40px;
+  position: relative;
 
-    border: 0;
-    border-radius: 10px;
-    background: #FFF;
-    padding: 0 13px;
-    outline: 0;
+  width: 100%;
+  height: 40px;
 
-    font-family: Poppins;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  border: 0;
+  border-radius: 10px;
+  background: #fff;
+  padding: 0 13px;
+  outline: 0;
+
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 header form::after {
-    /* Adiciona um botão flutuante ao input, absoluto a tag form */
+  /* Adiciona um botão flutuante ao input, absoluto a tag form */
 
-    content: url(../assets/icons/pesquisa-de-lupa-mobile.png);
-    position: absolute;
-    right: 13px;
-    top: 9px;
+  content: url(../assets/icons/pesquisa-de-lupa-mobile.png);
+  position: absolute;
+  right: 13px;
+  top: 9px;
 }
 
 header input::placeholder {
-    color: rgba(0, 0, 0, 0.40);
-    font-family: Poppins;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 /* PARTE FOOTER */
 footer {
-    margin-top: 75px;
-    position: relative;
+  margin-top: 75px;
+  position: relative;
 
-    background-color: #171612;
-    color: #fff;
+  background-color: #171612;
+  color: #fff;
 
-    padding: 13px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  padding: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    gap: 20px;
+  gap: 20px;
 }
 
 footer section {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 footer nav {
-    max-width: 182px;
+  max-width: 182px;
 
-    display: flex;
-    flex-direction: column;
-    gap: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
 }
 
 footer h3 {
-    color: #FFF;
-    text-align: center;
-    font-family: Poppins;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
-footer .text-wrapper a, footer .text-wrapper p {
-    color: #FFF;
-    font-family: Raleway;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+footer .text-wrapper a,
+footer .text-wrapper p {
+  color: #fff;
+  font-family: Raleway;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 footer .text-wrapper a::before {
-    content: url(../assets/icons/instagram-icon.svg);
-    margin-right: 4px;
+  content: url(../assets/icons/instagram-icon.svg);
+  margin-right: 4px;
 }
 
 footer .footer-payment {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 footer .footer-payment-icons {
-    width: 225px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0 16px;
+  width: 225px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0 16px;
 }
 
 /* PARTE DO OVERLAY DO MENU */
-#fechar-menu { /* Abri um elemento atrás do side nav, para dar um efeito de escurecimento, e adicionar um elemento clicavel fora do side nav, para poder fechalo */
-    background-color: #000;
-    opacity: 0.5;
-    position: fixed;
-    width: 0;
-    height: 100%;
-    top: 0;
-    z-index: 1;
-    cursor: pointer;
+#fechar-menu {
+  /* Abri um elemento atrás do side nav, para dar um efeito de escurecimento, e adicionar um elemento clicavel fora do side nav, para poder fechalo */
+  background-color: #000;
+  opacity: 0.5;
+  position: fixed;
+  width: 0;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+  cursor: pointer;
 }
 
 #sidenav-overlay {
-    /* width: 325px; */
-    background-color: #fff;
-    width: 0;
-    height: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    transition: ease-in-out 300ms;
+  /* width: 325px; */
+  background-color: #fff;
+  width: 0;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: ease-in-out 300ms;
 }
 
 #sidenav-overlay::-webkit-scrollbar {
-    /* Tirar a barra de rolagem de um elemento */
-    width: 0;
+  /* Tirar a barra de rolagem de um elemento */
+  width: 0;
 }
 
 #menu-header {
-    display: flex;
-    flex-direction: column;
-    gap: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
 
-    height: 251px;
-    background: #F2E63D;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 251px;
+  background: #f2e63d;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
-    padding: 20px 15px;
+  padding: 20px 15px;
 }
 
 #menu-header nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #menu-header nav div {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    gap: 10px;
+  gap: 10px;
 }
 
 #menu-header nav div img {
-    width: 61px;
-    height: 62px;
+  width: 61px;
+  height: 62px;
 }
 
 #menu-header nav div a {
-    color: #000;
-    font-family: Raleway;
-    font-size: 16px;
-    font-weight: 800;
-    text-decoration: none;
+  color: #000;
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none;
 }
 
 #menu-header button {
-    width: 100%;
-    height: 48px;
+  width: 100%;
+  height: 48px;
 
-    color: #FFF;
-    font-family: Poppins;
-    font-size: 18px;
-    font-weight: 700;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 700;
 
-    border: none;
-    border-radius: 12px;
-    background: #171612;
+  border: none;
+  border-radius: 12px;
+  background: #171612;
 }
 
 #menu-nav nav {
-    padding: 18px 20px;
+  padding: 18px 20px;
 }
 
 #menu-nav nav ul {
-    list-style: none;
+  list-style: none;
 
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 #menu-nav nav ul li {
-    width: fit-content;
+  width: fit-content;
 }
 
 #menu-nav nav ul li a {
-    display: flex;
-    align-items: center;
-    gap: 18px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
 
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #menu-nav nav a img {
-    width: 52px;
-    width: 52px;
+  width: 52px;
+  width: 52px;
 }
 
 #menu-nav nav a p {
-    color: #000;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Raleway;
-    font-size: 16px;
-    font-weight: 800;
+  color: #000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 800;
 }
 
 #menu-footer {
-    border-radius: 0px 10px 10px 0px;
-    background: #171612;
+  border-radius: 0px 10px 10px 0px;
+  background: #171612;
 
-    color: #FFF787;
-    font-family: Raleway;
-    font-size: 18px;
+  color: #fff787;
+  font-family: Raleway;
+  font-size: 18px;
 
-    max-width: 288px;
-    padding: 20.5px 32px;
-    text-align: center;
+  max-width: 288px;
+  padding: 20.5px 32px;
+  text-align: center;
 }
 
 #menu-footer p {
-    font-weight: 700;
-    margin-bottom: 5px;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
 
 #menu-footer a {
-    color: #FFF787;
-    font-weight: 400;
-    text-decoration: none;
+  color: #fff787;
+  font-weight: 400;
+  text-decoration: none;
 }
 
 /* Parte de estilização de formulários */
 
-#form-cadastreSe, #form-faleConosco, #form-entrar {
-    margin: 50px 4%;
+#form-cadastreSe,
+#form-faleConosco,
+#form-entrar {
+  margin: 50px 4%;
 }
 
 #form-faleConosco {
-    display: flex;
-    flex-direction: column;
-    gap: 65px;
+  display: flex;
+  flex-direction: column;
+  gap: 65px;
 }
 
 .formulario {
-    padding: 27px 3%;
-    max-width: 650px;
+  padding: 27px 3%;
+  max-width: 650px;
 
-    border-radius: 22px;
-    border: 3px solid #FFF;
-    background: var(--background-forms);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 22px;
+  border: 3px solid #fff;
+  background: var(--background-forms);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .formulario fieldset {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: none;
 }
 
 .formulario fieldset legend {
-    text-align: center;
-    color: #000;
-    font-family: Poppins;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+  text-align: center;
+  color: #000;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .formulario fieldset p {
-    color: #000;
-    text-align: center;
-    font-family: Raleway;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+  color: #000;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 
-    margin-bottom: 37px;
+  margin-bottom: 37px;
 }
-
 
 .agrupamento-lateral-inputs {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 17.5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 17.5px;
 }
 
-.input-wrapper input, .input-wrapper textarea {
-    height: 32.5px;
-    width: 100%;
-    border: none;
-    border-radius: 12px;
-    background-color: #fff;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    outline: none;
+.input-wrapper input,
+.input-wrapper textarea {
+  height: 32.5px;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  outline: none;
 
-    color: #000;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Poppins;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding-left: 8px;
+  color: #000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 8px;
 }
 
 .input-wrapper textarea {
-    padding-top: 8px;
-    height: 142px;
+  padding-top: 8px;
+  height: 142px;
 }
 
-
-.input-wrapper input::placeholder, .input-wrapper textarea::placeholder {
-    color: #0000006d;
-    text-shadow: none;
-    font-family: Poppins;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+.input-wrapper input::placeholder,
+.input-wrapper textarea::placeholder {
+  color: #0000006d;
+  text-shadow: none;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .agrupamento-lateral-button {
-    margin-top: 35px;
+  margin-top: 35px;
 
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 5%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 5%;
 }
 
 .button-global {
-    margin-top: 13px;
-    padding: 8px 12px;
-    max-width: fit-content;
-    border: none;
-    border-radius: 12px;
-    background-color: #000;
+  margin-top: 13px;
+  padding: 8px 12px;
+  max-width: fit-content;
+  border: none;
+  border-radius: 12px;
+  background-color: #000;
 
-    color: #FFF;
-    text-align: center;
-    font-family: Raleway;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+  color: #fff;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 /* HOVER */
 .button-global:hover {
-    cursor: pointer;
-    opacity: 0.8;
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .hyperlink-formulario {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
-.hyperlink-formulario>a {
-    color: #000;
-    text-decoration: none;
-    font-family: Raleway;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+.hyperlink-formulario > a {
+  color: #000;
+  text-decoration: none;
+  font-family: Raleway;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 /* Parte de contatos  do formulario 'Fale conosco' */
-#formas-de-contatos {display: flex;flex-direction: column;gap: 22px;}
-#formas-de-contatos .contato-wrapper {display: flex;align-items: center;gap: 10px;}
-.contato-wrapper>a {color: #171612;font-family: Raleway;font-size: 16px;
-font-style: normal;font-weight: 400;line-height: normal;}
+#formas-de-contatos {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+#formas-de-contatos .contato-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contato-wrapper > a {
+  color: #171612;
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 
 /* Esqueci minha senha ENTRAR */
 .formulario fieldset a {
-    width: fit-content;
-    color: #000;
-    font-family: Raleway;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  width: fit-content;
+  color: #000;
+  font-family: Raleway;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 /* links formularios */
 .formulario a:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .mobile-app ul {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 #icone-flutuante {
-    position: absolute;
-    top: -30px;
-    right: 8px;
+  position: absolute;
+  top: -30px;
+  right: 8px;
 }
 
 #icone-flutuante a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    text-decoration: none;
+  text-decoration: none;
 
-    color: #000;
-    font-family: Poppins;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+  color: #000;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 #icone-flutuante a img {
-    transition: 500ms;
+  transition: 500ms;
 }
 
 #icone-flutuante a:hover img {
-    transform: scale(1.1);
-    transition: 500ms;
+  transform: scale(1.1);
+  transition: 500ms;
 }
 
 /* LOCALIZAÇÃO */
 
 #ct-venhaNosVisitar {
-    margin-top: 38px;
+  margin-top: 38px;
 }
 
-#ct-venhaNosVisitar>section {
-    margin: 0 auto;
+#ct-venhaNosVisitar > section {
+  margin: 0 auto;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 
-    text-align: center;
+  text-align: center;
 
-    max-width: 276px;
+  max-width: 276px;
 }
 
-#ct-venhaNosVisitar>section h2 {
-    color: #000;
-    text-align: center;
-    font-family: Poppins;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+#ct-venhaNosVisitar > section h2 {
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
-#ct-venhaNosVisitar>section p {
-    color: #000;
-    font-family: sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+#ct-venhaNosVisitar > section p {
+  color: #000;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
-#ct-venhaNosVisitar>iframe {
-    margin-top: 36px;
-    width: 100%;
-    height: 400px;
-    border: 3px #000;
-    border-style: dashed none;
+#ct-venhaNosVisitar > iframe {
+  margin-top: 36px;
+  width: 100%;
+  height: 400px;
+  border: 3px #000;
+  border-style: dashed none;
+}
+
+/* Estilização Index */
+
+/* Estilização Parte Compre Aqui */
+#body-index {
+  background-color: #171612;
+}
+
+#compreAqui > section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 98px;
+}
+
+#compreAqui > section > h2 {
+  width: 251px;
+  height: 147px;
+
+  position: relative;
+
+  color: #f2e8b3;
+  text-align: center;
+  font-family: ROADSTORE;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.h2Home {
+  font-family: roadstore, sans-serif;
+}
+
+/* estilização alguns produtos */
+
+#compreAqui > div {
+  justify-content: center;
+  display: flex;
+}
+#destaque1 {
+  margin-top: 54px;
+}
+
+#destaque2 {
+  margin-top: 36px;
+}
+
+.img-destaque {
+  margin: 0 13px;
+  width: 162px;
+  height: 176px;
+  border-radius: 10px;
+}
+#img-destaque2 {
+  margin: auto;
+
+  width: 350px;
+  height: 252px;
+
+  border-radius: 10px;
+
+  object-fit: cover;
+}
+
+.img-amostra-produtos {
+  width: 100vw;
+}
+
+/* estilização cards produtos */
+/* a fazer, á decidir algumas coisas */
+.card-wrapper {
+
+  margin-top: 40px;
+  
+}
+.cardAmostraHome {
+  margin: 5px;
+  background-color: beige;
+
+  width: 189px;
+  height: 248px;
+}
+.img-amostra-produtos {
+  object-fit: cover;
+  object-position: bottom;
+  width: 135px;
+  height: 178px;
+}
+#amostraProdutos {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--cor-primaria);
+}
+#amostraProdutos>a {
+ margin: 32px auto;
+}
+#amostraProdutos > a > button {
+  
+  
+
+  padding: 7px 23px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 22px;
+  background: #171612;
+
+  color: #fff;
+
+  text-align: center;
+  font-family: ROADSTORE;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
