@@ -595,6 +595,19 @@ footer .footer-payment-icons {
 
 /* Estilização Index */
 
+/* Estilização slide carrosel */
+
+.img-slide {
+  width: 100vw;
+}
+#radio-carrosel{
+  display: flex;
+  justify-content: center;
+}
+.radio-button{
+  margin: 0 3px;
+}
+
 /* Estilização Parte Compre Aqui */
 #body-index {
   background-color: #171612;
@@ -666,9 +679,8 @@ footer .footer-payment-icons {
 /* estilização cards produtos */
 /* a fazer, á decidir algumas coisas */
 .card-wrapper {
- margin: auto;
+  margin: auto;
   margin-top: 40px;
-  
 }
 .cardAmostraHome {
   margin: 5px;
@@ -678,7 +690,6 @@ footer .footer-payment-icons {
   height: 248px;
 }
 .img-amostra-produtos {
-  
   object-fit: cover;
   object-position: bottom;
   width: 135px;
@@ -691,13 +702,10 @@ footer .footer-payment-icons {
   justify-content: center;
   background-color: var(--cor-primaria);
 }
-#amostraProdutos>a {
- margin: 32px auto;
+#amostraProdutos > a {
+  margin: 32px auto;
 }
 #amostraProdutos > a > button {
-  
-  
-
   padding: 7px 23px;
   justify-content: center;
   align-items: center;
