@@ -149,12 +149,67 @@
                     A performance foi monstra, com os beats representando real a quebrada e vozes que contam o bonde do dia a dia. A produção caprichou na luz e nos efeitos, criando uma vibe que destacou ainda mais o evento.
                 </P>
 
+                
                 <button id="showsBtnVerTudo">
                     VER TUDO
                 </button>
-
             </div>
-        </div>        
+        </div>
+        
+        <div id="section-agendarShow"> <!-- SEÇÃO AGENDE SEU SHOW -->
+            <div class="texto-agendeSeuShow">
+                <h4>Agende seu shows</h4>
+                <p>Bem-vindo ao nosso serviço de agendamento de shows! Facilitamos para artistas e bandas a reserva do palco em nosso estabelecimento, tornando o processo simples e conveniente através de nosso formulário de informações personalizado.</p>
+            </div>
+
+            <!-- Formulário de agendar seu shows -->
+
+            <!-- 
+                Fazer reformulação no formulário do figma antes de passar para estruturação
+             -->
+            <div id="form-agenda">
+        
+                <form action="#" class="formulario">
+                    <fieldset>
+                        <legend>Agendamento</legend>
+                        
+        
+                        <div class="agrupamento-lateral-inputs">
+                            <div class="input-wrapper">
+                                <!-- NOME -->
+                                <label class="label-escondido" for="name-input-agenda">Nome</label>
+                                <input id="name-input-agenda" type="text" placeholder="Nome" required> 
+                            </div>
+                            <div class="input-wrapper">
+                                  <!-- CPF/CNPJ -->
+                                <label class="label-escondido" for="cpf/cnpj-input-agenda">CPF/CNPJ</label>
+                                <input id="cpf/cnpj-input-agenda" type="number" placeholder="CPF/CNPJ" required>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <!-- ARTISTA -->
+                            <label class="label-escondido" for="artista-input-agenda">Nome do artista ou grupo musical</label>
+                            <input id="artista-input-agenda" type="text" placeholder="Nome do artista ou grupo musical" required>
+                        </div>
+                        <div class="input-wrapper">
+                            <!-- CALENDARIO -->
+                            <label class="label-escondido" for="calendario-input-agenda">Calendário de disponibilidade</label>
+                            <input id="calendario-input-agenda" type="date" placeholder="Calendário de disponibilidade" required>
+                        </div>
+                        <div class="input-wrapper">
+                            <label class="label-escondido" for="email-input-cadastreSe">Número de celular</label>
+                            <input id="phone-input-cadastreSe" type="celular" placeholder="Número de celular" required>
+                        </div>
+        
+                    </fieldset>
+        
+                    <div class="agrupamento-lateral-button">
+                        <button class="button-global">
+                            Enviar Formulário
+                        </button>
+                </form>
+            </div>
+        </div>
                     
     </main>
 
