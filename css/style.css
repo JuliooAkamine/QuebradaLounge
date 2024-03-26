@@ -783,16 +783,6 @@ footer .footer-payment-icons {
 
 /* Estilização slide carrosel */
 
-.img-slide {
-  width: 100vw;
-}
-#radio-carrosel{
-  display: flex;
-  justify-content: center;
-}
-.radio-button{
-  margin: 0 3px;
-}
 
 /* Estilização Parte Compre Aqui */
 #body-index {

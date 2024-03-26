@@ -11,7 +11,8 @@ function openNav() {
 function closeNav() {
     document.getElementById("sidenav-overlay").style.width = "0";
     document.getElementById("fechar-menu").style.width = "0";
-    
+
     // Restaura a barra de rolagem do corpo da página
     document.body.style.overflow = "auto";
 }
+
