@@ -1,6 +1,6 @@
 /* Função que quando clica aparece o menu lateral */
 function openNav() {
-    document.getElementById("sidenav-overlay").style.width = "90%";
+    document.getElementById("sidenav-overlay").style.width = "70%";
     document.getElementById("fechar-menu").style.width = "100%";
 
     // Oculta a barra de rolagem do corpo da página
