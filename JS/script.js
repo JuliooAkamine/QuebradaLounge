@@ -7,6 +7,15 @@ $(document).ready(function () {
         arrows: true
     });
 });
+
+$(document).ready(function () {
+    $('.slider').slick({
+        autoplay: true,
+        autoplaySpeed: 5000,
+        dots: false,
+        arrows: true
+    })
+})
 /* Função que quando clica aparece o menu lateral */
 function openNav() {
     document.getElementById("sidenav-overlay").style.width = "70%";
