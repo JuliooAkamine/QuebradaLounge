@@ -853,57 +853,20 @@ footer .footer-payment-icons {
 }
 
 .img-amostra-produtos {
-  width: 100vw;
+  width: 100%;
 }
 
 /* estilização cards produtos */
 /* a fazer, á decidir algumas coisas */
-.card-wrapper {
-  margin: auto;
-  margin-top: 40px;
-}
-.cardAmostraHome {
-  margin: 5px;
-  background-color: beige;
 
-  width: 189px;
-  height: 248px;
-}
-.img-amostra-produtos {
-  object-fit: cover;
-  object-position: bottom;
-  width: 135px;
-  height: 178px;
-}
-#amostraProdutos {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.produtos{
+  margin-top: 25px;
+  padding: 25px;
   background-color: var(--cor-primaria);
 }
-#amostraProdutos > a {
-  margin: 32px auto;
+.item{
+  padding: 20px;
 }
-#amostraProdutos > a > button {
-  padding: 7px 23px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-
-  border-radius: 22px;
-  background: #171612;
-
-  color: #fff;
-
-  text-align: center;
-  font-family: ROADSTORE;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
 /* Produto/Destaque */
 
 /* Slider de categorias de produtos */
