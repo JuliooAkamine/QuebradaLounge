@@ -934,7 +934,9 @@ footer .footer-payment-icons {
     }
 
     img {
-      width: 56px;
+      width: 100%;
+      aspect-ratio: 3/2;
+      object-fit: contain;
     }
 
     h3 {
@@ -1032,8 +1034,10 @@ footer .footer-payment-icons {
       backdrop-filter: blur(2px);
 
       img {
-        width: 73px;
         margin-top: 17.5px;
+        width: 75%;
+        aspect-ratio: 3/2;
+        object-fit: contain;
       }
     }
 
