@@ -74,7 +74,7 @@
 }
 
 .slick-prev {
-  z-index: 10000;
+  z-index: 1;
   left: 0;
 }
 [dir="rtl"] .slick-prev {
@@ -86,10 +86,10 @@
 
   background-color: white;
   margin-left: 15px;
-  padding: 5px 2px;
+  padding: 5px 5px;
 }
 [dir="rtl"] .slick-prev:before {
-    padding: 5px 2px;
+    padding: 5px 5px;
   background-color: white;
  
   
@@ -104,8 +104,8 @@
   left: 75px;
 }
 .slick-next:before {
- padding: 5px 2px;
- margin-left: -23px;
+ padding: 5px 5px;
+ margin-left: -30px;
  
   background-color: white;
 
