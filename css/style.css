@@ -899,3 +899,52 @@ footer .footer-payment-icons {
   font-weight: 400;
   line-height: normal;
 }
+
+/* Produto/Destaque */
+
+/* Slider de categorias de produtos */
+#slider-categoria-produtos {
+  overflow-x: scroll;
+  margin: 25px 4% 0;
+  display: flex;
+  gap: 10px;
+
+  /* overflow-x: scroll; */
+  .agrupamento-da-categoria {
+
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* Espaçamento da imagem e texto */
+
+    div {
+      background-color: #fff;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      width: 56px;
+    }
+
+    h3 {
+      color: #000;
+      text-align: center;
+      font-family: ROADSTORE;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
+
+#slider-categoria-produtos::-webkit-scrollbar {
+  display: none;
+}
