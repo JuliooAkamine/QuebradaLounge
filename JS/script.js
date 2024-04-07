@@ -1,3 +1,12 @@
+//Carrosel slick
+$(document).ready(function () {
+    $('.carrosel').slick({
+        autoplay: true,
+        autoplaySpeed: 4000,
+        dots: true,
+        arrows: true
+    });
+});
 /* Função que quando clica aparece o menu lateral */
 function openNav() {
     document.getElementById("sidenav-overlay").style.width = "70%";

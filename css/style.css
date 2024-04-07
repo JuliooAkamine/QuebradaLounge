@@ -783,6 +783,10 @@ footer .footer-payment-icons {
 
 /* Estilização slide carrosel */
 
+.imgbanner{
+  width: 100%;
+}
+
 
 /* Estilização Parte Compre Aqui */
 #body-index {
