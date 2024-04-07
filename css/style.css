@@ -905,7 +905,7 @@ footer .footer-payment-icons {
 /* Slider de categorias de produtos */
 #slider-categoria-produtos {
   overflow-x: scroll;
-  margin: 25px 4% 0;
+  margin: 25px 0 0 4%;
   display: flex;
   gap: 10px;
 
@@ -943,8 +943,163 @@ footer .footer-payment-icons {
       line-height: normal;
     }
   }
+
+  .agrupamento-da-categoria:last-child {
+    margin-right: 4%;
+  }
 }
 
 #slider-categoria-produtos::-webkit-scrollbar {
+  display: none;
+}
+
+/* Titulos de categorias de produtos */
+#produtos-por-categoria {
+  margin-top: 68px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .categoria-produto {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    padding-bottom: 16px;
+    background: var(--cor-primaria);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    .titulo-categotia-produto {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 4%;
+
+      h2 {
+        color: #FFF787;
+        font-family: ROADSTORE;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       width: 208px;
+       padding:  15px 0;
+
+        border-radius: 0px 22px 22px 0px;
+        background: #141410;
+      }
+
+      a {
+        color: #000;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+    }
+  }
+}
+
+
+/* Nesta parte vai ser usado este mesmo layout para todos os dispositivos (Somente alimentar HTML) */
+.nav-categoria-produto {
+  margin: 0 0 0 4%;
+  display: flex;
+  gap: 13px;
+
+  overflow-x: scroll;
+
+  .card-produto {
+    position: relative;
+    div:first-child {
+      text-align: center;
+      width: 175px;
+      height: 210px;
+
+      border-radius: 15px;
+      border: 1px solid #000;
+      background: rgba(23, 22, 18, 0.28);
+      backdrop-filter: blur(2px);
+
+      img {
+        width: 73px;
+        margin-top: 17.5px;
+      }
+    }
+
+    .descricao-produto {
+      width: 175px;
+      display: flex;
+      flex-direction: column;
+
+      position: absolute;
+      bottom: 43px;
+      color: #F2D43D;
+      padding: 10px;
+      border-radius: 15px 15px 0px 0px;
+      background: #171612;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+
+      p {
+        color: #FFF787;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      
+      span {
+        color: #FFF787;
+        font-family: Raleway;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+
+      width: 175px;
+      height: 44px;
+      border: none;
+      border-radius: 0px 0px 15px 15px;
+      background: #171612 100%;
+
+      color: #FFF;
+      font-family: ROADSTORE;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      cursor: pointer;
+
+      transition: 300ms;
+    }
+
+    button:hover {
+      background: #1716129a;
+    }
+    
+  }
+
+  .card-produto:last-child {
+    margin-right: 4%;
+  }
+}
+
+.nav-categoria-produto::-webkit-scrollbar {
   display: none;
 }
