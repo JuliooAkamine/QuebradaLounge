@@ -14,7 +14,16 @@ $(document).ready(function () {
         slidesToScroll: 1,
         arrows:true,
       });
-    });
+});
+
+$(document).ready(function () {
+    $('.slider').slick({
+        autoplay: true,
+        autoplaySpeed: 4000,
+        dots: false,
+        arrows: true,
+    }); 
+})
 /* Função que quando clica aparece o menu lateral */
 function openNav() {
     document.getElementById("sidenav-overlay").style.width = "70%";
