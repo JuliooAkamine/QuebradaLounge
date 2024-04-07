@@ -207,7 +207,7 @@ footer .footer-payment-icons {
   width: 0;
   height: 100%;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   top: 0;
   left: 0;
   overflow-x: hidden;
@@ -782,6 +782,10 @@ footer .footer-payment-icons {
 /* INDEX */
 
 /* Estilização slide carrosel */
+
+.imgbanner{
+  width: 100%;
+}
 
 
 /* Estilização Parte Compre Aqui */
