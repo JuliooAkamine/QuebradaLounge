@@ -640,6 +640,7 @@ footer .footer-payment-icons {
   display: flex;
   justify-content: space-between;
   align-items: end;
+  
 }
 
 .chamativaShowRight {
@@ -676,7 +677,6 @@ footer .footer-payment-icons {
   font-weight: 600;
   line-height: normal;
 }
-
 .chamativaShow>button {
   /* Botão "Ver mais" */
   background-color: #F2D43D;
@@ -784,7 +784,7 @@ footer .footer-payment-icons {
 /* Estilização slide carrosel */
 
 .imgbanner{
-  width: 100%;
+  width: 105%;
 }
 
 
@@ -861,12 +861,16 @@ footer .footer-payment-icons {
 
 .produtos{
   margin-top: 25px;
-  padding: 25px;
+  padding: 25px 0px;
   background-color: var(--cor-primaria);
 }
 .item{
-  padding: 20px;
+  
+ margin:0 auto;
 }
+/* estilização da parte shows dentro da aba home */
+
+
 /* Produto/Destaque */
 
 /* Slider de categorias de produtos */
