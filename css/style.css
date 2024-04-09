@@ -876,12 +876,20 @@ footer .footer-payment-icons {
 /* Slider de categorias de produtos */
 #slider-categoria-produtos {
   overflow-x: scroll;
-  margin: 25px 0 0 4%;
+  margin: 25px 0 0;
   display: flex;
   gap: 10px;
 
   a {
     text-decoration: none;
+  }
+
+  a:first-child {
+    margin-left: 4%;
+  }
+
+  a:last-child {
+    margin-right: 4%;
   }
 
   a:hover .agrupamento-da-categoria>div img {
@@ -930,10 +938,6 @@ footer .footer-payment-icons {
       font-weight: 400;
       line-height: normal;
     }
-  }
-
-  .agrupamento-da-categoria:last-child {
-    margin-right: 4%;
   }
 }
 
@@ -1001,7 +1005,6 @@ footer .footer-payment-icons {
 
 /* Nesta parte vai ser usado este mesmo layout para todos os dispositivos (Somente alimentar HTML) */
 .nav-categoria-produto {
-  margin: 0 0 0 4%;
   display: flex;
   gap: 13px;
 
@@ -1089,6 +1092,10 @@ footer .footer-payment-icons {
       background: #1716129a;
     }
     
+  }
+
+  .card-produto:first-child {
+    margin-left: 4%;
   }
 
   .card-produto:last-child {
