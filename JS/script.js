@@ -9,31 +9,16 @@ $(document).ready(function () {
 })
 $(document).ready(function () {
     $('.produtos').slick({
-        centerMode: true,
-        centerPadding: '60px',
+        infinite: true,
         slidesToShow: 3,
-        arrows:true,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '110px',
-              arrows:true,
-              slidesToShow: 2
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 1
-            }
-          }
-        ]
+        slidesToScroll: 1,
+        speed: 500,
+        autoplaySpeed: 5000,
+        infinite: true,
+        autoplay: true,
+        centerMode: true,
+        centerPadding: "0px",
+        arrows: false,
       });
 });
 

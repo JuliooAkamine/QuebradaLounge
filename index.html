@@ -27,7 +27,7 @@
   <title>Quebrada Loung & Bar</title>
 </head>
 
-<body id="body-index">
+<body>
   <header>
     <h1>
       <img id="logo-img-mobile" src="assets/icons/Letreiro.png" alt="logo-quebrada-lounge-mobile" />
@@ -142,14 +142,11 @@
         <h2 class="h2Home">Compre aqui e retire na loja</h2>
       </section>
 
-      <div id="destaque1">
+      <div class="grid-compre-aqui">
         <img class="img-destaque" src="assets/Prod Destaque Home/heineken.png" alt="Imagem ilustrativa Heineken" />
         <img class="img-destaque" src="assets/Prod Destaque Home/jackdaniels.png"
           alt="Imagem ilustrativa Jack Daniels" />
-        <br />
-      </div>
-      <div id="destaque2">
-        <img id="img-destaque2" src="assets/Prod Destaque Home/tanqueray.png" alt="Imagem ilustrativa Tanqueray" />
+        <img class="img-destaque" src="assets/Prod Destaque Home/tanqueray.png" alt="Imagem ilustrativa Tanqueray" />
       </div>
     </div>
     <!-- PRODUTOS DESTAQUE -->
@@ -159,25 +156,25 @@
         <div> <img class="item" src="assets/Prod Destaque Home/budweiser.svg" alt="">
               <div class="container-info-prod-destaque">
                 <span class="info-produto">Cerveja Budweiser 269ml</span>
-                <br>
+                
                 <span class="info-preco-produto">R$2.99</span></div>
               </div>
         <div> <img class="item" src="assets/Prod Destaque Home/heineken.svg" alt="">
               <div class="container-info-prod-destaque">
                 <span class="info-produto">Cerveja Heineken Long Neck 330ml</span>
-                <br>
+              
                 <span class="info-preco-produto">R$5.85</span></div>
               </div>
         <div> <img class="item" src="assets/Prod Destaque Home/jack daniels.svg" alt="">
               <div class="container-info-prod-destaque">
-                <spa class="info-produto"n>Whisky Jack Daniels Old No.7 1L</span>
-                  <br>
+                <span class="info-produto"n>Whisky Jack Daniels Old No.7 1L</span>
+                 
                 <span class="info-preco-produto">R$139.90</span></div>
               </div>
         <div> <img class="item" src="assets/Prod Destaque Home/Cerveja Skol.svg" alt="">
               <div class="container-info-prod-destaque">
                 <span class="info-produto">Cerveja Skol Pilsen 269ml</span>
-                <br>
+                
                 <span class="info-preco-produto">R$2.79</span>
               </div></div>
       </div>
@@ -193,26 +190,28 @@
       <div id="img-chamativa-shows">
         <img id="img-shows-home" src="assets/Shows/Snapinsta 4.png" alt="">
       </div>
-      <div id="chamativa-shows">
+      <div id="chamativa-shows-home">
         <!-- CHAMATIVA SHOWS -->
         <!--
                   Estou pensando em colocar a imagem mesclando o fundo com
                   degrade, tudo no css.
                   APENAS UM TESTE, QUALQUER COISA ADICIONAR IMAGEM PELO PRÓPRIO HTML
                -->
-        <h2 class="h2Home">CONTAMOS COM SHOWS AO VIVO</h2>
+        <h1 class="h2Home">CONTAMOS COM <br> SHOWS <br> AO VIVO</h1>
         <a href="pages/shows.html" class="link-style-none">Confira a disponibilidade para shows</a>
       </div>
       <div id="localizacao-home">
         <!-- LOCALIZAÇÃO -->
-        <div>
-          <h3>Venha no conhecer</h3>
-          <span>Clique no mapa e trace seu destino</span>
-        </div>
-        <iframe
+        
+        <iframe id="google-maps-location"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.295622796691!2d-46.72316072377011!3d-23.449798757504773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cefbc5c5487481%3A0xf0e86da1b07bc889!2sR.%20Horma%2C%20158%20-%20Jardim%20Pirituba%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002984-000!5e0!3m2!1spt-BR!2sbr!4v1708622569334!5m2!1spt-BR!2sbr"
           allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
+
+        <div id="text-location-home">
+          <h3 id="title-location-home">Venha no conhecer</h3>
+          <span id="span-location-home">Clique no mapa e trace seu destino</span>
+        </div>
       </div>
     </div>
   </main>

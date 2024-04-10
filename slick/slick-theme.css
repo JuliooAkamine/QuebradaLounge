@@ -120,7 +120,7 @@
 
 /* Dots */
 .slick-dotted.slick-slider {
-  margin-bottom: -48px;
+  margin-bottom: 0;
 }
 
 .slick-dots {
