@@ -1,6 +1,6 @@
 * {
-  /* recorta todo item que passar do viewport na horizontal, assim retirando a barra de scrolagem */
-  overflow-x: clip;
+
+  
   /* Zera os espaçamentos de todos os elemntos */
 
   margin: 0;
@@ -925,7 +925,8 @@ footer .footer-payment-icons {
   line-height: normal;
 }
 #container-produtos {
-
+    /* recorta todo item que passar do viewport na horizontal, assim retirando a barra de scrolagem */
+  overflow-x: clip;
   display: flex;
   flex-direction: column;
   background-color: var(--cor-primaria);
