@@ -63,7 +63,7 @@
 .slick-prev:before,
 .slick-next:before {
   font-family: "slick";
-  font-size: 20px;
+  font-size: 28px;
   line-height: 1;
 
   opacity: 0.55;
@@ -71,6 +71,7 @@
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgba(255, 255, 255, 0.50);
 }
 
 .slick-prev {
@@ -82,18 +83,22 @@
   left: auto;
 }
 .slick-prev:before {
-  content: "❮";
+  content: url(../assets/icons/arrow_left.svg);
 
   background-color: white;
   margin-left: 15px;
-  padding: 5px 5px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
 }
 [dir="rtl"] .slick-prev:before {
-    padding: 5px 5px;
+  padding: 5px 5px;
   background-color: white;
- 
   
-  content: "❯";
+  content: url(../assets/icons/arrow_right.svg);
 }
 
 .slick-next {
@@ -104,18 +109,23 @@
   left: 75px;
 }
 .slick-next:before {
- padding: 5px 5px;
- margin-left: -32px;
+  
+  margin-left: -32px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
  
   background-color: white;
-
-  content: "❯";
+  content: url(../assets/icons/arrow_right.svg);
 }
 [dir="rtl"] .slick-next:before {
-    padding: 5px 2px;
+  padding: 5px 2px;
   background-color: white;
   
-  content: "❮";
+  content: url(../assets/icons/arrow_left.svg);
 }
 
 /* Dots */
@@ -206,3 +216,7 @@
   transition: 400ms;
   width:40px;
 }
+: 400ms;
+  width: 40px;
+}
+ 

@@ -1,6 +1,4 @@
 * {
-
-  
   /* Zera os espaçamentos de todos os elemntos */
 
   margin: 0;
@@ -806,14 +804,32 @@ footer .footer-payment-icons {
 
 /* Estilização slide carrosel */
 
+.carrosel {
+  height: fit-content;
+}
 .imgbanner {
-  width: 105%;
+  width: 100%;
+  min-height: 192px;
+  object-position: 7% 50%;
+  object-fit: cover;
+}
+
+#carrosel-img2 {
+  object-position: 100% 50%;
+}
+
+#carrosel-img3 {
+  object-position: 90% 50%;
 }
 
 /* Estilização Parte Compre Aqui */
 
 #compreAqui {
-  background: radial-gradient(40.69% 40.69% at 49.88% 59.31%, #343434 0%, #1C1800 100%);
+  background: radial-gradient(
+    40.69% 40.69% at 49.88% 59.31%,
+    #343434 0%,
+    #1c1800 100%
+  );
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   padding: 85px 4%;
 
@@ -822,7 +838,7 @@ footer .footer-payment-icons {
   gap: 55px;
 
   h2 {
-    color: #F2E8B3;
+    color: #f2e8b3;
     text-align: center;
     font-family: ROADSTORE;
     font-size: 42px;
@@ -834,9 +850,9 @@ footer .footer-payment-icons {
 
 .grid-compre-aqui {
   display: grid;
-  grid-template-areas: 
-  "img1 img2"
-  "img3 img3";
+  grid-template-areas:
+    "img1 img2"
+    "img3 img3";
 
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
@@ -850,7 +866,8 @@ footer .footer-payment-icons {
   grid-area: img2;
 }
 
-.img-destaque:nth-child(1), .img-destaque:nth-child(2) {
+.img-destaque:nth-child(1),
+.img-destaque:nth-child(2) {
   width: 100%;
   border-radius: 22px;
 }
@@ -863,7 +880,6 @@ footer .footer-payment-icons {
   object-position: 50% 15%;
   border-radius: 22px;
 }
-
 
 .img-amostra-produtos {
   width: 100%;
@@ -912,7 +928,7 @@ footer .footer-payment-icons {
   padding: 7px 23px;
   margin: 0 auto;
   margin-top: 40px;
- 
+
   border: none;
 
   color: #fff;
@@ -925,7 +941,7 @@ footer .footer-payment-icons {
   line-height: normal;
 }
 #container-produtos {
-    /* recorta todo item que passar do viewport na horizontal, assim retirando a barra de scrolagem */
+  /* recorta todo item que passar do viewport na horizontal, assim retirando a barra de scrolagem */
   overflow-x: clip;
   display: flex;
   flex-direction: column;
@@ -954,19 +970,19 @@ footer .footer-payment-icons {
   flex-direction: column;
 }
 
-#chamativa-shows-home>.h2Home {
-    font-family: roadstore, sans-serif;
-    color: white;
-    text-align: center;
-    margin-top: 197px;
-  
-    color: #fff;
-  
-    font-family: ROADSTORE;
-    font-size: 50px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+#chamativa-shows-home > .h2Home {
+  font-family: roadstore, sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 197px;
+
+  color: #fff;
+
+  font-family: ROADSTORE;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 /* Localização na aba home */
@@ -1503,4 +1519,26 @@ footer .footer-payment-icons {
 }
 .slick-center {
   transform: scale(1);
+}
+
+/* Estilização pagina produto especifica Cervejas */
+
+.container-produtos-especificos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 70px auto;
+}
+
+.nav-categoria {
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  display: flex;
+
+  .card-produto:first-child {
+    margin: 0;
+  }
+  .card-produto:last-child {
+    margin: 0;
+  }
 }
