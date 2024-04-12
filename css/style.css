@@ -1524,17 +1524,15 @@ footer .footer-payment-icons {
 /* Estilização pagina produto especifica Cervejas */
 
 .container-produtos-especificos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 70px auto;
+  margin: 70px 1%;
 }
 
 .nav-categoria {
-  overflow-x: hidden;
+  max-width: fit-content;
+  overflow: hidden;
   flex-wrap: wrap;
-  display: flex;
-
+  justify-content: center;
+  
   .card-produto:first-child {
     margin: 0;
   }
