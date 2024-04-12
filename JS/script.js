@@ -1,3 +1,5 @@
+
+
 //Carrosel slick
 $(document).ready(function () {
     $('.carrosel').slick({
@@ -49,5 +51,26 @@ function closeNav() {
 }
 
 
-// 
+// Animações ao scrollar
+
+
+
+const observer = new IntersectionObserver(
+    function(entries){
+        entries.forEach((entry) => {
+            if(entry.isIntersecting === true){
+                entry.target.classList.add("show")
+            }else{
+                entry.target.classList.remove("show")
+            }
+        });
+    },
+   
+)
+
+const elements = document.querySelectorAll(".hidden");
+
+elements.forEach((entry) =>{
+    observer.observe(entry);
+})
 

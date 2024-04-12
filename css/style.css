@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   /* Zera os espaçamentos de todos os elemntos */
 
@@ -21,6 +25,18 @@
 }
 
 /* Classes globais */
+.hidden {
+  opacity: 0;
+  transition: all 700ms;
+  filter: blur(5px);
+  margin-left: -30px;
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transition: all 700ms;
+  margin: 0;
+}
 .label-escondido {
   position: absolute;
   width: 1px;
@@ -31,8 +47,6 @@
   text-align: center;
   text-decoration: none;
   font-family: Raleway;
-  margin: 0 auto;
-  margin-top: 68px;
 
   color: #fff;
 
@@ -815,7 +829,7 @@ footer .footer-payment-icons {
 }
 
 #carrosel-img2 {
-  object-position: 100% 50%;
+  object-position: 2% 50%;
 }
 
 #carrosel-img3 {
@@ -823,6 +837,7 @@ footer .footer-payment-icons {
 }
 
 /* Estilização Parte Compre Aqui */
+
 
 #compreAqui {
   background: radial-gradient(
@@ -880,6 +895,7 @@ footer .footer-payment-icons {
   object-position: 50% 15%;
   border-radius: 22px;
 }
+
 
 .img-amostra-produtos {
   width: 100%;
@@ -949,7 +965,23 @@ footer .footer-payment-icons {
 }
 
 /* estilização da parte shows dentro da aba home */
+#text-show-home {
+  text-align: center;
+  text-decoration: none;
+  font-family: Raleway;
+  margin: 0 auto;
+  margin-top: 68px;
 
+  color: #fff;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Raleway;
+  font-size: clamp(13px, 2vw, 22px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: 300ms;
+}
 #img-chamativa-shows {
   position: absolute;
 }
@@ -1119,45 +1151,45 @@ footer .footer-payment-icons {
     padding-bottom: 16px;
     background: var(--cor-primaria);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+}
 
-    .titulo-categotia-produto {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-right: 4%;
+.titulo-categotia-produto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 4%;
 
-      h2 {
-        color: #fff787;
-        font-family: ROADSTORE;
-        font-size: 26px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+  h2 {
+    color: #fff787;
+    font-family: ROADSTORE;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 208px;
-        padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 208px;
+    padding: 15px 0;
 
-        border-radius: 0px 22px 22px 0px;
-        background: #141410;
-      }
+    border-radius: 0px 22px 22px 0px;
+    background: #141410;
+  }
 
-      a {
-        color: #000;
-        font-family: Poppins;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        text-decoration: none;
-      }
+  a {
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+  }
 
-      a:hover {
-        opacity: 0.7;
-      }
-    }
+  a:hover {
+    opacity: 0.7;
   }
 }
 
@@ -1524,15 +1556,22 @@ footer .footer-payment-icons {
 /* Estilização pagina produto especifica Cervejas */
 
 .container-produtos-especificos {
-  margin: 70px 1%;
+  margin-top: 16px;
+
+  .categoria-produto {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
 }
 
 .nav-categoria {
+  margin: 0 1%;
   max-width: fit-content;
   overflow: hidden;
   flex-wrap: wrap;
   justify-content: center;
-  
+
   .card-produto:first-child {
     margin: 0;
   }
