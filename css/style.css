@@ -864,6 +864,8 @@ footer .footer-payment-icons {
 }
 
 .grid-compre-aqui {
+  max-width: 400px;
+  margin: 0 auto;
   display: grid;
   grid-template-areas:
     "img1 img2"
@@ -1577,5 +1579,80 @@ footer .footer-payment-icons {
   }
   .card-produto:last-child {
     margin: 0;
+  }
+}
+
+/* TELAS de 500px pra cima */
+@media screen and (min-width:500px) {
+  /* Parte HOME */
+  /* Diminuindo a escala do destaques da home */
+  .produtos {
+    scale: 1.2;
+  }
+}
+
+/* TELAS 720px */
+
+@media screen and (min-width:720px){
+
+  /* Parte HOME */
+  /* Imagem do carrosel com altura de 400px */
+  .imgbanner {
+    width: 100%;
+    max-height: 400px;
+
+  }
+
+  /* Imagens do "Compre aqui" ficam na horizontal */
+  .grid-compre-aqui {
+    max-width: 865.75px;
+    margin: 0 auto;
+
+    grid-template-areas: "img1 img2 img3";
+    grid-template-columns: repeat(3, 1fr);
+
+    .img-destaque {
+      max-height: 300px;
+    }
+  }
+
+  /* Tirando a escala e adicionando uma largura máxima */
+  .produtos {
+    scale: none;
+    max-width: 850px;
+    margin: 50px auto 0; /* Adicionando margin auto nas laterais para ficar no meio */
+  }
+
+  /* Adicionando uma largura máxima para o botão */
+  #btn-produtos {
+    max-width: 735px;
+    padding: 1% 0;
+  }
+
+  /* Adicionando uma altura fixa ao iframe de mapa */
+  #google-maps-location {
+    height: 500px;
+  }
+
+  /* Parte Footer */
+  footer {
+    padding: 4%;
+    flex-direction: row;
+    section {
+      flex-direction: row;
+    }
+    
+  }
+  /* Aumentando tamanho no ícone e da fonte e posicionando corretamente */
+  #icone-flutuante  {
+    top: -48px;
+    right: 14px;
+
+    span {
+      font-size: 16px;
+    }
+    img {
+      width: 50px;
+    }
   }
 }
