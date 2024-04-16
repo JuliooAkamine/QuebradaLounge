@@ -9,27 +9,36 @@ $(document).ready(function () {
         arrows: true,
     }); 
 })
-$(document).ready(function () {
-    $('.produtos').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        speed: 500,
-        autoplaySpeed: 5000,
-        infinite: true,
-        autoplay: true,
-        centerMode: true,
-        centerPadding: "0px",
-        arrows: false,
-        mobileFirst: true,
-        responsive: [
-            {
-                breakpoint: 500,
-                settings: "unslick"
-            }
-        ]
-      });
-});
+function slickfy() {
+    $(document).ready(function () {
+        $('.produtos').slick({
+            infinite: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            speed: 500,
+            autoplaySpeed: 5000,
+            infinite: true,
+            centerMode: true,
+            centerPadding: "0px",
+            arrows: false,
+            mobileFirst: true,
+            responsive: [
+                {
+                    breakpoint: 720,
+                    settings: "unslick"
+                }
+            ]
+          });
+    });
+}
+
+slickfy()
+$(window).resize(function(){
+    var $windowWidth = $(window).width();
+    if ($windowWidth < 1000) { /* Adicionar o máximo de @media que iremos usar em nossa página */
+        slickfy();
+    }
+})
 
 $(document).ready(function () {
     $('.slider').slick({
@@ -54,7 +63,8 @@ function closeNav() {
     document.getElementById("fechar-menu").style.width = "0";
 
     // Restaura a barra de rolagem do corpo da página
-    document.body.style.overflow = "auto";
+    document.body.style.overflowX = "clip";
+    document.body.style.overflowY = "auto";
 }
 
 
