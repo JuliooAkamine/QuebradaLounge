@@ -21,6 +21,13 @@ $(document).ready(function () {
         centerMode: true,
         centerPadding: "0px",
         arrows: false,
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: 500,
+                settings: "unslick"
+            }
+        ]
       });
 });
 

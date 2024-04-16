@@ -1616,11 +1616,18 @@ footer .footer-payment-icons {
     }
   }
 
+  #container-produtos {
+    margin: 0 4%;
+  }
+
   /* Tirando a escala e adicionando uma largura máxima */
   .produtos {
     scale: none;
     max-width: 850px;
-    margin: 50px auto 0; /* Adicionando margin auto nas laterais para ficar no meio */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
   }
 
   /* Adicionando uma largura máxima para o botão */
@@ -1633,6 +1640,8 @@ footer .footer-payment-icons {
   #google-maps-location {
     height: 500px;
   }
+
+
 
   /* Parte Footer */
   footer {
