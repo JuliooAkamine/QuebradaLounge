@@ -1,44 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- API DE FONTES DO GOOGLE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- LINK PARA ADICIONAR FAVICON -->
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.svg" />
     <!-- LINK COM O CSS PRINCIPAL -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css" />
     <!-- Link com o css do slick -->
-    <link rel="stylesheet" href="../slick/slick-theme.css">
-    <link rel="stylesheet" href="../slick/slick.css">
+    <link rel="stylesheet" href="../slick/slick-theme.css" />
+    <link rel="stylesheet" href="../slick/slick.css" />
     <!-- Link com js async -->
     <script async src="../JS/adicionarAoCarrinho.js"></script>
     <title>Produtos | Home</title>
+  </head>
 
-</head>
-
-<body>
-  
-
+  <body>
     <header>
-        <h1><img id="logo-img-mobile" src="../assets/icons/Letreiro.png" alt="logo-quebrada-lounge-mobile"></h1>
+      <h1>
+        <img
+          id="logo-img-mobile"
+          src="../assets/icons/Letreiro.png"
+          alt="logo-quebrada-lounge-mobile"
+        />
+      </h1>
 
-        <nav>
-            <div>
-
-                <img src="../assets/icons/Menu Hamburguer.png" alt="Icone de menu Hamburguer" onclick="openNav()">
-                <form action="#">
-                    <label for="barra-pesquisa" class="label-escondido">Pesquise o produto</label>
-                    <input id="barra-pesquisa" type="text" name="barra-pesquisa" placeholder="Pesquisar...">
-                </form>
-                <a href="carrinho.html"><img src="../assets/icons/Icone-Carrinho.png" alt="Icone de carrinho"></a>
-
-            </div>
-        </nav>
+      <nav>
+        <div>
+          <img
+            src="../assets/icons/Menu Hamburguer.png"
+            alt="Icone de menu Hamburguer"
+            onclick="openNav()"
+          />
+          <form action="#">
+            <label for="barra-pesquisa" class="label-escondido"
+              >Pesquise o produto</label
+            >
+            <input
+              id="barra-pesquisa"
+              type="text"
+              name="barra-pesquisa"
+              placeholder="Pesquisar..."
+            />
+          </form>
+          <a href="carrinho.html"
+            ><img
+              src="../assets/icons/Icone-Carrinho.png"
+              alt="Icone de carrinho"
+          /></a>
+        </div>
+      </nav>
     </header>
     <!-- 
         !!MENU LATERAL!!
@@ -47,713 +65,1090 @@
     -->
     <div id="fechar-menu" onclick="closeNav()"></div>
     <div id="sidenav-overlay">
-        <div id="menu-header"> <!-- Cabeçalho Menu-Lateral -->
-             <nav>
-                <div>
-                    <img src="../assets/icons/perfil-icon.svg" alt="Logo Quebrada Lounge">
-                    <a href="Entrar.html">Entrar</a> <!-- LOGIN -->
-                </div>
-                <img src="../assets/icons/logo-desktop.svg" alt="Logo Quebrada Lounge">
-             </nav>
-             <button>
-                Promoções
-             </button>
-        </div>
-        <div id="menu-nav"> <!-- NAVEGAÇÃO -->
-            <nav>
-                <ul>
-                    <li> <!-- HOME -->
-                        <a href="../index.html"> 
-                            <img src="../assets/icons/inicio-icon.svg" alt="Icone da página home">
-                            <p>Inicio</p>
-                        </a>
-                    </li>
-                    <li> <!-- PRODUCTS -->
-                        <a href="#"> 
-                            <img src="../assets/icons/produtos-icon.png" alt="Icone da página home">
-                            <p>Produtos</p>
-                        </a>
-                    </li>
-                    <li> <!-- LOCATION -->
-                        <a href="../pages/localizacao.html">
-                            <img src="../assets/icons/localizacao-icon.png" alt="Icone da página home">
-                            <p>Localização</p>
-                        </a>
-                    </li>
-                    <li> <!-- SHOWS -->
-                        <a href="../pages/shows.html"> 
-                            <img src="../assets/icons/shows-icon.png" alt="Icone da página home">
-                            <p>Shows</p>
-                        </a>
-                    </li>
-                    <li> <!-- Contact us -->
-                        <a href="../pages/fale-conosco.html"> 
-                            <img src="../assets/icons/faleCosnosco.png" alt="Icone da página home">
-                            <p>Fale conoscos</p>
-                        </a>
-                    </li>
-                    <li> <!-- KNOW US -->
-                        <a href="../pages/nos-conheca.html"> 
-                            <img src="../assets/icons/nosConheca.png" alt="Icone da página home">
-                            <p>Nos conheça</p>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div id="menu-footer"> <!-- Rodapé Menu-lateral -->
-            <p>Nos siga no instagram</p>
-            <a href="https://www.instagram.com/lider_quebradaloungebar/" target="_blank">@lider_quebradaloungebar</a>
-        </div>
+      <div id="menu-header">
+        <!-- Cabeçalho Menu-Lateral -->
+        <nav>
+          <div>
+            <img
+              src="../assets/icons/perfil-icon.svg"
+              alt="Logo Quebrada Lounge"
+            />
+            <a href="Entrar.html">Entrar</a>
+            <!-- LOGIN -->
+          </div>
+          <img
+            src="../assets/icons/logo-desktop.svg"
+            alt="Logo Quebrada Lounge"
+          />
+        </nav>
+        <button>Promoções</button>
+      </div>
+      <div id="menu-nav">
+        <!-- NAVEGAÇÃO -->
+        <nav>
+          <ul>
+            <li>
+              <!-- HOME -->
+              <a href="../index.html">
+                <img
+                  src="../assets/icons/inicio-icon.svg"
+                  alt="Icone da página home"
+                />
+                <p>Inicio</p>
+              </a>
+            </li>
+            <li>
+              <!-- PRODUCTS -->
+              <a href="#">
+                <img
+                  src="../assets/icons/produtos-icon.png"
+                  alt="Icone da página home"
+                />
+                <p>Produtos</p>
+              </a>
+            </li>
+            <li>
+              <!-- LOCATION -->
+              <a href="../pages/localizacao.html">
+                <img
+                  src="../assets/icons/localizacao-icon.png"
+                  alt="Icone da página home"
+                />
+                <p>Localização</p>
+              </a>
+            </li>
+            <li>
+              <!-- SHOWS -->
+              <a href="../pages/shows.html">
+                <img
+                  src="../assets/icons/shows-icon.png"
+                  alt="Icone da página home"
+                />
+                <p>Shows</p>
+              </a>
+            </li>
+            <li>
+              <!-- Contact us -->
+              <a href="../pages/fale-conosco.html">
+                <img
+                  src="../assets/icons/faleCosnosco.png"
+                  alt="Icone da página home"
+                />
+                <p>Fale conoscos</p>
+              </a>
+            </li>
+            <li>
+              <!-- KNOW US -->
+              <a href="../pages/nos-conheca.html">
+                <img
+                  src="../assets/icons/nosConheca.png"
+                  alt="Icone da página home"
+                />
+                <p>Nos conheça</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="menu-footer">
+        <!-- Rodapé Menu-lateral -->
+        <p>Nos siga no instagram</p>
+        <a
+          href="https://www.instagram.com/lider_quebradaloungebar/"
+          target="_blank"
+          >@lider_quebradaloungebar</a
+        >
+      </div>
     </div>
-
 
     <!-- Conteúdo da página -->
 
     <main>
+      <div id="slider-categoria-produtos">
+        <!-- SLIDER DE USO GLOBAL, SÓ ADICIONAR NO HTML DA PÁGINA -->
+        <a href="/pages/prodCervejas.html">
+          <!-- CERVEJAS -->
+          <div class="agrupamento-da-categoria">
+            <div>
+              <img src="/assets/Produtos/Cervejas/SKOL_269ML.png" alt="" />
+            </div>
+            <h3>Cervejas</h3>
+          </div>
+        </a>
+        <a href="/pages/prodGelo.html">
+          <!-- GELO -->
+          <div class="agrupamento-da-categoria">
+            <div>
+              <img src="../assets/Produtos/Gelos/MELANCIA-copy-1.png" alt="" />
+            </div>
+            <h3>Gelo</h3>
+          </div>
+        </a>
+        <a href="/pages/prodEnergetico.html">
+          <!-- ENERGÉTICO -->
+          <div class="agrupamento-da-categoria">
+            <div>
+              <img
+                src="../assets/Produtos/Energeticos/Bebida-Energetica-Red-Bull-250ml.png"
+                alt=""
+              />
+            </div>
+            <h3>Energético</h3>
+          </div>
+        </a>
+        <a href="/pages/prodCachaca.html">
+          <!-- CACHAÇA -->
+          <div class="agrupamento-da-categoria">
+            <div>
+              <img src="../assets/Produtos/Cachaça/corote_Cachaça.png" alt="" />
+            </div>
+            <h3>Cachaça</h3>
+          </div>
+        </a>
+        <a href="/pages/prodGin.html">
+          <!-- GIN -->
+          <div class="agrupamento-da-categoria">
+            <div>
+              <img src="../assets/Produtos/Gin/13992723 1.png" alt="" />
+            </div>
+            <h3>Gin</h3>
+          </div>
+        </a>
+        <a href="/pages/prodRefrigerante.html">
+          <!-- REFRIGERANTE -->
+          <div class="agrupamento-da-categoria">
+            <div>
+              <img
+                src="../assets/Produtos/Refrigerantes/itubaina350ml.png"
+                alt=""
+              />
+            </div>
+            <h3>Refrigerante</h3>
+          </div>
+        </a>
+        <a href="/pages/prodVodka.html">
+          <!-- VODKA -->
+          <div class="agrupamento-da-categoria">
+            <div>
+              <img src="../assets/Produtos/Vodka/img_1200_1.png" alt="" />
+            </div>
+            <h3>Vodka</h3>
+          </div>
+        </a>
+        <a href="/pages/prodWhisky.html">
+          <!-- WHISKY -->
+          <div class="agrupamento-da-categoria">
+            <div>
+              <img src="../assets/Produtos/Whisky/jack-daniels.png" alt="" />
+            </div>
+            <h3>Whisky</h3>
+          </div>
+        </a>
+      </div>
 
-        <div id="slider-categoria-produtos"> <!-- SLIDER DE USO GLOBAL, SÓ ADICIONAR NO HTML DA PÁGINA -->
-            <a href="cervejas.html"> <!-- CERVEJAS -->
-                <div class="agrupamento-da-categoria">
-                    <div><img src="../assets/Produtos/Cervejas/SKOL_269ML.png" alt=""></div>
-                    <h3>Cervejas</h3>
+      <div id="destaque-promos">
+        <div class="card-promo">
+          <!--   CERVEJAS DESTAQUES -->
+          <div class="card-promo-img-principal">
+            <!-- IMG CANTI -->
+            <img src="../assets/Prod. Destaque/contiFULL.jpg" alt="" />
+          </div>
+          <div class="slider">
+            <div class="slider-destaque-promo">
+              <div>
+                <div class="card-promo-produto">
+                  <img
+                    src="../assets/Produtos/Cervejas/Brahma-Duplo-Malte-310ml 1.png"
+                    alt="Cerveja Brahma Duplo Malte Lata 269ml"
+                  />
                 </div>
-            </a>
-            <a href="#"> <!-- GELO -->
-                <div class="agrupamento-da-categoria">
-                    <div><img src="../assets/Produtos/Gelos/MELANCIA-copy-1.png" alt=""></div>
-                    <h3>Gelo</h3>
+                <div class="card-promo-descricao">
+                  <p>Cerveja Brahma Duplo Malte Lata 269ml</p>
+                  <div class="card-promo-preco">
+                    <s>R$ 3,19</s>
+                    <span>R$ 2,59</span>
+                  </div>
                 </div>
-            </a>
-            <a href="#"> <!-- ENERGÉTICO -->
-                <div class="agrupamento-da-categoria">
-                    <div><img src="../assets/Produtos/Energeticos/Bebida-Energetica-Red-Bull-250ml.png" alt=""></div>
-                    <h3>Energético</h3>
+              </div>
+            </div>
+            <div class="slider-destaque-promo">
+              <div>
+                <div class="card-promo-produto">
+                  <img
+                    src="../assets/Produtos/Cervejas/spaten-350 1.png"
+                    alt="Cerveja Spaten Puro Malte Lata 350ml"
+                  />
                 </div>
-            </a>
-            <a href="#"> <!-- CACHAÇA -->
-                <div class="agrupamento-da-categoria">
-                    <div><img src="../assets/Produtos/Cachaça/corote_Cachaça.png" alt=""></div>
-                    <h3>Cachaça</h3>
+                <div class="card-promo-descricao">
+                  <p>Cerveja Spaten Puro Malte Lata 350ml</p>
+                  <div class="card-promo-preco">
+                    <s>R$ 5,49</s>
+                    <span>R$ 4,99</span>
+                  </div>
                 </div>
-            </a>
-            <a href="#"> <!-- GIN -->
-                <div class="agrupamento-da-categoria">
-                    <div><img src="../assets/Produtos/Gin/13992723 1.png" alt=""></div>
-                    <h3>Gin</h3>
+              </div>
+            </div>
+            <div class="slider-destaque-promo">
+              <div>
+                <div class="card-promo-produto">
+                  <img
+                    src="../assets/Produtos/Cervejas/Stella 1.png"
+                    alt="Cerveja Stella Artois Puro Malte Lata 269ml"
+                  />
                 </div>
-            </a>
-            <a href="#"> <!-- REFRIGERANTE -->
-                <div class="agrupamento-da-categoria">
-                    <div><img src="../assets/Produtos/Refrigerantes/itubaina350ml.png" alt=""></div>
-                    <h3>Refrigerante</h3>
+                <div class="card-promo-descricao">
+                  <p>Cerveja Stella Artois Puro Malte Lata 269ml</p>
+                  <div class="card-promo-preco">
+                    <s>R$ 4,49</s>
+                    <span>R$ 4,19</span>
+                  </div>
                 </div>
-            </a>
-            <a href="#"> <!-- VODKA -->
-                <div class="agrupamento-da-categoria">
-                    <div><img src="../assets/Produtos/Vodka/img_1200_1.png" alt=""></div>
-                    <h3>Vodka</h3>
-                </div>
-            </a>
-            <a href="#"> <!-- WHISKY -->
-                <div class="agrupamento-da-categoria">
-                    <div><img src="../assets/Produtos/Whisky/jack-daniels.png" alt=""></div>
-                    <h3>Whisky</h3>
-                </div>
-            </a>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div id="destaque-promos">
-            <div class="card-promo"> <!--   CERVEJAS DESTAQUES -->
-                <div class="card-promo-img-principal"> <!-- IMG CANTI -->
-                    <img src="../assets/Prod. Destaque/contiFULL.jpg" alt="">
+        <div class="card-promo">
+          <!-- WHISKEY DESTAQUES -->
+          <div class="card-promo-img-principal">
+            <!-- IMG WHISKEY -->
+            <img src="../assets/Prod. Destaque/whiskeyFULL.jpg" alt="" />
+          </div>
+          <div class="slider">
+            <div class="slider-destaque-promo">
+              <div>
+                <div class="card-promo-produto">
+                  <img
+                    src="../assets/Produtos/Whisky/Whiskey-Jim-Beam-White-Bourbon-1L.png"
+                    alt="Whisky Jim Beam Bourbon 1L"
+                  />
                 </div>
-                <div class="slider">
-                    <div class="slider-destaque-promo">
-                        <div>
-                            <div class="card-promo-produto">
-                                <img src="../assets/Produtos/Cervejas/Brahma-Duplo-Malte-310ml 1.png" alt="Cerveja Brahma Duplo Malte Lata 269ml">
-                            </div>
-                            <div class="card-promo-descricao">
-                                <p>Cerveja Brahma Duplo Malte Lata 269ml</p>
-                                <div class="card-promo-preco">
-                                    <s>R$ 3,19</s>
-                                    <span>R$ 2,59</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-destaque-promo">
-                        <div>
-                            <div class="card-promo-produto">
-                                <img src="../assets/Produtos/Cervejas/spaten-350 1.png" alt="Cerveja Spaten Puro Malte Lata 350ml">
-                            </div>
-                            <div class="card-promo-descricao">
-                                <p>Cerveja Spaten Puro Malte Lata 350ml</p>
-                                <div class="card-promo-preco">
-                                    <s>R$ 5,49</s>
-                                    <span>R$ 4,99</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-destaque-promo">
-                        <div>
-                            <div class="card-promo-produto">
-                                <img src="../assets/Produtos/Cervejas/Stella 1.png" alt="Cerveja Stella Artois Puro Malte Lata 269ml">
-                            </div>
-                            <div class="card-promo-descricao">
-                                <p>Cerveja Stella Artois Puro Malte Lata 269ml</p>
-                                <div class="card-promo-preco">
-                                    <s>R$ 4,49</s>
-                                    <span>R$ 4,19</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="card-promo-descricao">
+                  <p>Whisky Jim Beam Bourbon 1L</p>
+                  <div class="card-promo-preco">
+                    <s>R$ 80,19</s>
+                    <span>R$ 79,94</span>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div class="card-promo"> <!-- WHISKEY DESTAQUES -->
-                <div class="card-promo-img-principal"> <!-- IMG WHISKEY -->
-                    <img src="../assets/Prod. Destaque/whiskeyFULL.jpg" alt="">
+            <div class="slider-destaque-promo">
+              <div>
+                <div class="card-promo-produto">
+                  <img
+                    src="../assets/Produtos/Whisky/jack-daniels.png"
+                    alt="Whisky Jack Daniel's 1L"
+                  />
                 </div>
-                <div class="slider">
-                    <div class="slider-destaque-promo">
-                        <div>
-                            <div class="card-promo-produto">
-                                <img src="../assets/Produtos/Whisky/Whiskey-Jim-Beam-White-Bourbon-1L.png" alt="Whisky Jim Beam Bourbon 1L">
-                            </div>
-                            <div class="card-promo-descricao">
-                                <p>Whisky Jim Beam Bourbon 1L</p>
-                                <div class="card-promo-preco">
-                                    <s>R$ 80,19</s>
-                                    <span>R$ 79,94</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-destaque-promo">
-                        <div>
-                            <div class="card-promo-produto">
-                                <img src="../assets/Produtos/Whisky/jack-daniels.png" alt="Whisky Jack Daniel's 1L">
-                            </div>
-                            <div class="card-promo-descricao">
-                                <p>Whisky Jack Daniel's 1L</p>
-                                <div class="card-promo-preco">
-                                    <s>R$ 120,49</s>
-                                    <span>R$ 117,05</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-destaque-promo">
-                        <div>
-                            <div class="card-promo-produto">
-                                <img src="../assets/Produtos/Whisky/Red-Label-750ml.png" alt="Whisky Red Label 750 ml">
-                            </div>
-                            <div class="card-promo-descricao">
-                                <p>Whisky Red Label 750 ml</p>
-                                <div class="card-promo-preco">
-                                    <s>R$ 80,49</s>
-                                    <span>R$ 77,90</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="card-promo-descricao">
+                  <p>Whisky Jack Daniel's 1L</p>
+                  <div class="card-promo-preco">
+                    <s>R$ 120,49</s>
+                    <span>R$ 117,05</span>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div class="card-promo"> <!-- VODKA DESTAQUES -->
-                <div class="card-promo-img-principal"> <!-- IMG VODKA -->
-                    <img src="../assets/Prod. Destaque/vodkaFULL.jpg" alt="">
+            <div class="slider-destaque-promo">
+              <div>
+                <div class="card-promo-produto">
+                  <img
+                    src="../assets/Produtos/Whisky/Red-Label-750ml.png"
+                    alt="Whisky Red Label 750 ml"
+                  />
                 </div>
-                <div class="slider">
-                    <div class="slider-destaque-promo">
-                        <div>
-                            <div class="card-promo-produto">
-                                <img src="../assets/Produtos/Vodka/absolut-750ml.png" alt="Vodka Absolut Imported 750ml">
-                            </div>
-                            <div class="card-promo-descricao">
-                                <p>Vodka Absolut Imported 750ml</p>
-                                <div class="card-promo-preco">
-                                    <s>R$ 89,99</s>
-                                    <span>R$ 79,99</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-destaque-promo">
-                        <div>
-                            <div class="card-promo-produto">
-                                <img src="../assets/Produtos/Vodka/Vodka-Smirnoff-998ml.png" alt="Vodka Smirnoff 998ml">
-                            </div>
-                            <div class="card-promo-descricao">
-                                <p>Vodka Smirnoff 998ml</p>
-                                <div class="card-promo-preco">
-                                    <s>R$ 40,00</s>
-                                    <span>R$ 34,99</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-destaque-promo">
-                        <div>
-                            <div class="card-promo-produto">
-                                <img src="../assets/Produtos/Vodka/img_500_1.png" alt="Vodka Balalaika 1L">
-                            </div>
-                            <div class="card-promo-descricao">
-                                <p>Vodka Balalaika 1L</p>
-                                <div class="card-promo-preco">
-                                    <s>R$ 20,71</s>
-                                    <span>R$ 16,71</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="card-promo-descricao">
+                  <p>Whisky Red Label 750 ml</p>
+                  <div class="card-promo-preco">
+                    <s>R$ 80,49</s>
+                    <span>R$ 77,90</span>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+        <div class="card-promo">
+          <!-- VODKA DESTAQUES -->
+          <div class="card-promo-img-principal">
+            <!-- IMG VODKA -->
+            <img src="../assets/Prod. Destaque/vodkaFULL.jpg" alt="" />
+          </div>
+          <div class="slider">
+            <div class="slider-destaque-promo">
+              <div>
+                <div class="card-promo-produto">
+                  <img
+                    src="../assets/Produtos/Vodka/absolut-750ml.png"
+                    alt="Vodka Absolut Imported 750ml"
+                  />
+                </div>
+                <div class="card-promo-descricao">
+                  <p>Vodka Absolut Imported 750ml</p>
+                  <div class="card-promo-preco">
+                    <s>R$ 89,99</s>
+                    <span>R$ 79,99</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-destaque-promo">
+              <div>
+                <div class="card-promo-produto">
+                  <img
+                    src="../assets/Produtos/Vodka/Vodka-Smirnoff-998ml.png"
+                    alt="Vodka Smirnoff 998ml"
+                  />
+                </div>
+                <div class="card-promo-descricao">
+                  <p>Vodka Smirnoff 998ml</p>
+                  <div class="card-promo-preco">
+                    <s>R$ 40,00</s>
+                    <span>R$ 34,99</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-destaque-promo">
+              <div>
+                <div class="card-promo-produto">
+                  <img
+                    src="../assets/Produtos/Vodka/img_500_1.png"
+                    alt="Vodka Balalaika 1L"
+                  />
+                </div>
+                <div class="card-promo-descricao">
+                  <p>Vodka Balalaika 1L</p>
+                  <div class="card-promo-preco">
+                    <s>R$ 20,71</s>
+                    <span>R$ 16,71</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <div id="produtos-por-categoria">
-            <!-- 
+      <div id="produtos-por-categoria">
+        <!-- 
                 Para gerar outra categoria, só copiar esse código e colar dentro de "produtos-por-categoria" 
             -->
-            <div class="categoria-produto">  <!--   CERVEJA CT -->
-                <div class="titulo-categotia-produto"> <!-- Cervejas Título-->
-                    <h2>Cervejas</h2>
-                    <a href="cervejas.html">Ver mais...</a>
-                </div>
-                <div class="nav-categoria-produto"> <!-- Navegação dos produtos -->
-                    <div class="card-produto"> <!-- Heineken 269ml -->
-                        <div><img class="product-image" src="../assets/Produtos/Cervejas/heineken_lata_269ml 1.png" alt=""></div>
-                        <div class="descricao-produto">
-                            <p class="product-title">Cerveja Heineken 269ml</p>
-                            <span class="product-price">Por apenas R$4,19</span>
-                        </div>
-                        <button onclick="addProductToCart(event)" class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Skol 269ml -->
-                        <div><img class="product-image" src="../assets/Produtos/Cervejas/SKOL_269ML.png" alt=""></div>
-                        <div class="descricao-produto">
-                            <p class="product-title">Cerveja Skol Pilsen 269ml</p>
-                            <span class="product-price">Por apenas R$2,79</span>
-                        </div>
-                        <button onclick="addProductToCart(event)" id="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Amstel 269ml -->
-                        <div><img class="product-image" src="../assets/Produtos/Cervejas/amstel_lata_269l 1.png" alt=""></div>
-                        <div class="descricao-produto">
-                            <p class="product-title">Cerveja Amstel 269ml</p>
-                            <span class="product-price">Por apenas R$2,79</span>
-                        </div>
-                        <button onclick="addProductToCart(event)" class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Stella Noire 410ml -->
-                        <div><img src="../assets/Produtos/Cervejas/Stella 1.png" alt=""></div>
-                        <div class="descricao-produto">
-                            <p>Cerveja Stella Noire 410ml</p>
-                            <span>Por apenas  R$19,90</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Heineken 330ml -->
-                        <div><img src="../assets/Produtos/Cervejas/3328-heineken-long-neck-330ml-24un.20231128140701.png" alt=""></div>
-                        <div class="descricao-produto">
-                            <p>Cerveja Heineken Long Neck 330ml</p>
-                            <span>Por apenas  R$4,19</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Becks 330ml -->
-                        <div><img src="../assets/Produtos/Cervejas/10464-becks-long-neck-330ml-24un 1.png" alt=""></div>
-                        <div class="descricao-produto">
-                            <p>Cerveja Heineken Long Neck 330ml</p>
-                            <span>Por apenas  R$6,49</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                </div>
+        <div class="categoria-produto">
+          <!--   CERVEJA CT -->
+          <div class="titulo-categotia-produto">
+            <!-- Cervejas Título-->
+            <h2>Cervejas</h2>
+            <a href="/pages/prodCervejas.html">Ver mais...</a>
+          </div>
+          <div class="nav-categoria-produto">
+            <!-- Navegação dos produtos -->
+            <div class="card-produto">
+              <!-- Heineken 269ml -->
+              <div>
+                <img
+                  class="product-image"
+                  src="../assets/Produtos/Cervejas/heineken_lata_269ml 1.png"
+                  alt=""
+                />
+              </div>
+              <div class="descricao-produto">
+                <p class="product-title">Cerveja Heineken 269ml</p>
+                <span class="product-price">Por apenas R$4,19</span>
+              </div>
+              <button
+                onclick="addProductToCart(event)"
+                class="btnRetirarNaLoja"
+              >
+                Retire na loja
+              </button>
             </div>
-            <div class="categoria-produto"> <!-- WHISKY CT -->
-                <div class="titulo-categotia-produto"> <!-- WHISKY -->
-                <h2>Whisky</h2>
-                    <a href="#">Ver mais...</a>
-                </div>
-                <div class="nav-categoria-produto"> <!-- Navegação dos produtos -->
-                    <div class="card-produto"> <!-- Jack Daniel's 1L -->
-                        <div><img src="../assets/Produtos/Whisky/jack-daniels.png" alt=""></div>
-                        <div class="descricao-produto">
-                            <p>Whisky Jack Daniel's 1L</p>
-                            <span>Por apenas  R$117,05</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Red Label 750 ml -->
-                        <div><img src="../assets/Produtos/Whisky/Red-Label-750ml.png" alt=""></div>
-                        <div class="descricao-produto">
-                            <p>Whisky Red Label 750 ml</p>
-                            <span>Por apenas R$77,90</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- White Horse 1L -->
-                        <div><img src="../assets/Produtos/Whisky/Whisky-White-Horse-1l.png" alt=""></div>
-                        <div class="descricao-produto">
-                            <p>Whisky White Horse 1L</p>
-                            <span>Por apenas R$79,94</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Bourbon 1L -->
-                        <div><img src="../assets/Produtos/Whisky/Whiskey-Jim-Beam-White-Bourbon-1L.png" alt=""></div>
-                        <div class="descricao-produto">
-                            <p>Whisky Jim Beam Bourbon 1L</p>
-                            <span>Por apenas  R$99,96</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                </div>
+            <div class="card-produto">
+              <!-- Skol 269ml -->
+              <div>
+                <img
+                  class="product-image"
+                  src="../assets/Produtos/Cervejas/SKOL_269ML.png"
+                  alt=""
+                />
+              </div>
+              <div class="descricao-produto">
+                <p class="product-title">Cerveja Skol Pilsen 269ml</p>
+                <span class="product-price">Por apenas R$2,79</span>
+              </div>
+              <button onclick="addProductToCart(event)" id="btnRetirarNaLoja">
+                Retire na loja
+              </button>
             </div>
-            <div class="categoria-produto"> <!-- GIN CT -->
-                <div class="titulo-categotia-produto"> <!-- GIN -->
-                <h2>Gin</h2>
-                    <a href="#">Ver mais...</a>
-                </div>
-                <div class="nav-categoria-produto"> <!-- Navegação dos produtos -->
-                    <div class="card-produto"> <!-- Tanqueray  750 ml -->
-                        <div><img src="../assets/Produtos/Gin/13992723 1.png" alt=""></div>
-                        <div class="descricao-produto">
-                            <p>Gin Tanqueray Dry 750 ml</p>
-                            <span>Por apenas  R$93,13</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Bombay 750 ml -->
-                        <div><img src="../assets/Produtos/Gin/Gin-London-Dry-Bombay-Sapphire-Garrafa-750ml-.png" alt=""></div>
-                        <div class="descricao-produto">
-                            <p>Gin Bombay Sapphire Dry London 750 ml</p>
-                            <span>Por apenas R$97,90</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Gordons Pink 700 ml -->
-                        <div><img src="../assets/Produtos/Gin/1648232355274-gingordonspink750ml.png" alt=""></div>
-                        <div class="descricao-produto">
-                            <p>Gin Gordons Pink 700 ml</p>
-                            <span>Por apenas R$67,62</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                </div>
+            <div class="card-produto">
+              <!-- Amstel 269ml -->
+              <div>
+                <img
+                  class="product-image"
+                  src="../assets/Produtos/Cervejas/amstel_lata_269l 1.png"
+                  alt=""
+                />
+              </div>
+              <div class="descricao-produto">
+                <p class="product-title">Cerveja Amstel 269ml</p>
+                <span class="product-price">Por apenas R$2,79</span>
+              </div>
+              <button
+                onclick="addProductToCart(event)"
+                class="btnRetirarNaLoja"
+              >
+                Retire na loja
+              </button>
             </div>
-            <div class="categoria-produto"> <!-- VODKA CT -->
-                <div class="titulo-categotia-produto"> <!-- VODKA -->
-                <h2>Vodka</h2>
-                    <a href="#">Ver mais...</a>
-                </div>
-                <div class="nav-categoria-produto"> <!-- Navegação dos produtos -->
-                    <div class="card-produto"> <!-- ASKOV 900ml -->
-                        <div><img src="../assets/Produtos/Vodka/img_1200_1.png" alt="Vodka ASKOV 900ml"></div>
-                        <div class="descricao-produto">
-                            <p>Vodka ASKOV 900ml</p>
-                            <span>Por apenas  R$19,90</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Absolut 750ml -->
-                        <div><img src="../assets/Produtos/Vodka/absolut-750ml.png" alt="Vodka Absolut Imported 750ml"></div>
-                        <div class="descricao-produto">
-                            <p>Vodka Absolut Imported 750ml</p>
-                            <span>Por apenas R$16,71</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Balalaika 1L -->
-                        <div><img src="../assets/Produtos/Vodka/img_500_1.png" alt="Vodka Balalaika 1L"></div>
-                        <div class="descricao-produto">
-                            <p>Vodka Balalaika 1L</p>
-                            <span>Por apenas R$79,94</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Smirnoff 998ml -->
-                        <div><img src="../assets/Produtos/Vodka/Vodka-Smirnoff-998ml.png" alt="Vodka Smirnoff 998ml"></div>
-                        <div class="descricao-produto">
-                            <p>Vodka Smirnoff 998ml</p>
-                            <span>Por apenas  R$34,99</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                </div>
+            <div class="card-produto">
+              <!-- Stella Noire 410ml -->
+              <div>
+                <img src="../assets/Produtos/Cervejas/Stella 1.png" alt="" />
+              </div>
+              <div class="descricao-produto">
+                <p>Cerveja Stella Noire 410ml</p>
+                <span>Por apenas R$19,90</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
             </div>
-            <div class="categoria-produto"> <!-- CACHAÇA CT -->
-                <div class="titulo-categotia-produto"> <!-- CACHAÇA -->
-                    <h2>Cachaça</h2>
-                    <a href="#">Ver mais...</a>
-                </div>
-                <div class="nav-categoria-produto"> <!-- Navegação dos produtos -->
-                    <div class="card-produto"> <!-- Corote 500Ml -->
-                        <div><img src="../assets/Produtos/Cachaça/corote_Cachaça.png" alt="Cachaça Corote 500Ml"></div>
-                        <div class="descricao-produto">
-                            <p>Cachaça Corote 500Ml</p>
-                            <span>Por apenas R$6,25</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Duelo 500Ml -->
-                        <div><img src="../assets/Produtos/Cachaça/Caninha-Duelo-490ML.png" alt="Cachaça Duelo 500Ml"></div>
-                        <div class="descricao-produto">
-                            <p>Cachaça Duelo 500Ml</p>
-                            <span>Por apenas R$3,59</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- 51 965Ml -->
-                        <div><img src="../assets/Produtos/Cachaça/0005576_cachaca-adocada-pirassununga-51-965ml.png" alt="Cachaça 51 965Ml"></div>
-                        <div class="descricao-produto">
-                            <p>Cachaça 51 965Ml</p>
-                            <span>Por apenas R$11,89</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Velho Barreiro 910Ml -->
-                        <div><img src="../assets/Produtos/Cachaça/Cachaca-Adocada-Velho-Barreiro-910ml.png" alt="Cachaça Velho Barreiro 910Ml"></div>
-                        <div class="descricao-produto">
-                            <p>Cachaça Velho Barreiro 910Ml</p>
-                            <span>Por apenas  R$19,05</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Jurupinga 975ml -->
-                        <div><img src="../assets/Produtos/Cachaça/Vinho-Branco-Jurupinga-Dinalle-975ml.png" alt="Cachaça Jurupinga Dinalle 975ml"></div>
-                        <div class="descricao-produto">
-                            <p>Cachaça Jurupinga Dinalle 975ml</p>
-                            <span>Por apenas  R$39,00</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Cabaré 700ml -->
-                        <div><img src="../assets/Produtos/Cachaça/cabare.PNG.prata_.png" alt="Cachaça Cabaré Prata 700ml"></div>
-                        <div class="descricao-produto">
-                            <p>Cachaça Cabaré Prata 700ml</p>
-                            <span>Por apenas  R$48,70</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                </div>
+            <div class="card-produto">
+              <!-- Heineken 330ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Cervejas/3328-heineken-long-neck-330ml-24un.20231128140701.png"
+                  alt=""
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Cerveja Heineken Long Neck 330ml</p>
+                <span>Por apenas R$4,19</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
             </div>
-            <div class="categoria-produto"> <!-- ENERGÉTICO CT -->
-                <div class="titulo-categotia-produto"> <!-- ENERGÉTICO -->
-                    <h2>Energético</h2>
-                    <a href="#">Ver mais...</a>
-                </div>
-                <div class="nav-categoria-produto"> <!-- Navegação dos produtos -->
-                    <div class="card-produto"> <!-- Red Bull 250ml -->
-                        <div><img src="../assets/Produtos/Energeticos/Bebida-Energetica-Red-Bull-250ml.png" alt="Energético Red Bull 250ml"></div>
-                        <div class="descricao-produto">
-                            <p>Energético Red Bull 250ml</p>
-                            <span>Por apenas R$9,49</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- TNT 269ml -->
-                        <div><img src="../assets/Produtos/Energeticos/tnt269ml.png"></div>
-                        <div class="descricao-produto">
-                            <p>Energético TNT 269ml</p>
-                            <span>Por apenas R$6,59</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Monster 473ml -->
-                        <div><img src="../assets/Produtos/Energeticos/monster473ml.png" alt="Bebida Energética Monster 473ml"></div>
-                        <div class="descricao-produto">
-                            <p>Bebida Energética Monster 473ml</p>
-                            <span>Por apenas R$8,99</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Baly 473ml -->
-                        <div><img src="../assets/Produtos/Energeticos/bally473ml.png" alt="Energético Baly 473ml"></div>
-                        <div class="descricao-produto">
-                            <p>Energético Baly 473ml</p>
-                            <span>Por apenas  R$7,13</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Fusion 1L -->
-                        <div><img src="../assets/Produtos/Energeticos/fusion1l.png" alt="Energético Fusion 1L"></div>
-                        <div class="descricao-produto">
-                            <p>Energético Fusion 1L</p>
-                            <span>Por apenas  R$7,99</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Burn 1L -->
-                        <div><img src="../assets/Produtos/Energeticos/burn1l.png" alt="Energético Burn Original 1L"></div>
-                        <div class="descricao-produto">
-                            <p>Energético Burn Original 1L</p>
-                            <span>Por apenas  R$11,50</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                </div>
+            <div class="card-produto">
+              <!-- Becks 330ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Cervejas/10464-becks-long-neck-330ml-24un 1.png"
+                  alt=""
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Cerveja Heineken Long Neck 330ml</p>
+                <span>Por apenas R$6,49</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
             </div>
-            <div class="categoria-produto"> <!-- REFRIGERANTE CT -->
-                <div class="titulo-categotia-produto"> <!-- REFRIGERANTE -->
-                    <h2>Refrigerante</h2>
-                    <a href="#">Ver mais...</a>
-                </div>
-                <div class="nav-categoria-produto"> <!-- Navegação dos produtos -->
-                    <div class="card-produto"> <!-- Coca-Cola 2L -->
-                        <div><img src="../assets/Produtos/Refrigerantes/coca-cola2L.png" alt="Refrigerante Coca-Cola 2L"></div>
-                        <div class="descricao-produto">
-                            <p>Refrigerante Coca-Cola 2L</p>
-                            <span>Por apenas R$10,49</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Pepsi 2L -->
-                        <div><img src="../assets/Produtos/Refrigerantes/pepsi2L.png" alt="Refrigerante Pepsi 2L"></div>
-                        <div class="descricao-produto">
-                            <p>Refrigerante Pepsi 2L</p>
-                            <span>Por apenas R$7,99</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Coca-cola 350ml -->
-                        <div><img src="../assets/Produtos/Refrigerantes/coca-cola350ML.png" alt="Refrigerante Coca-cola 350ml"></div>
-                        <div class="descricao-produto">
-                            <p>Refrigerante Coca-cola 350ml</p>
-                            <span>Por apenas R$3,99</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Guaraná 350ml -->
-                        <div><img src="../assets/Produtos/Refrigerantes/guarana350ml.png" alt="Refrigerante Guaraná Antartica 350ml"></div>
-                        <div class="descricao-produto">
-                            <p>Refrigerante Guaraná Antartica 350ml</p>
-                            <span>Por apenas  R$2,59</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Itubaína 350ml -->
-                        <div><img src="../assets/Produtos/Refrigerantes/itubaina350ml.png" alt="Refrigerante Itubaína 350ml"></div>
-                        <div class="descricao-produto">
-                            <p>Refrigerante Itubaína 350ml</p>
-                            <span>Por apenas  R$2,79</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Soda 350ml -->
-                        <div><img src="../assets/Produtos/Refrigerantes/soda350ml.png" alt="Refrigerante Soda Limonada 350ml"></div>
-                        <div class="descricao-produto">
-                            <p>Refrigerante Soda Limonada 350ml</p>
-                            <span>Por apenas  R$3,99</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                </div>
-            </div>
-            <div class="categoria-produto"> <!-- GELO CT -->
-                <div class="titulo-categotia-produto"> <!-- GELO -->
-                <h2>Gelo</h2>
-                    <a href="#">Ver mais...</a>
-                </div>
-                <div class="nav-categoria-produto"> <!-- Navegação dos produtos -->
-                    <div class="card-produto"> <!-- Gelo Coco 200ml -->
-                        <div><img src="../assets/Produtos/Gelos/COCO-1.png" alt="Gelo Coco Leve Sabor Aguá de Coco 200ml"></div>
-                        <div class="descricao-produto">
-                            <p>Gelo Coco Leve Sabor Aguá de Coco 200ml</p>
-                            <span>Por apenas  R$3,59</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Gelo MELANCIA 200ml -->
-                        <div><img src="../assets/Produtos/Gelos/MELANCIA-copy-1.png" alt="Gelo Coco Leve Sabor Melancia 200ml"></div>
-                        <div class="descricao-produto">
-                            <p>Gelo Coco Leve Sabor Melancia 200ml</p>
-                            <span>Por apenas  R$3,59</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Gelo MARACUJA 200ml -->
-                        <div><img src="../assets/Produtos/Gelos/MARACUJA-1.png" alt="Gelo Coco Leve Sabor Marácuja 200ml"></div>
-                        <div class="descricao-produto">
-                            <p>Gelo Coco Leve Sabor Marácuja 200ml</p>
-                            <span>Por apenas  R$3,59</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    <div class="card-produto"> <!-- Gelo MORANGO 200ml -->
-                        <div><img src="../assets/Produtos/Gelos/MORANGO-1.png" alt="Gelo Coco Leve Sabor Morango 200ml"></div>
-                        <div class="descricao-produto">
-                            <p>GGelo Coco Leve Sabor Morango 200ml</p>
-                            <span>Por apenas  R$3,59</span>
-                        </div>
-                        <button class="btnRetirarNaLoja">Retire na loja</button>
-                    </div>
-                    
-                </div>
-            </div>
-            
+          </div>
         </div>
-
+        <div class="categoria-produto">
+          <!-- WHISKY CT -->
+          <div class="titulo-categotia-produto">
+            <!-- WHISKY -->
+            <h2>Whisky</h2>
+            <a href="/pages/prodWhisky.html">Ver mais...</a>
+          </div>
+          <div class="nav-categoria-produto">
+            <!-- Navegação dos produtos -->
+            <div class="card-produto">
+              <!-- Jack Daniel's 1L -->
+              <div>
+                <img src="../assets/Produtos/Whisky/jack-daniels.png" alt="" />
+              </div>
+              <div class="descricao-produto">
+                <p>Whisky Jack Daniel's 1L</p>
+                <span>Por apenas R$117,05</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Red Label 750 ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Whisky/Red-Label-750ml.png"
+                  alt=""
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Whisky Red Label 750 ml</p>
+                <span>Por apenas R$77,90</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- White Horse 1L -->
+              <div>
+                <img
+                  src="../assets/Produtos/Whisky/Whisky-White-Horse-1l.png"
+                  alt=""
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Whisky White Horse 1L</p>
+                <span>Por apenas R$79,94</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Bourbon 1L -->
+              <div>
+                <img
+                  src="../assets/Produtos/Whisky/Whiskey-Jim-Beam-White-Bourbon-1L.png"
+                  alt=""
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Whisky Jim Beam Bourbon 1L</p>
+                <span>Por apenas R$99,96</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+          </div>
+        </div>
+        <div class="categoria-produto">
+          <!-- GIN CT -->
+          <div class="titulo-categotia-produto">
+            <!-- GIN -->
+            <h2>Gin</h2>
+            <a href="/pages/prodGin.html">Ver mais...</a>
+          </div>
+          <div class="nav-categoria-produto">
+            <!-- Navegação dos produtos -->
+            <div class="card-produto">
+              <!-- Tanqueray  750 ml -->
+              <div>
+                <img src="../assets/Produtos/Gin/13992723 1.png" alt="" />
+              </div>
+              <div class="descricao-produto">
+                <p>Gin Tanqueray Dry 750 ml</p>
+                <span>Por apenas R$93,13</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Bombay 750 ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Gin/Gin-London-Dry-Bombay-Sapphire-Garrafa-750ml-.png"
+                  alt=""
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Gin Bombay Sapphire Dry London 750 ml</p>
+                <span>Por apenas R$97,90</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Gordons Pink 700 ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Gin/1648232355274-gingordonspink750ml.png"
+                  alt=""
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Gin Gordons Pink 700 ml</p>
+                <span>Por apenas R$67,62</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+          </div>
+        </div>
+        <div class="categoria-produto">
+          <!-- VODKA CT -->
+          <div class="titulo-categotia-produto">
+            <!-- VODKA -->
+            <h2>Vodka</h2>
+            <a href="/pages/prodVodka.html">Ver mais...</a>
+          </div>
+          <div class="nav-categoria-produto">
+            <!-- Navegação dos produtos -->
+            <div class="card-produto">
+              <!-- ASKOV 900ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Vodka/img_1200_1.png"
+                  alt="Vodka ASKOV 900ml"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Vodka ASKOV 900ml</p>
+                <span>Por apenas R$19,90</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Absolut 750ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Vodka/absolut-750ml.png"
+                  alt="Vodka Absolut Imported 750ml"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Vodka Absolut Imported 750ml</p>
+                <span>Por apenas R$16,71</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Balalaika 1L -->
+              <div>
+                <img
+                  src="../assets/Produtos/Vodka/img_500_1.png"
+                  alt="Vodka Balalaika 1L"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Vodka Balalaika 1L</p>
+                <span>Por apenas R$79,94</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Smirnoff 998ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Vodka/Vodka-Smirnoff-998ml.png"
+                  alt="Vodka Smirnoff 998ml"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Vodka Smirnoff 998ml</p>
+                <span>Por apenas R$34,99</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+          </div>
+        </div>
+        <div class="categoria-produto">
+          <!-- CACHAÇA CT -->
+          <div class="titulo-categotia-produto">
+            <!-- CACHAÇA -->
+            <h2>Cachaça</h2>
+            <a href="/pages/prodCachaca.html">Ver mais...</a>
+          </div>
+          <div class="nav-categoria-produto">
+            <!-- Navegação dos produtos -->
+            <div class="card-produto">
+              <!-- Corote 500Ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Cachaça/corote_Cachaça.png"
+                  alt="Cachaça Corote 500Ml"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Cachaça Corote 500Ml</p>
+                <span>Por apenas R$6,25</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Duelo 500Ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Cachaça/Caninha-Duelo-490ML.png"
+                  alt="Cachaça Duelo 500Ml"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Cachaça Duelo 500Ml</p>
+                <span>Por apenas R$3,59</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- 51 965Ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Cachaça/0005576_cachaca-adocada-pirassununga-51-965ml.png"
+                  alt="Cachaça 51 965Ml"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Cachaça 51 965Ml</p>
+                <span>Por apenas R$11,89</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Velho Barreiro 910Ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Cachaça/Cachaca-Adocada-Velho-Barreiro-910ml.png"
+                  alt="Cachaça Velho Barreiro 910Ml"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Cachaça Velho Barreiro 910Ml</p>
+                <span>Por apenas R$19,05</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Jurupinga 975ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Cachaça/Vinho-Branco-Jurupinga-Dinalle-975ml.png"
+                  alt="Cachaça Jurupinga Dinalle 975ml"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Cachaça Jurupinga Dinalle 975ml</p>
+                <span>Por apenas R$39,00</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Cabaré 700ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Cachaça/cabare.PNG.prata_.png"
+                  alt="Cachaça Cabaré Prata 700ml"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Cachaça Cabaré Prata 700ml</p>
+                <span>Por apenas R$48,70</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+          </div>
+        </div>
+        <div class="categoria-produto">
+          <!-- ENERGÉTICO CT -->
+          <div class="titulo-categotia-produto">
+            <!-- ENERGÉTICO -->
+            <h2>Energético</h2>
+            <a href="/pages/energetico.html">Ver mais...</a>
+          </div>
+          <div class="nav-categoria-produto">
+            <!-- Navegação dos produtos -->
+            <div class="card-produto">
+              <!-- Red Bull 250ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Energeticos/Bebida-Energetica-Red-Bull-250ml.png"
+                  alt="Energético Red Bull 250ml"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Energético Red Bull 250ml</p>
+                <span>Por apenas R$9,49</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- TNT 269ml -->
+              <div>
+                <img src="../assets/Produtos/Energeticos/tnt269ml.png" />
+              </div>
+              <div class="descricao-produto">
+                <p>Energético TNT 269ml</p>
+                <span>Por apenas R$6,59</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Monster 473ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Energeticos/monster473ml.png"
+                  alt="Bebida Energética Monster 473ml"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Bebida Energética Monster 473ml</p>
+                <span>Por apenas R$8,99</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Baly 473ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Energeticos/bally473ml.png"
+                  alt="Energético Baly 473ml"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Energético Baly 473ml</p>
+                <span>Por apenas R$7,13</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Fusion 1L -->
+              <div>
+                <img
+                  src="../assets/Produtos/Energeticos/fusion1l.png"
+                  alt="Energético Fusion 1L"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Energético Fusion 1L</p>
+                <span>Por apenas R$7,99</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Burn 1L -->
+              <div>
+                <img
+                  src="../assets/Produtos/Energeticos/burn1l.png"
+                  alt="Energético Burn Original 1L"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Energético Burn Original 1L</p>
+                <span>Por apenas R$11,50</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+          </div>
+        </div>
+        <div class="categoria-produto">
+          <!-- REFRIGERANTE CT -->
+          <div class="titulo-categotia-produto">
+            <!-- REFRIGERANTE -->
+            <h2>Refrigerante</h2>
+            <a href="/pages/prodRefrigerante.html">Ver mais...</a>
+          </div>
+          <div class="nav-categoria-produto">
+            <!-- Navegação dos produtos -->
+            <div class="card-produto">
+              <!-- Coca-Cola 2L -->
+              <div>
+                <img
+                  src="../assets/Produtos/Refrigerantes/coca-cola2L.png"
+                  alt="Refrigerante Coca-Cola 2L"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Refrigerante Coca-Cola 2L</p>
+                <span>Por apenas R$10,49</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Pepsi 2L -->
+              <div>
+                <img
+                  src="../assets/Produtos/Refrigerantes/pepsi2L.png"
+                  alt="Refrigerante Pepsi 2L"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Refrigerante Pepsi 2L</p>
+                <span>Por apenas R$7,99</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Coca-cola 350ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Refrigerantes/coca-cola350ML.png"
+                  alt="Refrigerante Coca-cola 350ml"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Refrigerante Coca-cola 350ml</p>
+                <span>Por apenas R$3,99</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Guaraná 350ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Refrigerantes/guarana350ml.png"
+                  alt="Refrigerante Guaraná Antartica 350ml"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Refrigerante Guaraná Antartica 350ml</p>
+                <span>Por apenas R$2,59</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Itubaína 350ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Refrigerantes/itubaina350ml.png"
+                  alt="Refrigerante Itubaína 350ml"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Refrigerante Itubaína 350ml</p>
+                <span>Por apenas R$2,79</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Soda 350ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Refrigerantes/soda350ml.png"
+                  alt="Refrigerante Soda Limonada 350ml"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Refrigerante Soda Limonada 350ml</p>
+                <span>Por apenas R$3,99</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+          </div>
+        </div>
+        <div class="categoria-produto">
+          <!-- GELO CT -->
+          <div class="titulo-categotia-produto">
+            <!-- GELO -->
+            <h2>Gelo</h2>
+            <a href="/pages/prodGelo.html">Ver mais...</a>
+          </div>
+          <div class="nav-categoria-produto">
+            <!-- Navegação dos produtos -->
+            <div class="card-produto">
+              <!-- Gelo Coco 200ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Gelos/COCO-1.png"
+                  alt="Gelo Coco Leve Sabor Aguá de Coco 200ml"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Gelo Coco Leve Sabor Aguá de Coco 200ml</p>
+                <span>Por apenas R$3,59</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Gelo MELANCIA 200ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Gelos/MELANCIA-copy-1.png"
+                  alt="Gelo Coco Leve Sabor Melancia 200ml"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Gelo Coco Leve Sabor Melancia 200ml</p>
+                <span>Por apenas R$3,59</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Gelo MARACUJA 200ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Gelos/MARACUJA-1.png"
+                  alt="Gelo Coco Leve Sabor Marácuja 200ml"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>Gelo Coco Leve Sabor Marácuja 200ml</p>
+                <span>Por apenas R$3,59</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+              <!-- Gelo MORANGO 200ml -->
+              <div>
+                <img
+                  src="../assets/Produtos/Gelos/MORANGO-1.png"
+                  alt="Gelo Coco Leve Sabor Morango 200ml"
+                />
+              </div>
+              <div class="descricao-produto">
+                <p>GGelo Coco Leve Sabor Morango 200ml</p>
+                <span>Por apenas R$3,59</span>
+              </div>
+              <button class="btnRetirarNaLoja">Retire na loja</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- Footer -->
     <footer>
+      <div id="icone-flutuante">
+        <a href="fale-conosco.html">
+          <span>Entre em contato</span>
+          <img
+            src="../assets/icons/whatsapp-icon.svg"
+            alt="Icone do WhatsApp"
+          />
+        </a>
+      </div>
 
-            <div id="icone-flutuante">
-                <a href="">
-                    <span>Entre em contato</span>
-                    <img src="../assets/icons/whatsapp-icon.svg" alt="Icone do WhatsApp">
-                </a>
-            </div>
+      <section>
+        <nav>
+          <div class="text-wrapper">
+            <h3>HORÁRIO DE ATENDIEMNTO</h3>
+            <p>De Qua. a Dom. das 18:00h ás 23:30h</p>
+          </div>
+          <div class="text-wrapper">
+            <h3>NOS SIGA NO INSTAGRAM</h3>
+            <a href="#">@lider_quebradaloungebar</a>
+          </div>
+          <div class="text-wrapper">
+            <h3>LOCALIZAÇÃO</h3>
+            <p>Rua Horma, 158 - São Paulo - SP CEP: 02984-000</p>
+          </div>
+        </nav>
+        <div class="footer-payment">
+          <h3>FORMAS DE PAGAMENTO</h3>
+          <div class="footer-payment-icons">
+            <img
+              src="../assets/icons/payment-icon-mastercard.png"
+              alt="Bandeira MasterCard"
+            />
+            <img
+              src="../assets/icons/payment-icon-visa.png"
+              alt="Bandeira Visa"
+            />
+            <img
+              src="../assets/icons/payment-icon-pix.png"
+              alt="Bandeira Pix"
+            />
+            <img
+              src="../assets/icons/payment-icon-elo.png"
+              alt="Bandeira Elo"
+            />
+            <img
+              src="../assets/icons/payment-icon-american.png"
+              alt="Bandeira American Express"
+            />
+          </div>
+        </div>
+      </section>
 
-            <section>
-                <nav>
-                    <div class="text-wrapper">
-                        <h3>HORÁRIO DE ATENDIEMNTO</h3>
-                        <p>De Qua. a Dom. das 18:00h ás 23:30h</p>
-                    </div>
-                    <div class="text-wrapper">
-                        <h3>NOS SIGA NO INSTAGRAM</h3>
-                        <a href="#">@lider_quebradaloungebar</a>
-                    </div>
-                    <div class="text-wrapper">
-                        <h3>LOCALIZAÇÃO</h3>
-                        <p>Rua Horma, 158 - São Paulo - SP CEP: 02984-000</p>
-                    </div>
-                </nav>
-                <div class="footer-payment">
-                    <h3>FORMAS DE PAGAMENTO</h3>
-                    <div class="footer-payment-icons">
-                        <img src="../assets/icons/payment-icon-mastercard.png" alt="Bandeira MasterCard">
-                        <img src="../assets/icons/payment-icon-visa.png" alt="Bandeira Visa">
-                        <img src="../assets/icons/payment-icon-pix.png" alt="Bandeira Pix">
-                        <img src="../assets/icons/payment-icon-elo.png" alt="Bandeira Elo">
-                        <img src="../assets/icons/payment-icon-american.png" alt="Bandeira American Express">
-                    </div>
-                </div>
-            </section>
-
-            <div class="mobile-app">
-                <h3>BAIXE NOSSO APLICATIVO </h3>
-                <ul>
-                    <img src="../assets/icons/apple-store-badge.svg" alt="Badge da App Store">
-                    <img src="../assets/icons/google-play-badge.svg" alt="Badge do Google Play Store">
-                </ul>
-            </div>
-
+      <div class="mobile-app">
+        <h3>BAIXE NOSSO APLICATIVO</h3>
+        <ul>
+          <img
+            src="../assets/icons/apple-store-badge.svg"
+            alt="Badge da App Store"
+          />
+          <img
+            src="../assets/icons/google-play-badge.svg"
+            alt="Badge do Google Play Store"
+          />
+        </ul>
+      </div>
     </footer>
 
     <!-- LINK COM O JS PRINCIPAL -->
     <script src="../JS/jquery-3.7.0.min.js"></script>
     <script src="../JS/script.js"></script>
-  
+
     <!-- LINK COM O JS DO JQUERY -->
     <!-- LINK COM O JS DO SLICK -->
     <script src="../slick/slick.js"></script>
     <script src="../slick/slick.min.js"></script>
-</body>
-
+  </body>
 </html>
