@@ -4,7 +4,7 @@
     var imagem = cardProduto.querySelector('.product-image').src;
     var productTitle = cardProduto.querySelector('.product-title').textContent;
     var productPrice = cardProduto.querySelector('.product-price').textContent;
-
+    var botao = document.querySelector('#modal-addtocart')
     var productDetails = {
         title: productTitle,
         image: imagem,
@@ -13,6 +13,13 @@
 
     localStorage.setItem('productDetails', JSON.stringify(productDetails));
 
+    botao.style.right = '0px'
+
+    setTimeout(function(){
+        botao.style.right = '-550px'
+     }, 5000)
+
+   
 }
 
 

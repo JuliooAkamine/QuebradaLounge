@@ -30,7 +30,6 @@ html {
   display: none;
 }
 
-
 .hidden {
   opacity: 0;
   transition: all 700ms;
@@ -840,7 +839,6 @@ footer .footer-payment-icons {
 
 /* Estilização Parte Compre Aqui */
 
-
 #compreAqui {
   background: radial-gradient(
     40.69% 40.69% at 49.88% 59.31%,
@@ -900,7 +898,6 @@ footer .footer-payment-icons {
   border-radius: 22px;
 }
 
-
 .img-amostra-produtos {
   width: 100%;
 }
@@ -921,16 +918,16 @@ footer .footer-payment-icons {
 }
 
 .card-produtos-home:nth-child(1) {
-    background-color: #F9E900;
+  background-color: #f9e900;
 }
 .card-produtos-home:nth-child(2) {
-    background-color: #007F2D;
+  background-color: #007f2d;
 }
 .card-produtos-home:nth-child(3) {
-    background-color: #D96207;
+  background-color: #d96207;
 }
 .card-produtos-home:nth-child(4) {
-    background-color: #C71825;
+  background-color: #c71825;
 }
 
 .card-produtos-home-info {
@@ -938,8 +935,9 @@ footer .footer-payment-icons {
 
   background: #171612;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  p, span {
-    color: #FFFDE2;
+  p,
+  span {
+    color: #fffde2;
     font-family: Poppins;
     font-size: 9px;
     font-style: normal;
@@ -1592,41 +1590,42 @@ footer .footer-payment-icons {
     margin: 0;
   }
 }
+@media screen and (max-width: 425px) {
+  #modal-addtocart {
+    font-size: 12px;
+  }
+}
 
 /* TELAS de 500px a cima */
-@media screen and (min-width:500px) {
+@media screen and (min-width: 500px) {
   /* Parte HOME */
-    /* Tirando a escala e adicionando uma largura máxima */
-    .produtos {
-      scale: none;
-      max-width: 850px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      margin: 0 4%;
-    }
+  /* Tirando a escala e adicionando uma largura máxima */
+  .produtos {
+    scale: none;
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin: 0 4%;
+  }
 
-    .card-produtos-home-img {
-      img {
-        width: 100%;
-      }
+  .card-produtos-home-img {
+    img {
+      width: 100%;
     }
-  
-  
-    /* Adicionando uma largura máxima para o botão */
-    #btn-produtos {
-      max-width: 735px;
-      padding: 1% 0;
-      margin: 40px auto 0;
-    }
+  }
 
-  
+  /* Adicionando uma largura máxima para o botão */
+  #btn-produtos {
+    max-width: 735px;
+    padding: 1% 0;
+    margin: 40px auto 0;
+  }
 }
 
 /* TELAS 720px */
 
-@media screen and (min-width:720px){
-
+@media screen and (min-width: 720px) {
   /* Parte HOME */
   /* Imagem do carrosel com altura de 400px */
   .imgbanner {
@@ -1656,8 +1655,6 @@ footer .footer-payment-icons {
     height: 500px;
   }
 
-
-
   /* Parte Footer */
   footer {
     padding: 4%;
@@ -1665,10 +1662,9 @@ footer .footer-payment-icons {
     section {
       flex-direction: row;
     }
-    
   }
   /* Aumentando tamanho no ícone e da fonte e posicionando corretamente */
-  #icone-flutuante  {
+  #icone-flutuante {
     top: -48px;
     right: 14px;
 
@@ -1685,19 +1681,66 @@ footer .footer-payment-icons {
   /* Header */
   header {
     padding: 0;
-    width: 850px;
-    margin: auto;
     nav {
       padding: 0;
       display: flex;
       flex-direction: column;
-      
+      margin: 0 16%;
       div {
+        /* Navegação 1 */
         grid-template-columns: auto 1fr auto;
         align-items: center;
-        gap: none;
+        gap: 25px;
+      }
+
+      ul {
+        /* Navegação 2 */
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        list-style: none;
+        li {
+            padding-bottom: 30px;
+            a {
+              color: #000;
+              font-family: Poppins;
+              font-size: clamp(14px, 1vw, 20px);
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+              text-decoration: none;
+            }
+            
+        }
+
+         
       }
     }
+  }
+  /* Bloco onde está ícone de Perfil e Carrinho */
+  .profile-wrapper {
+    display: flex;
+    gap: 25px;
+  }
+  .profile-wrapper a {
+    cursor: pointer;
+  }
+  .profile-wrapper a:hover {
+    opacity: 0.8;
+  }
+
+  .profile-wrapper a:first-child {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #000;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
 
   /* Parte "VER TODOS OS PRODUTOS" */
@@ -1723,13 +1766,13 @@ footer .footer-payment-icons {
     padding: 0;
 
     p {
-      color: #FFFDE2;
+      color: #fffde2;
       font-size: 16px;
       font-family: Poppins;
     }
 
     span {
-      color: #FFFDE2;
+      color: #fffde2;
       font-family: Raleway;
       font-size: 16px;
     }
@@ -1764,11 +1807,59 @@ footer .footer-payment-icons {
   -moz-filter: brightness(100%);
 }
 .frame-contendo-VerTodosOsProdutos:hover #btn-produtos {
-  background: rgb(249,233,0);
-  background: -moz-radial-gradient(circle, rgba(249,233,0,1) 0%, rgba(0,0,0,1) 100%);
-  background: -webkit-radial-gradient(circle, rgba(249,233,0,1) 0%, rgba(0,0,0,1) 100%);
-  background: radial-gradient(circle, rgba(249,233,0,1) 0%, rgba(0,0,0,1) 100%);
+  background: rgb(249, 233, 0);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(249, 233, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(249, 233, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(249, 233, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f9e900",endColorstr="#000000",GradientType=1);
   color: black;
 }
 
+/* /////////////////////////////////////////////////////////////// */
+
+/* Modal produto adicionado ao carrinho */
+
+#modal-addtocart {
+  position: fixed;
+  background-color: white;
+
+  bottom: 80%;
+  max-width: 400px;
+
+  scale: 0.8;
+  font-family: poppins;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: -5px 5px rgba(0, 0, 0, 0.412);
+  right: -510px;
+  z-index: 1000;
+  transition: ease-in-out 400ms;
+}
+
+
+/* modal 18anos */
+#container-modal-18anos{
+  z-index: 1000;
+  position: fixed;
+  background-color: white;
+  width: 300px;
+  padding: 25px;
+  border-radius: 15px;  
+}
+
+#modal-18anos{
+ width: fit-content;
+ margin: 0 auto;
+}

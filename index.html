@@ -1,327 +1,454 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- API DE FONTES DO GOOGLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- API DE FONTES DO GOOGLE -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
+    <!-- API ICONES GOOGLE -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- LINK PARA ADICIONAR FAVICON -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.svg" />
+    <!-- LINK COM O CSS PRINCIPAL -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Link com o css do slick -->
+    <link rel="stylesheet" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="slick/slick.css" />
 
-  <!-- API ICONES GOOGLE -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <!-- LINK PARA ADICIONAR FAVICON -->
-  <link rel="icon" type="image/x-icon" href="assets/favicon.svg" />
-  <!-- LINK COM O CSS PRINCIPAL -->
-  <link rel="stylesheet" href="css/style.css" />
-  <!-- Link com o css do slick -->
-  <link rel="stylesheet" href="slick/slick-theme.css" />
-  <link rel="stylesheet" href="slick/slick.css" />
+    <title>Quebrada Lounge & Bar</title>
+  </head>
 
-  <title>Quebrada Loung & Bar</title>
-</head>
+  <body>
+    <!-- modal 18anos -->
+    
+    <header>
+      <h1 class="frame-hide">
+        <!-- HIDEN -->
+        <img
+          id="logo-img-mobile"
+          src="assets/icons/Letreiro.png"
+          alt="logo-quebrada-lounge-mobile"
+        />
+      </h1>
 
-<body>
-  <header>
-    <h1 class="frame-hide"> <!-- HIDEN -->
-      <img id="logo-img-mobile" src="assets/icons/Letreiro.png" alt="logo-quebrada-lounge-mobile" />
-    </h1>
+      <nav>
+        <div>
+          <!-- Navegação 1  -->
+          <!-- Logo Desktop -->
+          <h1>
+            <img
+              src="assets/icons/logo-desktop.svg"
+              alt="Quebrada Loung & Bar"
+            />
+          </h1>
 
-    <nav>
-      <div>
-        <!-- Logo Desktop -->
-        <h1><img src="assets/icons/logo-desktop.svg" alt=""></h1>
-
-        <!-- Botão menu hamburguer -->
-        <img src="assets/icons/Menu Hamburguer.png" alt="Icone de menu Hamburguer" onclick="openNav()" class="frame-hide"/> <!-- HIDEN -->
-        <!-- Input de pesquisa -->
-        <form action="#">
-          <label for="barra-pesquisa" class="label-escondido">Pesquise o produto</label>
-          <input id="barra-pesquisa" type="text" name="barra-pesquisa" placeholder="Pesquisar..." />
-        </form>
-        <!-- Botão carrinho -->
-        <!-- Mobile -->
-        <a href="pages/carrinho.html" class="frame-hide"><img src="assets/icons/Icone-Carrinho.png" alt="Icone de carrinho" /></a> <!-- HIDEN -->
-        <!-- Desktop -->
-        <div class="profile-wrapper">
-          <a href="pages/Entrar.html">
-            <img src="assets/icons/PROFILE-ICON.png" alt="ícone de perfil">
-            <p>Olá, Faça seu login</p>
-          </a>
-          <a href="pages/carrinho.html">
-            <img src="assets/icons/carrinho-sem-nome.svg" alt="ícone de carrinho">
-          </a>
+          <!-- Botão menu hamburguer -->
+          <img
+            src="assets/icons/Menu Hamburguer.png"
+            alt="Icone de menu Hamburguer"
+            onclick="openNav()"
+            class="frame-hide"
+          />
+          <!-- HIDEN -->
+          <!-- Input de pesquisa -->
+          <form action="#">
+            <label for="barra-pesquisa" class="label-escondido"
+              >Pesquise o produto</label
+            >
+            <input
+              id="barra-pesquisa"
+              type="text"
+              name="barra-pesquisa"
+              placeholder="Pesquisar..."
+            />
+          </form>
+          <!-- Botão carrinho -->
+          <!-- Mobile -->
+          <a href="pages/carrinho.html" class="frame-hide"
+            ><img src="assets/icons/Icone-Carrinho.png" alt="Icone de carrinho"
+          /></a>
+          <!-- HIDEN -->
+          <!-- Desktop -->
+          <div class="profile-wrapper">
+            <a href="pages/Entrar.html">
+              <img src="assets/icons/PROFILE-ICON.png" alt="ícone de perfil" />
+              <p>Olá, Faça seu login</p>
+            </a>
+            <a href="pages/carrinho.html">
+              <img
+                src="assets/icons/carrinho-sem-nome.svg"
+                alt="ícone de carrinho"
+              />
+            </a>
+          </div>
         </div>
-      </div>
-      
-    </nav>
-  </header>
+        <ul>
+          <!-- Navegação 2 -->
+          <li>
+            <a href="#">HOME</a>
+            <hr />
+          </li>
+          <li><a href="pages/destaques.html">PRODUTOS</a> <hr></li>
+          <li><a href="pages/localizacao.html">LOCALIZAÇÃO</a> <hr></li>
+          <li><a href="pages/shows.html">SHOWS</a> <hr></li>
+          <li><a href="pages/nos-conheca.html">NOS CONHEÇA</a> <hr></li>
+          <li><a href="pages/">FALE CONOSCO</a> <hr></li>
+        </ul>
+      </nav>
+    </header>
 
-  <!-- 
+    <!-- 
         !!MENU LATERAL!!
         Overlay slider in-out
         **Aplicação de fundo opaco
     -->
-  <div id="fechar-menu" onclick="closeNav()"></div>
-  <div id="sidenav-overlay">
-    <div id="menu-header">
-      <!-- Cabeçalho Menu-Lateral -->
-      <nav>
-        <div>
-          <img src="assets/icons/perfil-icon.svg" alt="Logo Quebrada Lounge" />
-          <a href="pages/Entrar.html">Entrar</a>
-          <!-- LOGIN -->
-        </div>
-        <img src="assets/icons/logo-desktop.svg" alt="Logo Quebrada Lounge" />
-      </nav>
-      <button>Promoções</button>
+    <div id="fechar-menu" onclick="closeNav()"></div>
+    <div id="sidenav-overlay">
+      <div id="menu-header">
+        <!-- Cabeçalho Menu-Lateral -->
+        <nav>
+          <div>
+            <img
+              src="assets/icons/perfil-icon.svg"
+              alt="Logo Quebrada Lounge"
+            />
+            <a href="pages/Entrar.html">Entrar</a>
+            <!-- LOGIN -->
+          </div>
+          <img src="assets/icons/logo-desktop.svg" alt="Logo Quebrada Lounge" />
+        </nav>
+        <button>Promoções</button>
+      </div>
+      <div id="menu-nav">
+        <!-- NAVEGAÇÃO -->
+        <nav>
+          <ul>
+            <li>
+              <!-- HOME -->
+              <a href="/index.html">
+                <img
+                  src="assets/icons/inicio-icon.png"
+                  alt="Icone da página home"
+                />
+                <p>Inicio</p>
+              </a>
+            </li>
+            <li>
+              <!-- PRODUCTS -->
+              <a href="pages/destaques.html">
+                <img
+                  src="assets/icons/produtos-icon.png"
+                  alt="Icone da página home"
+                />
+                <p>Produtos</p>
+              </a>
+            </li>
+            <li>
+              <!-- LOCATION -->
+              <a href="/pages/localizacao.html">
+                <img
+                  src="assets/icons/localizacao-icon.png"
+                  alt="Icone da página home"
+                />
+                <p>Localização</p>
+              </a>
+            </li>
+            <li>
+              <!-- SHOWS -->
+              <a href="/pages/shows.html">
+                <img
+                  src="assets/icons/shows-icon.png"
+                  alt="Icone da página home"
+                />
+                <p>Shows</p>
+              </a>
+            </li>
+            <li>
+              <!-- Contact us -->
+              <a href="/pages/fale-conosco.html">
+                <img
+                  src="assets/icons/faleCosnosco.png"
+                  alt="Icone da página home"
+                />
+                <p>Fale conoscos</p>
+              </a>
+            </li>
+            <li>
+              <!-- KNOW US -->
+              <a href="/pages/nos-conheca.html">
+                <img
+                  src="assets/icons/nosConheca.png"
+                  alt="Icone da página home"
+                />
+                <p>Nos conheça</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="menu-footer">
+        <!-- Rodapé Menu-lateral -->
+        <p>Nos siga no instagram</p>
+        <a
+          href="https://www.instagram.com/lider_quebradaloungebar/"
+          target="_blank"
+          >@lider_quebradaloungebar</a
+        >
+      </div>
     </div>
-    <div id="menu-nav">
-      <!-- NAVEGAÇÃO -->
-      <nav>
-        <ul>
-          <li>
-            <!-- HOME -->
-            <a href="/index.html">
-              <img src="assets/icons/inicio-icon.png" alt="Icone da página home" />
-              <p>Inicio</p>
-            </a>
-          </li>
-          <li>
-            <!-- PRODUCTS -->
-            <a href="pages/destaques.html">
-              <img src="assets/icons/produtos-icon.png" alt="Icone da página home" />
-              <p>Produtos</p>
-            </a>
-          </li>
-          <li>
-            <!-- LOCATION -->
-            <a href="/pages/localizacao.html">
-              <img src="assets/icons/localizacao-icon.png" alt="Icone da página home" />
-              <p>Localização</p>
-            </a>
-          </li>
-          <li>
-            <!-- SHOWS -->
-            <a href="/pages/shows.html">
-              <img src="assets/icons/shows-icon.png" alt="Icone da página home" />
-              <p>Shows</p>
-            </a>
-          </li>
-          <li>
-            <!-- Contact us -->
-            <a href="/pages/fale-conosco.html">
-              <img src="assets/icons/faleCosnosco.png" alt="Icone da página home" />
-              <p>Fale conoscos</p>
-            </a>
-          </li>
-          <li>
-            <!-- KNOW US -->
-            <a href="/pages/nos-conheca.html">
-              <img src="assets/icons/nosConheca.png" alt="Icone da página home" />
-              <p>Nos conheça</p>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div id="menu-footer">
-      <!-- Rodapé Menu-lateral -->
-      <p>Nos siga no instagram</p>
-      <a href="https://www.instagram.com/lider_quebradaloungebar/" target="_blank">@lider_quebradaloungebar</a>
-    </div>
-  </div>
 
-  <!-- Inicio do conteúdo do site
+    <!-- Inicio do conteúdo do site
     -->
-  <!-- carrosel -->
-
-  <div class="carrosel">
-    <div>
-      <a href="pages/prodCervejas.html">
-        <img class="imgbanner" src="assets/Banners/Banner-Skol.png" alt="foto-ilustrativa-skol" />
-      </a>
-    </div>
-    <div>
-      <a href="pages/prodWhisky.html">
-        <img class="imgbanner" id="carrosel-img2" src="assets/Banners/Jack Daniels.png"
-          alt="foto-ilustrativa-jack-daniels" />
-      </a>
-    </div>
-    <div>
-      <a href="pages/destaques.html">
-        <img class="imgbanner" id="carrosel-img3" src="assets/Banners/Banner-Pormoções.png"
-          alt="foto-ilustrativa-promoções" />
-      </a>
-    </div>
-  </div>
-
-  <main>
-    <!-- CONTEÚDO PRINCIPAL -->
-
-    <div id="compreAqui">
-      <!-- CHAMATIVA "COMPRE AQUI" -->
-      <section>
-        <h2 class="h2Home">Compre aqui e retire na loja</h2>
-      </section>
-
-      <div class="grid-compre-aqui">
-        <a href="pages/cervejas.html">
-          <img class="img-destaque hidden" src="assets/Prod Destaque Home/heineken.png"
-            alt="Imagem ilustrativa Heineken" />
-        </a>
-        <a href="pages/prodWhisky.html">
-          <img class="img-destaque hidden" src="assets/Prod Destaque Home/jackdaniels.png"
-            alt="Imagem ilustrativa Jack Daniels" />
-        </a>
-        <a href="pages/prodGin.html" class="img-destaque" >
-          <img class=" img-destaque hidden" src="assets/Prod Destaque Home/tanqueray.png"
-            alt="Imagem ilustrativa Tanqueray" />
-        </a>
-      </div>
-    </div>
-    <!-- PRODUTOS DESTAQUE -->
-
-    <div id="container-produtos" class="hidden">
-      <div class="produtos">
-        <div class="card-produtos-home">
-          <div class="card-produtos-home-img">
-            <img src="assets/Prod Destaque Home/ilustracao-Skol.svg" alt="Imagem ilustrativa da Budweiser">
-          </div>
-          <div class="card-produtos-home-info">
-            <p>Cerveja Skol Pilsen 269ml</p>
-            <span>R$2,79</span>
-          </div>
+    <!-- carrosel -->
+    <main>
+      <div class="carrosel">
+        <div>
+          <a href="pages/prodCervejas.html">
+            <img
+              class="imgbanner"
+              src="assets/Banners/Banner-Skol.png"
+              alt="foto-ilustrativa-skol"
+            />
+          </a>
         </div>
-        <div class="card-produtos-home">
-          <div class="card-produtos-home-img">
-            <img src="assets/Prod Destaque Home/ilustracao-Heineken.svg" alt="Imagem ilustrativa da Heineken">
-          </div>
-          <div class="card-produtos-home-info">
-            <p>Cerveja Skol Pilsen 269ml</p>
-            <span>R$2,79</span>
-          </div>
+        <div>
+          <a href="pages/prodWhisky.html">
+            <img
+              class="imgbanner"
+              id="carrosel-img2"
+              src="assets/Banners/Jack Daniels.png"
+              alt="foto-ilustrativa-jack-daniels"
+            />
+          </a>
         </div>
-        <div class="card-produtos-home">
-          <div class="card-produtos-home-img">
-            <img src="assets/Prod Destaque Home/ilustracao-Jackdaniels.svg" alt="Imagem ilustrativa da Jack Daniel's">
-          </div>
-          <div class="card-produtos-home-info">
-            <p>Cerveja Skol Pilsen 269ml</p>
-            <span>R$2,79</span>
-          </div>
+        <div>
+          <a href="pages/destaques.html">
+            <img
+              class="imgbanner"
+              id="carrosel-img3"
+              src="assets/Banners/Banner-Pormoções.png"
+              alt="foto-ilustrativa-promoções"
+            />
+          </a>
         </div>
-        <div class="card-produtos-home">
-          <div class="card-produtos-home-img">
-            <img src="assets/Prod Destaque Home/ilustracao-Budweiser.svg" alt="Imagem ilustrativa da Budweiser">
-          </div>
-          <div class="card-produtos-home-info">
-            <p>Cerveja Skol Pilsen 269ml</p>
-            <span>R$2,79</span>
-          </div>
-        </div>
-        
       </div>
 
-      <button id="btn-produtos" class="frame-hideBTN">ver todos os produtos</button>
-      <a href="pages/destaques.html" class="link-style-none">
-        <div class="frame-contendo-VerTodosOsProdutos frame-hide">
-          <div><img src="assets/Prod Destaque Home/IMG-VerTodosOsProdutos.png" alt=""></div>
-          <button id="btn-produtos">ver todos os produtos</button>
-        </div>
-      </a>
-    </div>
+      <!-- CONTEÚDO PRINCIPAL -->
 
-    <div id="container-shows">
-      <div id="img-chamativa-shows">
-        <img id="img-shows-home" src="assets/Shows/Snapinsta 4.png" alt="" />
+      <div id="compreAqui">
+        <!-- CHAMATIVA "COMPRE AQUI" -->
+        <section>
+          <h2 class="h2Home">Compre aqui e retire na loja</h2>
+        </section>
+
+        <div class="grid-compre-aqui">
+          <a href="pages/cervejas.html">
+            <img
+              class="img-destaque hidden"
+              src="assets/Prod Destaque Home/heineken.png"
+              alt="Imagem ilustrativa Heineken"
+            />
+          </a>
+          <a href="pages/prodWhisky.html">
+            <img
+              class="img-destaque hidden"
+              src="assets/Prod Destaque Home/jackdaniels.png"
+              alt="Imagem ilustrativa Jack Daniels"
+            />
+          </a>
+          <a href="pages/prodGin.html" class="img-destaque">
+            <img
+              class="img-destaque hidden"
+              src="assets/Prod Destaque Home/tanqueray.png"
+              alt="Imagem ilustrativa Tanqueray"
+            />
+          </a>
+        </div>
       </div>
-      <div id="chamativa-shows-home">
-        <!-- CHAMATIVA SHOWS -->
-        <!--
+      <!-- PRODUTOS DESTAQUE -->
+
+      <div id="container-produtos" class="hidden">
+        <div class="produtos">
+          <div class="card-produtos-home">
+            <div class="card-produtos-home-img">
+              <img
+                src="assets/Prod Destaque Home/ilustracao-Skol.svg"
+                alt="Imagem ilustrativa da Budweiser"
+              />
+            </div>
+            <div class="card-produtos-home-info">
+              <p>Cerveja Skol Pilsen 269ml</p>
+              <span>R$2,79</span>
+            </div>
+          </div>
+          <div class="card-produtos-home">
+            <div class="card-produtos-home-img">
+              <img
+                src="assets/Prod Destaque Home/ilustracao-Heineken.svg"
+                alt="Imagem ilustrativa da Heineken"
+              />
+            </div>
+            <div class="card-produtos-home-info">
+              <p>Cerveja Skol Pilsen 269ml</p>
+              <span>R$2,79</span>
+            </div>
+          </div>
+          <div class="card-produtos-home">
+            <div class="card-produtos-home-img">
+              <img
+                src="assets/Prod Destaque Home/ilustracao-Jackdaniels.svg"
+                alt="Imagem ilustrativa da Jack Daniel's"
+              />
+            </div>
+            <div class="card-produtos-home-info">
+              <p>Cerveja Skol Pilsen 269ml</p>
+              <span>R$2,79</span>
+            </div>
+          </div>
+          <div class="card-produtos-home">
+            <div class="card-produtos-home-img">
+              <img
+                src="assets/Prod Destaque Home/ilustracao-Budweiser.svg"
+                alt="Imagem ilustrativa da Budweiser"
+              />
+            </div>
+            <div class="card-produtos-home-info">
+              <p>Cerveja Skol Pilsen 269ml</p>
+              <span>R$2,79</span>
+            </div>
+          </div>
+        </div>
+
+        <button id="btn-produtos" class="frame-hideBTN">
+          ver todos os produtos
+        </button>
+        <a href="pages/destaques.html" class="link-style-none">
+          <div class="frame-contendo-VerTodosOsProdutos frame-hide">
+            <div>
+              <img
+                src="assets/Prod Destaque Home/IMG-VerTodosOsProdutos.png"
+                alt=""
+              />
+            </div>
+            <button id="btn-produtos">ver todos os produtos</button>
+          </div>
+        </a>
+      </div>
+
+      <div id="container-shows">
+        <div id="img-chamativa-shows">
+          <img id="img-shows-home" src="assets/Shows/Snapinsta 4.png" alt="" />
+        </div>
+        <div id="chamativa-shows-home">
+          <!-- CHAMATIVA SHOWS -->
+          <!--
                   Estou pensando em colocar a imagem mesclando o fundo com
                   degrade, tudo no css.
                   APENAS UM TESTE, QUALQUER COISA ADICIONAR IMAGEM PELO PRÓPRIO HTML
                -->
-        <h1 class="h2Home hidden">
-          CONTAMOS COM <br />
-          SHOWS <br />
-          AO VIVO
-        </h1>
-        <a class="hidden" href="pages/shows.html" id="text-show-home">Confira a disponibilidade para shows</a>
-      </div>
-      <div id="localizacao-home">
-        <!-- LOCALIZAÇÃO -->
+          <h1 class="h2Home hidden">
+            CONTAMOS COM <br />
+            SHOWS <br />
+            AO VIVO
+          </h1>
+          <a class="hidden" href="pages/shows.html" id="text-show-home"
+            >Confira a disponibilidade para shows</a
+          >
+        </div>
+        <div id="localizacao-home">
+          <!-- LOCALIZAÇÃO -->
 
-        <iframe id="google-maps-location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.295622796691!2d-46.72316072377011!3d-23.449798757504773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cefbc5c5487481%3A0xf0e86da1b07bc889!2sR.%20Horma%2C%20158%20-%20Jardim%20Pirituba%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002984-000!5e0!3m2!1spt-BR!2sbr!4v1708622569334!5m2!1spt-BR!2sbr"
-          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+          <iframe
+            id="google-maps-location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.295622796691!2d-46.72316072377011!3d-23.449798757504773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cefbc5c5487481%3A0xf0e86da1b07bc889!2sR.%20Horma%2C%20158%20-%20Jardim%20Pirituba%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002984-000!5e0!3m2!1spt-BR!2sbr!4v1708622569334!5m2!1spt-BR!2sbr"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
 
-        <div id="text-location-home">
-          <h3 id="title-location-home">Venha no conhecer</h3>
-          <span id="span-location-home">Clique no mapa e trace seu destino</span>
+          <div id="text-location-home">
+            <h3 id="title-location-home">Venha no conhecer</h3>
+            <span id="span-location-home"
+              >Clique no mapa e trace seu destino</span
+            >
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <!-- FOOTER -->
-  <footer class="#">
-    <div id="icone-flutuante">
-      <a href="">
-        <span>Entre em contato</span>
-        <img src="assets/icons/whatsapp-icon.svg" alt="Icone do WhatsApp" />
-      </a>
-    </div>
-
-    <section>
-      <nav>
-        <div class="text-wrapper">
-          <h3>HORÁRIO DE ATENDIEMNTO</h3>
-          <p>De Qua. a Dom. das 18:00h ás 23:30h</p>
-        </div>
-        <div class="text-wrapper">
-          <h3>NOS SIGA NO INSTAGRAM</h3>
-          <a href="#" class="link-style-none">@lider_quebradaloungebar</a>
-        </div>
-        <div class="text-wrapper">
-          <h3>LOCALIZAÇÃO</h3>
-          <p>Rua Horma, 158 - São Paulo - SP CEP: 02984-000</p>
-        </div>
-      </nav>
-      <div class="footer-payment">
-        <h3>FORMAS DE PAGAMENTO</h3>
-        <div class="footer-payment-icons">
-          <img src="assets/icons/payment-icon-mastercard.png" alt="Bandeira MasterCard" />
-          <img src="assets/icons/payment-icon-visa.png" alt="Bandeira Visa" />
-          <img src="assets/icons/payment-icon-pix.png" alt="Bandeira Pix" />
-          <img src="assets/icons/payment-icon-elo.png" alt="Bandeira Elo" />
-          <img src="assets/icons/payment-icon-american.png" alt="Bandeira American Express" />
-        </div>
+    <!-- FOOTER -->
+    <footer class="#">
+      <div id="icone-flutuante">
+        <a href="">
+          <span>Entre em contato</span>
+          <img src="assets/icons/whatsapp-icon.svg" alt="Icone do WhatsApp" />
+        </a>
       </div>
-    </section>
 
-    <div class="mobile-app">
-      <h3>BAIXE NOSSO APLICATIVO</h3>
-      <ul>
-        <img src="assets/icons/apple-store-badge.png" alt="Badge da App Store" />
-        <img src="assets/icons/google-play-badge.png" alt="Badge do Google Play Store" />
-      </ul>
-    </div>
-  </footer>
-  <!-- LINK COM O JS PRINCIPAL -->
-  <script src="JS/jquery-3.7.0.min.js"></script>
-  <script src="JS/script.js"></script>
+      <section>
+        <nav>
+          <div class="text-wrapper">
+            <h3>HORÁRIO DE ATENDIEMNTO</h3>
+            <p>De Qua. a Dom. das 18:00h ás 23:30h</p>
+          </div>
+          <div class="text-wrapper">
+            <h3>NOS SIGA NO INSTAGRAM</h3>
+            <a href="#" class="link-style-none">@lider_quebradaloungebar</a>
+          </div>
+          <div class="text-wrapper">
+            <h3>LOCALIZAÇÃO</h3>
+            <p>Rua Horma, 158 - São Paulo - SP CEP: 02984-000</p>
+          </div>
+        </nav>
+        <div class="footer-payment">
+          <h3>FORMAS DE PAGAMENTO</h3>
+          <div class="footer-payment-icons">
+            <img
+              src="assets/icons/payment-icon-mastercard.png"
+              alt="Bandeira MasterCard"
+            />
+            <img src="assets/icons/payment-icon-visa.png" alt="Bandeira Visa" />
+            <img src="assets/icons/payment-icon-pix.png" alt="Bandeira Pix" />
+            <img src="assets/icons/payment-icon-elo.png" alt="Bandeira Elo" />
+            <img
+              src="assets/icons/payment-icon-american.png"
+              alt="Bandeira American Express"
+            />
+          </div>
+        </div>
+      </section>
 
-  <!-- LINK COM O JS DO JQUERY -->
-  <!-- LINK COM O JS DO SLICK -->
-  <script src="slick/slick.js"></script>
-  <script src="slick/slick.min.js"></script>
-</body>
+      <div class="mobile-app">
+        <h3>BAIXE NOSSO APLICATIVO</h3>
+        <ul>
+          <img
+            src="assets/icons/apple-store-badge.png"
+            alt="Badge da App Store"
+          />
+          <img
+            src="assets/icons/google-play-badge.png"
+            alt="Badge do Google Play Store"
+          />
+        </ul>
+      </div>
+    </footer>
+    <!-- LINK COM O JS PRINCIPAL -->
+    <script src="JS/jquery-3.7.0.min.js"></script>
+    <script src="JS/script.js"></script>
 
+    <!-- LINK COM O JS DO JQUERY -->
+    <!-- LINK COM O JS DO SLICK -->
+    <script src="slick/slick.js"></script>
+    <script src="slick/slick.min.js"></script>
+  </body>
 </html>
