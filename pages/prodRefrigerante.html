@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="/JS/adicionarAoCarrinho.js"></script>
   </head>
   <body>
     <header>
@@ -213,75 +214,73 @@
             <!-- TÍTULO -->
             <h2>Refrigerante</h2>
           </div>
-            <div class="nav-categoria-produto nav-categoria">
-                <div class="card-produto"> <!-- Coca-Cola 2L -->
-                    <div><img src="../assets/Produtos/Refrigerantes/coca-cola2L.png" alt="Refrigerante Coca-Cola 2L"></div>
-                    <div class="descricao-produto">
-                        <p>Refrigerante Coca-Cola 2L</p>
-                        <span>Por apenas R$10,49</span>
-                    </div>
-                    <button id="btnRetirarNaLoja">Retire na loja</button>
+          <div class="nav-categoria-produto nav-categoria">
+            <div class="card-produto">
+                <div><img class="product-image" src="../assets/Produtos/Refrigerantes/coca-cola2L.png" alt="Refrigerante Coca-Cola 2L"></div>
+                <div class="descricao-produto">
+                    <p class="product-title">Refrigerante Coca-Cola 2L</p>
+                    <span class="product-price">Por apenas R$10,49</span>
                 </div>
-                <div class="card-produto"> <!-- Pepsi 2L -->
-                    <div><img src="../assets/Produtos/Refrigerantes/pepsi2L.png" alt="Refrigerante Pepsi 2L"></div>
-                    <div class="descricao-produto">
-                        <p>Refrigerante Pepsi 2L</p>
-                        <span>Por apenas R$7,99</span>
-                    </div>
-                    <button id="btnRetirarNaLoja">Retire na loja</button>
-                </div>
-                <div class="card-produto"> <!-- Coca-cola 350ml -->
-                    <div><img src="../assets/Produtos/Refrigerantes/coca-cola350ML.png" alt="Refrigerante Coca-cola 350ml"></div>
-                    <div class="descricao-produto">
-                        <p>Refrigerante Coca-cola 350ml</p>
-                        <span>Por apenas R$3,99</span>
-                    </div>
-                    <button id="btnRetirarNaLoja">Retire na loja</button>
-                </div>
-                <div class="card-produto"> <!-- Guaraná 350ml -->
-                    <div><img src="../assets/Produtos/Refrigerantes/guarana350ml.png" alt="Refrigerante Guaraná Antartica 350ml"></div>
-                    <div class="descricao-produto">
-                        <p>Refrigerante Guaraná Antartica 350ml</p>
-                        <span>Por apenas  R$2,59</span>
-                    </div>
-                    <button id="btnRetirarNaLoja">Retire na loja</button>
-                </div>
-                <div class="card-produto"> <!-- Itubaína 350ml -->
-                    <div><img src="../assets/Produtos/Refrigerantes/itubaina350ml.png" alt="Refrigerante Itubaína 350ml"></div>
-                    <div class="descricao-produto">
-                        <p>Refrigerante Itubaína 350ml</p>
-                        <span>Por apenas  R$2,79</span>
-                    </div>
-                    <button id="btnRetirarNaLoja">Retire na loja</button>
-                </div>
-                <div class="card-produto"> <!-- Soda 350ml -->
-                    <div><img src="../assets/Produtos/Refrigerantes/soda350ml.png" alt="Refrigerante Soda Limonada 350ml"></div>
-                    <div class="descricao-produto">
-                        <p>Refrigerante Soda Limonada 350ml</p>
-                        <span>Por apenas  R$3,99</span>
-                    </div>
-                    <button id="btnRetirarNaLoja">Retire na loja</button>
-                </div>
-                <div class="card-produto"> <!-- Guarana 1,5l -->
-                    <div><img src="../assets/Produtos/Refrigerantes/guarana2L.png" alt="Refrigerante Guaraná Antartica 1,5L"></div>
-                    <div class="descricao-produto">
-                        <p>Refrigerante Guaraná Antartica 1,5L</p>
-                        <span>Por apenas  R$6,19</span>
-                    </div>
-                    <button id="btnRetirarNaLoja">Retire na loja</button>
-                </div>
-                <div class="card-produto"> <!-- Fanta 350ml -->
-                    <div><img src="../assets/Produtos/Refrigerantes/fantaUva350ml.png" alt="Refrigerante Fanta Uva 350ml"></div>
-                    <div class="descricao-produto">
-                        <p>Refrigerante Fanta Uva 350ml</p>
-                        <span>Por apenas  R$3,59</span>
-                    </div>
-                    <button id="btnRetirarNaLoja">Retire na loja</button>
-                </div>
+                <button onclick="addProductToCart(event)" class="btn-retire-na-loja">Retire na loja</button>
             </div>
-          </div>
+            <div class="card-produto">
+                <div><img class="product-image" src="../assets/Produtos/Refrigerantes/pepsi2L.png" alt="Refrigerante Pepsi 2L"></div>
+                <div class="descricao-produto">
+                    <p class="product-title">Refrigerante Pepsi 2L</p>
+                    <span class="product-price">Por apenas R$7,99</span>
+                </div>
+                <button onclick="addProductToCart(event)" class="btn-retire-na-loja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+                <div><img class="product-image" src="../assets/Produtos/Refrigerantes/coca-cola350ML.png" alt="Refrigerante Coca-cola 350ml"></div>
+                <div class="descricao-produto">
+                    <p class="product-title">Refrigerante Coca-cola 350ml</p>
+                    <span class="product-price">Por apenas R$3,99</span>
+                </div>
+                <button onclick="addProductToCart(event)" class="btn-retire-na-loja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+                <div><img class="product-image" src="../assets/Produtos/Refrigerantes/guarana350ml.png" alt="Refrigerante Guaraná Antartica 350ml"></div>
+                <div class="descricao-produto">
+                    <p class="product-title">Refrigerante Guaraná Antartica 350ml</p>
+                    <span class="product-price">Por apenas R$2,59</span>
+                </div>
+                <button onclick="addProductToCart(event)" class="btn-retire-na-loja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+                <div><img class="product-image" src="../assets/Produtos/Refrigerantes/itubaina350ml.png" alt="Refrigerante Itubaína 350ml"></div>
+                <div class="descricao-produto">
+                    <p class="product-title">Refrigerante Itubaína 350ml</p>
+                    <span class="product-price">Por apenas R$2,79</span>
+                </div>
+                <button onclick="addProductToCart(event)" class="btn-retire-na-loja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+                <div><img class="product-image" src="../assets/Produtos/Refrigerantes/soda350ml.png" alt="Refrigerante Soda Limonada 350ml"></div>
+                <div class="descricao-produto">
+                    <p class="product-title">Refrigerante Soda Limonada 350ml</p>
+                    <span class="product-price">Por apenas R$3,99</span>
+                </div>
+                <button onclick="addProductToCart(event)" class="btn-retire-na-loja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+                <div><img class="product-image" src="../assets/Produtos/Refrigerantes/guarana2L.png" alt="Refrigerante Guaraná Antartica 1,5L"></div>
+                <div class="descricao-produto">
+                    <p class="product-title">Refrigerante Guaraná Antartica 1,5L</p>
+                    <span class="product-price">Por apenas R$6,19</span>
+                </div>
+                <button onclick="addProductToCart(event)" class="btn-retire-na-loja">Retire na loja</button>
+            </div>
+            <div class="card-produto">
+                <div><img class="product-image" src="../assets/Produtos/Refrigerantes/fantaUva350ml.png" alt="Refrigerante Fanta Uva 350ml"></div>
+                <div class="descricao-produto">
+                    <p class="product-title">Refrigerante Fanta Uva 350ml</p>
+                    <span class="product-price">Por apenas R$3,59</span>
+                </div>
+                <button onclick="addProductToCart(event)" class="btn-retire-na-loja">Retire na loja</button>
+            </div>
         </div>
-      </div>
+        
     </main>
 
     <!-- FOOTER -->

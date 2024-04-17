@@ -12,6 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <script src="/JS/adicionarAoCarrinho.js"></script>
   </head>
   <body>
     <header>
@@ -206,184 +208,135 @@
 
       <!-- Copiar código a baixo para adicionar nova categoria -->
       <div class="container-produtos-especificos">
-        <!-- CONTAINER PRINCIPAL PARA CATEGORIA -->
         <div class="categoria-produto">
-          <!-- DIVISÃO ENTRE TÍTULO E CONTEÚDO DA CATEGORIA -->
-          <div class="titulo-categotia-produto">
-            <!-- TÍTULO -->
-            <h2>Cervejas</h2>
-          </div>
-          <div class="nav-categoria-produto nav-categoria">
-            <div class="card-produto">
-              <!-- Heineken 269ml -->
-              <div>
-                <img
-                  src="../assets/Produtos/Cervejas/heineken_lata_269ml 1.png"
-                  alt=""
-                />
-              </div>
-              <div class="descricao-produto">
-                <p>Cerveja Heineken 269ml</p>
-                <span>Por apenas R$4,19</span>
-              </div>
-              <button id="btnRetirarNaLoja">Retire na loja</button>
+            <div class="titulo-categotia-produto">
+                <h2>Cervejas</h2>
             </div>
-            <div class="card-produto">
-              <!-- Skol 269ml -->
-              <div>
-                <img src="../assets/Produtos/Cervejas/SKOL_269ML.png" alt="" />
-              </div>
-              <div class="descricao-produto">
-                <p>Cerveja Skol Pilsen 269ml</p>
-                <span>Por apenas R$2,79</span>
-              </div>
-              <button id="btnRetirarNaLoja">Retire na loja</button>
+            <div class="nav-categoria-produto nav-categoria">
+                <div class="card-produto">
+                    <div>
+                        <img class="product-image" src="../assets/Produtos/Cervejas/heineken_lata_269ml 1.png" alt="" />
+                    </div>
+                    <div class="descricao-produto">
+                        <p class="product-title">Cerveja Heineken 269ml</p>
+                        <span class="product-price">Por apenas R$4,19</span>
+                    </div>
+                    <button onclick="addProductToCart(event)">Retire na loja</button>
+                </div>
+                <div class="card-produto">
+                    <div>
+                        <img class="product-image" src="../assets/Produtos/Cervejas/SKOL_269ML.png" alt="" />
+                    </div>
+                    <div class="descricao-produto">
+                        <p class="product-title">Cerveja Skol Pilsen 269ml</p>
+                        <span class="product-price">Por apenas R$2,79</span>
+                    </div>
+                    <button onclick="addProductToCart(event)">Retire na loja</button>
+                </div>
+                <div class="card-produto">
+                    <div>
+                        <img class="product-image" src="../assets/Produtos/Cervejas/amstel_lata_269l 1.png" alt="" />
+                    </div>
+                    <div class="descricao-produto">
+                        <p class="product-title">Cerveja Amstel 269ml</p>
+                        <span class="product-price">Por apenas R$2,79</span>
+                    </div>
+                    <button onclick="addProductToCart(event)">Retire na loja</button>
+                </div>
+                <div class="card-produto">
+                    <div>
+                        <img class="product-image" src="../assets/Produtos/Cervejas/Stella 1.png" alt="" />
+                    </div>
+                    <div class="descricao-produto">
+                        <p class="product-title">Cerveja Stella Noire 410ml</p>
+                        <span class="product-price">Por apenas R$19,90</span>
+                    </div>
+                    <button onclick="addProductToCart(event)">Retire na loja</button>
+                </div>
+                <div class="card-produto">
+                    <div>
+                        <img class="product-image" src="../assets/Produtos/Cervejas/3328-heineken-long-neck-330ml-24un.20231128140701.png" alt="" />
+                    </div>
+                    <div class="descricao-produto">
+                        <p class="product-title">Cerveja Heineken Long Neck 330ml</p>
+                        <span class="product-price">Por apenas R$4,19</span>
+                    </div>
+                    <button onclick="addProductToCart(event)">Retire na loja</button>
+                </div>
+                <div class="card-produto">
+                    <div>
+                        <img class="product-image" src="../assets/Produtos/Cervejas/10464-becks-long-neck-330ml-24un 1.png" alt="" />
+                    </div>
+                    <div class="descricao-produto">
+                        <p class="product-title">Cerveja Becks Long Neck 330 ml</p>
+                        <span class="product-price">Por apenas R$6,49</span>
+                    </div>
+                    <button onclick="addProductToCart(event)">Retire na loja</button>
+                </div>
+                <div class="card-produto">
+                    <div>
+                        <img class="product-image" src="../assets/Produtos/Cervejas/Cerveja_Lata_Skol_Gelada_PNG_Transparente (1) 1.png" alt="" />
+                    </div>
+                    <div class="descricao-produto">
+                        <p class="product-title">Cerveja Skol Pilsen 350ml</p>
+                        <span class="product-price">Por apenas R$3,39</span>
+                    </div>
+                    <button onclick="addProductToCart(event)">Retire na loja</button>
+                </div>
+                <div class="card-produto">
+                    <div>
+                        <img class="product-image" src="../assets/Produtos/Cervejas/Brahma-Duplo-Malte-310ml 1.png" alt="" />
+                    </div>
+                    <div class="descricao-produto">
+                        <p class="product-title">Cerveja Brahma Duplo Malte 310ml</p>
+                        <span class="product-price">Por apenas R$3,39</span>
+                    </div>
+                    <button onclick="addProductToCart(event)">Retire na loja</button>
+                </div>
+                <div class="card-produto">
+                    <div>
+                        <img class="product-image" src="../assets/Produtos/Cervejas/lata_269ml 1.png" alt="" />
+                    </div>
+                    <div class="descricao-produto">
+                        <p class="product-title">Cerveja Budweiser 269 ml</p>
+                        <span class="product-price">Por apenas R$2,69</span>
+                    </div>
+                    <button onclick="addProductToCart(event)">Retire na loja</button>
+                </div>
+                <div class="card-produto">
+                    <div>
+                        <img class="product-image" src="../assets/Produtos/Cervejas/spaten-350 1.png" alt="" />
+                    </div>
+                    <div class="descricao-produto">
+                        <p class="product-title">Cerveja Spaten 350ml</p>
+                        <span class="product-price">Por apenas R$3,65</span>
+                    </div>
+                    <button onclick="addProductToCart(event)">Retire na loja</button>
+                </div>
+                <div class="card-produto">
+                    <div>
+                        <img class="product-image" src="../assets/Produtos/Cervejas/stella_artois_lata_269ml 1.png" alt="" />
+                    </div>
+                    <div class="descricao-produto">
+                        <p class="product-title">Cerveja Stella 269ml</p>
+                        <span class="product-price">Por apenas R$2,89</span>
+                    </div>
+                    <button onclick="addProductToCart(event)">Retire na loja</button>
+                </div>
+                <div class="card-produto">
+                    <div>
+                        <img class="product-image" src="../assets/Produtos/Cervejas/heineken_lata_350ml 1.png" alt="" />
+                    </div>
+                    <div class="descricao-produto">
+                        <p class="product-title">Cerveja Heineken 350ml</p>
+                        <span class="product-price">Por apenas R$5,39</span>
+                    </div>
+                    <button onclick="addProductToCart(event)">Retire na loja</button>
+                </div>
             </div>
-            <div class="card-produto">
-              <!-- Amstel 269ml -->
-              <div>
-                <img
-                  src="../assets/Produtos/Cervejas/amstel_lata_269l 1.png"
-                  alt=""
-                />
-              </div>
-              <div class="descricao-produto">
-                <p>Cerveja Amstel 269ml</p>
-                <span>Por apenas R$2,79</span>
-              </div>
-              <button id="btnRetirarNaLoja">Retire na loja</button>
-            </div>
-            <div class="card-produto">
-              <!-- Noire 410ml -->
-              <div>
-                <img src="../assets/Produtos/Cervejas/Stella 1.png" alt="" />
-              </div>
-              <div class="descricao-produto">
-                <p>Cerveja Stella Noire 410ml</p>
-                <span>Por apenas R$19,90</span>
-              </div>
-              <button id="btnRetirarNaLoja">Retire na loja</button>
-            </div>
-            <div class="card-produto">
-              <!-- Heineken 330ml -->
-              <div>
-                <img
-                  src="../assets/Produtos/Cervejas/3328-heineken-long-neck-330ml-24un.20231128140701.png"
-                  alt=""
-                />
-              </div>
-              <div class="descricao-produto">
-                <p>Cerveja Heineken Long Neck 330ml</p>
-                <span>Por apenas R$4,19</span>
-              </div>
-              <button id="btnRetirarNaLoja">Retire na loja</button>
-            </div>
-            <div class="card-produto">
-              <!-- Becks 330ml -->
-              <div>
-                <img
-                  src="../assets/Produtos/Cervejas/10464-becks-long-neck-330ml-24un 1.png"
-                  alt=""
-                />
-              </div>
-              <div class="descricao-produto">
-                <p>Cerveja Becks Long Neck 330 ml</p>
-                <span>Por apenas R$6,49</span>
-              </div>
-              <button id="btnRetirarNaLoja">Retire na loja</button>
-            </div>
-            <div class="card-produto">
-              <!-- Skol 350ml -->
-              <div>
-                <img
-                  src="../assets/Produtos/Cervejas/Cerveja_Lata_Skol_Gelada_PNG_Transparente (1) 1.png"
-                  alt=""
-                />
-              </div>
-              <div class="descricao-produto">
-                <p>Cerveja Skol Pilsen 350ml</p>
-                <span>Por apenas R$3,39</span>
-              </div>
-              <button id="btnRetirarNaLoja">Retire na loja</button>
-            </div>
-            <div class="card-produto">
-              <!-- Brahma 310ml -->
-              <div>
-                <img
-                  src="../assets/Produtos/Cervejas/Brahma-Duplo-Malte-310ml 1.png"
-                  alt=""
-                />
-              </div>
-              <div class="descricao-produto">
-                <p>Cerveja Brahma Duplo Malte 310ml</p>
-                <span>Por apenas R$3,39</span>
-              </div>
-              <button id="btnRetirarNaLoja">Retire na loja</button>
-            </div>
-            <div class="card-produto">
-              <!-- Budweiser 269ml -->
-              <div>
-                <img
-                  src="../assets/Produtos/Cervejas/lata_269ml 1.png"
-                  alt=""
-                />
-              </div>
-              <div class="descricao-produto">
-                <p>Cerveja Budweiser 269 ml</p>
-                <span>Por apenas R$2,69</span>
-              </div>
-              <button id="btnRetirarNaLoja">Retire na loja</button>
-            </div>
-            <div class="card-produto">
-              <!-- Spaten 350ml -->
-
-              <div>
-                <img
-                  src="../assets/Produtos/Cervejas/spaten-350 1.png"
-                  alt=""
-                />
-              </div>
-              <div class="descricao-produto">
-                <p>Cerveja Spaten 350ml</p>
-                <span>Por apenas R$3,65</span>
-              </div>
-              <button id="btnRetirarNaLoja">Retire na loja</button>
-            </div>
-            <div class="card-produto">
-              <!-- Stella 269ml -->
-              <!-- heineken 269ml -->
-              <div>
-                <img
-                  src="../assets/Produtos/Cervejas/stella_artois_lata_269ml 1.png"
-                  alt=""
-                />
-              </div>
-              <div class="descricao-produto">
-                <p>Cerveja Stella 269ml</p>
-                <span>Por apenas R$2,89</span>
-              </div>
-              <button id="btnRetirarNaLoja">Retire na loja</button>
-            </div>
-            <div class="card-produto">
-              <!-- Heineken 350ml -->
-              <!-- Stella 269ml -->
-              <div>
-                <img
-                  src="../assets/Produtos/Cervejas/heineken_lata_350ml 1.png"
-                  alt=""
-                />
-              </div>
-              <div class="descricao-produto">
-                <p>Cerveja Heineken 350ml</p>
-                <span>Por apenas R$5,39</span>
-              </div>
-              <button id="btnRetirarNaLoja">Retire na loja</button>
-            </div>
-          </div>
         </div>
-      </div>
-    </main>
-
+    </div>
+    
     <!-- FOOTER -->
     <footer class="#">
       <div id="icone-flutuante">

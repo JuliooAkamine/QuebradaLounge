@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="/JS/adicionarAoCarrinho.js"></script>
   </head>
   <body>
     <header>
@@ -207,74 +208,71 @@
 
       <!-- Copiar código a baixo para adicionar nova categoria -->
       <div class="container-produtos-especificos">
-        <!-- CONTAINER PRINCIPAL PARA CATEGORIA -->
         <div class="categoria-produto">
-          <!-- DIVISÃO ENTRE TÍTULO E CONTEÚDO DA CATEGORIA -->
-          <div class="titulo-categotia-produto">
-            <!-- TÍTULO -->
-            <h2>Energético</h2>
-          </div>
+            <div class="titulo-categotia-produto">
+                <h2>Energético</h2>
+            </div>
             <div class="nav-categoria-produto nav-categoria">
-                <div class="card-produto"> <!-- Red Bull 250ml -->
-                    <div><img src="../assets/Produtos/Energeticos/Bebida-Energetica-Red-Bull-250ml.png" alt="Energético Red Bull 250ml"></div>
+                <div class="card-produto">
+                    <div><img class="product-image" src="../assets/Produtos/Energeticos/Bebida-Energetica-Red-Bull-250ml.png" alt="Energético Red Bull 250ml"></div>
                     <div class="descricao-produto">
-                        <p>Energético Red Bull 250ml</p>
-                        <span>Por apenas R$9,49</span>
+                        <p class="product-title">Energético Red Bull 250ml</p>
+                        <span class="product-price">Por apenas R$9,49</span>
                     </div>
-                    <button id="btnRetirarNaLoja">Retire na loja</button>
+                    <button onclick="addProductToCart(event)" id="btnRetirarNaLoja">Retire na loja</button>
                 </div>
-                <div class="card-produto"> <!-- TNT 269ml -->
-                    <div><img src="../assets/Produtos/Energeticos/tnt269ml.png"></div>
+                <div class="card-produto">
+                    <div><img class="product-image" src="../assets/Produtos/Energeticos/tnt269ml.png"></div>
                     <div class="descricao-produto">
-                        <p>Energético TNT 269ml</p>
-                        <span>Por apenas R$6,59</span>
+                        <p class="product-title">Energético TNT 269ml</p>
+                        <span class="product-price">Por apenas R$6,59</span>
                     </div>
-                    <button id="btnRetirarNaLoja">Retire na loja</button>
+                    <button onclick="addProductToCart(event)" id="btnRetirarNaLoja">Retire na loja</button>
                 </div>
-                <div class="card-produto"> <!-- Monster 473ml -->
-                    <div><img src="../assets/Produtos/Energeticos/monster473ml.png" alt="Bebida Energética Monster 473ml"></div>
+                <div class="card-produto">
+                    <div><img class="product-image" src="../assets/Produtos/Energeticos/monster473ml.png" alt="Bebida Energética Monster 473ml"></div>
                     <div class="descricao-produto">
-                        <p>Bebida Energética Monster 473ml</p>
-                        <span>Por apenas R$8,99</span>
+                        <p class="product-title">Bebida Energética Monster 473ml</p>
+                        <span class="product-price">Por apenas R$8,99</span>
                     </div>
-                    <button id="btnRetirarNaLoja">Retire na loja</button>
+                    <button onclick="addProductToCart(event)" id="btnRetirarNaLoja">Retire na loja</button>
                 </div>
-                <div class="card-produto"> <!-- Baly 473ml -->
-                    <div><img src="../assets/Produtos/Energeticos/bally473ml.png" alt="Energético Baly 473ml"></div>
+                <div class="card-produto">
+                    <div><img class="product-image" src="../assets/Produtos/Energeticos/bally473ml.png" alt="Energético Baly 473ml"></div>
                     <div class="descricao-produto">
-                        <p>Energético Baly 473ml</p>
-                        <span>Por apenas  R$7,13</span>
+                        <p class="product-title">Energético Baly 473ml</p>
+                        <span class="product-price">Por apenas R$7,13</span>
                     </div>
-                    <button id="btnRetirarNaLoja">Retire na loja</button>
+                    <button onclick="addProductToCart(event)" id="btnRetirarNaLoja">Retire na loja</button>
                 </div>
-                <div class="card-produto"> <!-- Fusion 1L -->
-                    <div><img src="../assets/Produtos/Energeticos/fusion1l.png" alt="Energético Fusion 1L"></div>
+                <div class="card-produto">
+                    <div><img class="product-image" src="../assets/Produtos/Energeticos/fusion1l.png" alt="Energético Fusion 1L"></div>
                     <div class="descricao-produto">
-                        <p>Energético Fusion 1L</p>
-                        <span>Por apenas  R$7,99</span>
+                        <p class="product-title">Energético Fusion 1L</p>
+                        <span class="product-price">Por apenas R$7,99</span>
                     </div>
-                    <button id="btnRetirarNaLoja">Retire na loja</button>
+                    <button onclick="addProductToCart(event)" id="btnRetirarNaLoja">Retire na loja</button>
                 </div>
-                <div class="card-produto"> <!-- Burn 1L -->
-                    <div><img src="../assets/Produtos/Energeticos/burn1l.png" alt="Energético Burn Original 1L"></div>
+                <div class="card-produto">
+                    <div><img class="product-image" src="../assets/Produtos/Energeticos/burn1l.png" alt="Energético Burn Original 1L"></div>
                     <div class="descricao-produto">
-                        <p>Energético Burn Original 1L</p>
-                        <span>Por apenas  R$11,50</span>
+                        <p class="product-title">Energético Burn Original 1L</p>
+                        <span class="product-price">Por apenas R$11,50</span>
                     </div>
-                    <button id="btnRetirarNaLoja">Retire na loja</button>
+                    <button onclick="addProductToCart(event)" id="btnRetirarNaLoja">Retire na loja</button>
                 </div>
-                <div class="card-produto"> <!-- Baly 1L -->
-                    <div><img src="../assets/Produtos/Energeticos/burn1l.png" alt="Energético Burn Original 1L"></div>
+                <div class="card-produto">
+                    <div><img class="product-image" src="../assets/Produtos/Energeticos/burn1l.png" alt="Energético Burn Original 1L"></div>
                     <div class="descricao-produto">
-                        <p>Energético Baly 473ml</p>
-                        <span>Por apenas  R$7,13</span>
+                        <p class="product-title">Energético Baly 473ml</p>
+                        <span class="product-price">Por apenas R$7,13</span>
                     </div>
-                    <button id="btnRetirarNaLoja">Retire na loja</button>
+                    <button onclick="addProductToCart(event)" id="btnRetirarNaLoja">Retire na loja</button>
                 </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
+    
     </main>
 
     <!-- FOOTER -->

@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="/JS/adicionarAoCarrinho.js"></script>
   </head>
   <body>
     <header>
@@ -213,39 +214,41 @@
             <!-- TÍTULO -->
             <h2>Whisky</h2>
           </div>
-            <div class="nav-categoria-produto nav-categoria">
-              <div class="card-produto"> <!-- Jack Daniel's 1L -->
-                <div><img src="../assets/Produtos/Whisky/jack-daniels.png" alt=""></div>
+          <div class="nav-categoria-produto nav-categoria">
+            <div class="card-produto"> <!-- Jack Daniel's 1L -->
+                <div><img class="product-image" src="../assets/Produtos/Whisky/jack-daniels.png" alt="Whisky Jack Daniel's 1L"></div>
                 <div class="descricao-produto">
-                    <p>Whisky Jack Daniel's 1L</p>
-                    <span>Por apenas  R$117,05</span>
+                    <p class="product-title">Whisky Jack Daniel's 1L</p>
+                    <span class="product-price">Por apenas R$117,05</span>
                 </div>
-                <button id="btnRetirarNaLoja">Retire na loja</button>
+                <button id="btnRetirarNaLoja" onclick="addProductToCart(event)">Retire na loja</button>
             </div>
             <div class="card-produto"> <!-- Red Label 750 ml -->
-                <div><img src="../assets/Produtos/Whisky/Red-Label-750ml.png" alt=""></div>
+                <div><img class="product-image" src="../assets/Produtos/Whisky/Red-Label-750ml.png" alt="Whisky Red Label 750 ml"></div>
                 <div class="descricao-produto">
-                    <p>Whisky Red Label 750 ml</p>
-                    <span>Por apenas R$77,90</span>
+                    <p class="product-title">Whisky Red Label 750 ml</p>
+                    <span class="product-price">Por apenas R$77,90</span>
                 </div>
-                <button id="btnRetirarNaLoja">Retire na loja</button>
+                <button id="btnRetirarNaLoja" onclick="addProductToCart(event)">Retire na loja</button>
             </div>
             <div class="card-produto"> <!-- White Horse 1L -->
-                <div><img src="../assets/Produtos/Whisky/Whisky-White-Horse-1l.png" alt=""></div>
+                <div><img class="product-image" src="../assets/Produtos/Whisky/Whisky-White-Horse-1l.png" alt="Whisky White Horse 1L"></div>
                 <div class="descricao-produto">
-                    <p>Whisky White Horse 1L</p>
-                    <span>Por apenas R$79,94</span>
+                    <p class="product-title">Whisky White Horse 1L</p>
+                    <span class="product-price">Por apenas R$79,94</span>
                 </div>
-                <button id="btnRetirarNaLoja">Retire na loja</button>
+                <button id="btnRetirarNaLoja" onclick="addProductToCart(event)">Retire na loja</button>
             </div>
             <div class="card-produto"> <!-- Bourbon 1L -->
-                <div><img src="../assets/Produtos/Whisky/Whiskey-Jim-Beam-White-Bourbon-1L.png" alt=""></div>
+                <div><img class="product-image" src="../assets/Produtos/Whisky/Whiskey-Jim-Beam-White-Bourbon-1L.png" alt="Whisky Jim Beam Bourbon 1L"></div>
                 <div class="descricao-produto">
-                    <p>Whisky Jim Beam Bourbon 1L</p>
-                    <span>Por apenas  R$99,96</span>
+                    <p class="product-title">Whisky Jim Beam Bourbon 1L</p>
+                    <span class="product-price">Por apenas R$99,96</span>
                 </div>
-                <button id="btnRetirarNaLoja">Retire na loja</button>
+                <button id="btnRetirarNaLoja" onclick="addProductToCart(event)">Retire na loja</button>
             </div>
+        </div>
+        
             </div>
           </div>
         </div>

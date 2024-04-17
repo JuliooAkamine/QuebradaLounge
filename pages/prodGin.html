@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="/JS/adicionarAoCarrinho.js"></script>
   </head>
   <body>
     <header>
@@ -206,42 +207,39 @@
 
       <!-- Copiar código a baixo para adicionar nova categoria -->
       <div class="container-produtos-especificos">
-        <!-- CONTAINER PRINCIPAL PARA CATEGORIA -->
         <div class="categoria-produto">
-          <!-- DIVISÃO ENTRE TÍTULO E CONTEÚDO DA CATEGORIA -->
-          <div class="titulo-categotia-produto">
-            <!-- TÍTULO -->
-            <h2>Gin</h2>
-          </div>
+            <div class="titulo-categotia-produto">
+                <h2>Gin</h2>
+            </div>
             <div class="nav-categoria-produto nav-categoria">
-                <div class="card-produto"> <!-- Tanqueray  750 ml -->
-                    <div><img src="../assets/Produtos/Gin/13992723 1.png" alt=""></div>
+                <div class="card-produto">
+                    <div><img class="product-image" src="../assets/Produtos/Gin/13992723 1.png" alt="Gin Tanqueray Dry 750 ml"></div>
                     <div class="descricao-produto">
-                        <p>Gin Tanqueray Dry 750 ml</p>
-                        <span>Por apenas  R$93,13</span>
+                        <p class="product-title">Gin Tanqueray Dry 750 ml</p>
+                        <span class="product-price">Por apenas R$93,13</span>
                     </div>
-                    <button id="btnRetirarNaLoja">Retire na loja</button>
+                    <button class="btn-retire-na-loja" onclick="addProductToCart(event)">Retire na loja</button>
                 </div>
-                <div class="card-produto"> <!-- Bombay 750 ml -->
-                    <div><img src="../assets/Produtos/Gin/Gin-London-Dry-Bombay-Sapphire-Garrafa-750ml-.png" alt=""></div>
+                <div class="card-produto">
+                    <div><img class="product-image" src="../assets/Produtos/Gin/Gin-London-Dry-Bombay-Sapphire-Garrafa-750ml-.png" alt="Gin Bombay Sapphire Dry London 750 ml"></div>
                     <div class="descricao-produto">
-                        <p>Gin Bombay Sapphire Dry London 750 ml</p>
-                        <span>Por apenas R$97,90</span>
+                        <p class="product-title">Gin Bombay Sapphire Dry London 750 ml</p>
+                        <span class="product-price">Por apenas R$97,90</span>
                     </div>
-                    <button id="btnRetirarNaLoja">Retire na loja</button>
+                    <button class="btn-retire-na-loja" onclick="addProductToCart(event)">Retire na loja</button>
                 </div>
-                <div class="card-produto"> <!-- Gordons Pink 700 ml -->
-                    <div><img src="../assets/Produtos/Gin/1648232355274-gingordonspink750ml.png" alt=""></div>
+                <div class="card-produto">
+                    <div><img class="product-image" src="../assets/Produtos/Gin/1648232355274-gingordonspink750ml.png" alt="Gin Gordons Pink 700 ml"></div>
                     <div class="descricao-produto">
-                        <p>Gin Gordons Pink 700 ml</p>
-                        <span>Por apenas R$67,62</span>
+                        <p class="product-title">Gin Gordons Pink 700 ml</p>
+                        <span class="product-price">Por apenas R$67,62</span>
                     </div>
-                    <button id="btnRetirarNaLoja">Retire na loja</button>
+                    <button class="btn-retire-na-loja" onclick="addProductToCart(event)">Retire na loja</button>
                 </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
+    
     </main>
 
     <!-- FOOTER -->
