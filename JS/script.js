@@ -35,7 +35,7 @@ function slickfy() {
 slickfy()
 $(window).resize(function(){
     var $windowWidth = $(window).width();
-    if ($windowWidth < 1000) { /* Adicionar o máximo de @media que iremos usar em nossa página */
+    if ($windowWidth < 10000) { /* Adicionar o máximo de @media que iremos usar em nossa página */
         slickfy();
     }
 })
