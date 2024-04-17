@@ -27,21 +27,37 @@
 
 <body>
   <header>
-    <h1>
+    <h1 class="frame-hide"> <!-- HIDEN -->
       <img id="logo-img-mobile" src="assets/icons/Letreiro.png" alt="logo-quebrada-lounge-mobile" />
     </h1>
 
     <nav>
       <div>
+        <!-- Logo Desktop -->
+        <h1><img src="assets/icons/logo-desktop.svg" alt=""></h1>
+
         <!-- Botão menu hamburguer -->
-        <img src="assets/icons/Menu Hamburguer.png" alt="Icone de menu Hamburguer" onclick="openNav()" />
+        <img src="assets/icons/Menu Hamburguer.png" alt="Icone de menu Hamburguer" onclick="openNav()" class="frame-hide"/> <!-- HIDEN -->
+        <!-- Input de pesquisa -->
         <form action="#">
           <label for="barra-pesquisa" class="label-escondido">Pesquise o produto</label>
           <input id="barra-pesquisa" type="text" name="barra-pesquisa" placeholder="Pesquisar..." />
         </form>
         <!-- Botão carrinho -->
-        <a href="pages/carrinho.html"><img src="assets/icons/Icone-Carrinho.png" alt="Icone de carrinho" /></a>
+        <!-- Mobile -->
+        <a href="pages/carrinho.html" class="frame-hide"><img src="assets/icons/Icone-Carrinho.png" alt="Icone de carrinho" /></a> <!-- HIDEN -->
+        <!-- Desktop -->
+        <div class="profile-wrapper">
+          <a href="pages/Entrar.html">
+            <img src="assets/icons/PROFILE-ICON.png" alt="ícone de perfil">
+            <p>Olá, Faça seu login</p>
+          </a>
+          <a href="pages/carrinho.html">
+            <img src="assets/icons/carrinho-sem-nome.svg" alt="ícone de carrinho">
+          </a>
+        </div>
       </div>
+      
     </nav>
   </header>
 
@@ -212,10 +228,12 @@
       </div>
 
       <button id="btn-produtos" class="frame-hideBTN">ver todos os produtos</button>
-      <div class="frame-contendo-VerTodosOsProdutos frame-hide">
-        <div><img src="assets/Prod Destaque Home/IMG-VerTodosOsProdutos.png" alt=""></div>
-        <button id="btn-produtos">ver todos os produtos</button>
-      </div>
+      <a href="pages/destaques.html" class="link-style-none">
+        <div class="frame-contendo-VerTodosOsProdutos frame-hide">
+          <div><img src="assets/Prod Destaque Home/IMG-VerTodosOsProdutos.png" alt=""></div>
+          <button id="btn-produtos">ver todos os produtos</button>
+        </div>
+      </a>
     </div>
 
     <div id="container-shows">

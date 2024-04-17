@@ -65,10 +65,6 @@ html {
   transition: 300ms;
 }
 
-.link-style-none:hover {
-  scale: 1.1;
-  transition: 300ms;
-}
 #bloco-banner {
   padding: 30px 5%;
 }
@@ -953,6 +949,7 @@ footer .footer-payment-icons {
 }
 /* botao ver todos os produtos index */
 #btn-produtos {
+  transition: all 700ms;
   width: 80%;
   border-radius: 22px;
   background: #171612;
@@ -970,6 +967,7 @@ footer .footer-payment-icons {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  cursor: pointer;
 }
 #container-produtos {
   /* recorta todo item que passar do viewport na horizontal, assim retirando a barra de scrolagem */
@@ -980,6 +978,21 @@ footer .footer-payment-icons {
 }
 
 /* estilização da parte shows dentro da aba home */
+#chamativa-shows-home > .h2Home {
+  font-family: roadstore, sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 197px;
+
+  color: #fff;
+
+  font-family: ROADSTORE;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 #text-show-home {
   text-align: center;
   text-decoration: none;
@@ -1015,21 +1028,6 @@ footer .footer-payment-icons {
   position: relative;
   display: flex;
   flex-direction: column;
-}
-
-#chamativa-shows-home > .h2Home {
-  font-family: roadstore, sans-serif;
-  color: white;
-  text-align: center;
-  margin-top: 197px;
-
-  color: #fff;
-
-  font-family: ROADSTORE;
-  font-size: 50px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 
 /* Localização na aba home */
@@ -1684,13 +1682,44 @@ footer .footer-payment-icons {
 }
 
 @media screen and (min-width: 1000px) {
+  /* Header */
+  header {
+    padding: 0;
+    width: 850px;
+    margin: auto;
+    nav {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      
+      div {
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: none;
+      }
+    }
+  }
+
+  /* Parte "VER TODOS OS PRODUTOS" */
   .frame-hideBTN {
     display: none;
   }
+  #container-produtos {
+    width: 850px;
+    margin: 25px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 44px;
 
+    button {
+      margin: 0;
+      width: 100%;
+      border-radius: 0;
+    }
+  }
   .produtos {
     grid-template-columns: repeat(2, 1fr);
-    margin: 0 auto 0 0;
+    margin: auto;
     padding: 0;
 
     p {
@@ -1705,38 +1734,41 @@ footer .footer-payment-icons {
       font-size: 16px;
     }
   }
-
   .card-produtos-home {
     width: 100%;
   }
-
-  #compreAqui {
-    padding: 85px 200px;
-  }
-
-  #container-produtos {
-    margin: 25px 200px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 44px;
-
-    button {
-      margin: 0;
-      width: 100%;
-      border-radius: 0;
-    }
-  }
-
   .frame-contendo-VerTodosOsProdutos {
+    background-color: #171612;
+    height: 100%;
     display: grid;
     border-radius: 22px;
     overflow: hidden;
+    cursor: pointer;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: all 700ms;
+      border-radius: 0 0 22px 22px;
+      filter: brightness(60%);
+      -webkit-filter: brightness(60%);
+      -moz-filter: brightness(60%);
     }
-    
   }
 }
+.frame-contendo-VerTodosOsProdutos:hover img {
+  scale: 1.05;
+  filter: brightness(100%);
+  -webkit-filter: brightness(100%);
+  -moz-filter: brightness(100%);
+}
+.frame-contendo-VerTodosOsProdutos:hover #btn-produtos {
+  background: rgb(249,233,0);
+  background: -moz-radial-gradient(circle, rgba(249,233,0,1) 0%, rgba(0,0,0,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(249,233,0,1) 0%, rgba(0,0,0,1) 100%);
+  background: radial-gradient(circle, rgba(249,233,0,1) 0%, rgba(0,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f9e900",endColorstr="#000000",GradientType=1);
+  color: black;
+}
+
