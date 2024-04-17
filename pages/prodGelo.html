@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="/JS/adicionarAoCarrinho.js"></script>
   </head>
   <body>
     <header>
@@ -206,49 +207,47 @@
 
       <!-- Copiar código a baixo para adicionar nova categoria -->
       <div class="container-produtos-especificos">
-        <!-- CONTAINER PRINCIPAL PARA CATEGORIA -->
         <div class="categoria-produto">
-          <!-- DIVISÃO ENTRE TÍTULO E CONTEÚDO DA CATEGORIA -->
-          <div class="titulo-categotia-produto">
-            <!-- TÍTULO -->
-            <h2>Gelo</h2>
-          </div>
-          <div class="nav-categoria-produto nav-categoria">
-            <div class="card-produto"> <!-- Gelo Coco 200ml -->
-                <div><img src="../assets/Produtos/Gelos/COCO-1.png" alt="Gelo Coco Leve Sabor Aguá de Coco 200ml"></div>
-                <div class="descricao-produto">
-                    <p>Gelo Coco Leve Sabor Aguá de Coco 200ml</p>
-                    <span>Por apenas  R$3,59</span>
-                </div>
-                <button id="btnRetirarNaLoja">Retire na loja</button>
+            <div class="titulo-categotia-produto">
+                <h2>Gelo</h2>
             </div>
-            <div class="card-produto"> <!-- Gelo MELANCIA 200ml -->
-                <div><img src="../assets/Produtos/Gelos/MELANCIA-copy-1.png" alt="Gelo Coco Leve Sabor Melancia 200ml"></div>
-                <div class="descricao-produto">
-                    <p>Gelo Coco Leve Sabor Melancia 200ml</p>
-                    <span>Por apenas  R$3,59</span>
+            <div class="nav-categoria-produto nav-categoria">
+                <div class="card-produto">
+                    <div><img class="product-image" src="../assets/Produtos/Gelos/COCO-1.png" alt="Gelo Coco Leve Sabor Aguá de Coco 200ml"></div>
+                    <div class="descricao-produto">
+                        <p class="product-title">Gelo Coco Leve Sabor Aguá de Coco 200ml</p>
+                        <span class="product-price">Por apenas R$3,59</span>
+                    </div>
+                    <button onclick="addProductToCart(event)" id="btnRetirarNaLoja">Retire na loja</button>
                 </div>
-                <button id="btnRetirarNaLoja">Retire na loja</button>
-            </div>
-            <div class="card-produto"> <!-- Gelo MARACUJA 200ml -->
-                <div><img src="../assets/Produtos/Gelos/MARACUJA-1.png" alt="Gelo Coco Leve Sabor Marácuja 200ml"></div>
-                <div class="descricao-produto">
-                    <p>Gelo Coco Leve Sabor Marácuja 200ml</p>
-                    <span>Por apenas  R$3,59</span>
+                <div class="card-produto">
+                    <div><img class="product-image" src="../assets/Produtos/Gelos/MELANCIA-copy-1.png" alt="Gelo Coco Leve Sabor Melancia 200ml"></div>
+                    <div class="descricao-produto">
+                        <p class="product-title">Gelo Coco Leve Sabor Melancia 200ml</p>
+                        <span class="product-price">Por apenas R$3,59</span>
+                    </div>
+                    <button onclick="addProductToCart(event)" id="btnRetirarNaLoja">Retire na loja</button>
                 </div>
-                <button id="btnRetirarNaLoja">Retire na loja</button>
-            </div>
-            <div class="card-produto"> <!-- Gelo MORANGO 200ml -->
-                <div><img src="../assets/Produtos/Gelos/MORANGO-1.png" alt="Gelo Coco Leve Sabor Morango 200ml"></div>
-                <div class="descricao-produto">
-                    <p>Gelo Coco Leve Sabor Morango 200ml</p>
-                    <span>Por apenas  R$3,59</span>
+                <div class="card-produto">
+                    <div><img class="product-image" src="../assets/Produtos/Gelos/MARACUJA-1.png" alt="Gelo Coco Leve Sabor Marácuja 200ml"></div>
+                    <div class="descricao-produto">
+                        <p class="product-title">Gelo Coco Leve Sabor Marácuja 200ml</p>
+                        <span class="product-price">Por apenas R$3,59</span>
+                    </div>
+                    <button onclick="addProductToCart(event)" id="btnRetirarNaLoja">Retire na loja</button>
                 </div>
-                <button id="btnRetirarNaLoja">Retire na loja</button>
+                <div class="card-produto">
+                    <div><img class="product-image" src="../assets/Produtos/Gelos/MORANGO-1.png" alt="Gelo Coco Leve Sabor Morango 200ml"></div>
+                    <div class="descricao-produto">
+                        <p class="product-title">Gelo Coco Leve Sabor Morango 200ml</p>
+                        <span class="product-price">Por apenas R$3,59</span>
+                    </div>
+                    <button onclick="addProductToCart(event)" id="btnRetirarNaLoja">Retire na loja</button>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
+    
     </main>
 
     <!-- FOOTER -->
