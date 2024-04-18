@@ -3,11 +3,13 @@
 //Carrosel slick
 $(document).ready(function () {
     $('.carrosel').slick({
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 4000,
         dots: true,
         arrows: true,
     }); 
+    
+  
 })
 function slickfy() {
     $(document).ready(function () {
@@ -42,7 +44,7 @@ $(window).resize(function(){
 
 $(document).ready(function () {
     $('.slider').slick({
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 4000,
         dots: false,
         arrows: true,
@@ -91,5 +93,24 @@ elements.forEach((entry) =>{
     observer.observe(entry);
 })
 
+setTimeout(function(){
+    document.getElementById('modal-18anos').style.scale = '1'
+}, 700)
 
+document.getElementById('body').style.overflowY = 'hidden'
+document.getElementById('main').style.filter = 'blur(2px)'
+document.getElementById('header').style.filter = 'blur(2px)'
 
+function modal(){
+    document.getElementById('container-modal-18anos').style.display = 'none'
+document.getElementById('body').style.overflowY = 'scroll'
+document.getElementById('main').style.filter = 'blur(0)'
+document.getElementById('header').style.filter = 'blur(0)'
+   
+}
+
+function nao(){
+   document.getElementById('body').style.display = 'none'
+   document.write('<h1>Desculpe você não tem idade suficiente para acessar este site.</h1>')
+  
+}

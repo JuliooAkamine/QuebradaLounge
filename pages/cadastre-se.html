@@ -1,40 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- API DE FONTES DO GOOGLE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- LINK PARA ADICIONAR FAVICON -->
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.svg" />
     <!-- LINK COM O CSS PRINCIPAL -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css" />
     <script src="../JS/script.js"></script>
-    
+
     <title>Home</title>
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <header>
-        <h1><img id="logo-img-mobile" src="../assets/icons/Letreiro.png" alt="logo-quebrada-lounge-mobile"></h1>
+      <h1 class="mobileHeaderHiden">
+        <!-- Logo Mobile -->
+        <img
+          id="logo-img-mobile"
+          src="../assets/icons/Letreiro.png"
+          alt="logo-quebrada-lounge-mobile"
+        />
+      </h1>
 
-        <nav>
-            <div>
+      <nav>
+        <div>
+          <!-- Navegação 1  -->
+          <!-- Logo Desktop -->
+          <h1 class="deskHeaderHiden">
+            <img
+              src="../assets/icons/logo-desktop.svg"
+              alt="Quebrada Loung & Bar"
+            />
+          </h1>
 
-                <img src="../assets/icons/Menu Hamburguer.png" alt="Icone de menu Hamburguer" onclick="openNav()">
-                <form action="#">
-                    <label for="barra-pesquisa" class="label-escondido">Pesquise o produto</label>
-                    <input id="barra-pesquisa" type="text" name="barra-pesquisa" placeholder="Pesquisar...">
-                </form>
-                <img src="../assets/icons/Icone-Carrinho.png" alt="Icone de carrinho">
-
-            </div>
-        </nav>
+          <!-- Botão menu hamburguer -->
+          <img
+            src="../assets/icons/Menu Hamburguer.png"
+            alt="Icone de menu Hamburguer"
+            onclick="openNav()"
+            class="mobileHeaderHiden"
+          />
+          <!-- Input de pesquisa -->
+          <form action="#">
+            <label for="barra-pesquisa" class="label-escondido"
+              >Pesquise o produto</label
+            >
+            <input
+              id="barra-pesquisa"
+              type="text"
+              name="barra-pesquisa"
+              placeholder="Pesquisar..."
+            />
+          </form>
+          <!-- Botão carrinho -->
+          <!-- Mobile -->
+          <a href="../pages/carrinho.html" class="mobileHeaderHiden"
+            ><img src="../assets/icons/Icone-Carrinho.png" alt="Icone de carrinho"
+          /></a>
+          <!-- Desktop -->
+          <div class="profile-wrapper deskHeaderHiden">
+            <a href="../pages/Entrar.html">
+              <img src="../assets/icons/PROFILE-ICON.png" alt="ícone de perfil" />
+              <p>Olá, Faça seu login</p>
+            </a>
+            <a href="../pages/carrinho.html">
+              <img
+                src="../assets/icons/carrinho-sem-nome.svg"
+                alt="ícone de carrinho"
+              />
+            </a>
+          </div>
+        </div>
+        <!-- Navegação 2 -->
+        <ul class="navegacaoHeaderDesktop deskHeaderHiden">
+          <li>
+            <a href="../index.html">HOME</a>
+            <hr />
+          </li>
+          <li>
+            <a href="destaques.html">PRODUTOS</a>
+            <hr />
+          </li>
+          <li>
+            <a href="localizacao.html">LOCALIZAÇÃO</a>
+            <hr />
+          </li>
+          <li>
+            <a href="shows.html">SHOWS</a>
+            <hr />
+          </li>
+          <li>
+            <a href="nos-conheca.html">NOS CONHEÇA</a>
+            <hr />
+          </li>
+          <li>
+            <a href="fale-conosco.html">FALE CONOSCO</a>
+            <hr />
+          </li>
+        </ul>
+      </nav>
     </header>
     <!-- 
         !!MENU LATERAL!!
@@ -43,168 +115,274 @@
     -->
     <div id="fechar-menu" onclick="closeNav()"></div>
     <div id="sidenav-overlay">
-        <div id="menu-header"> <!-- Cabeçalho Menu-Lateral -->
-             <nav>
-                <div>
-                    <img src="../assets/icons/perfil-icon.svg" alt="Logo Quebrada Lounge">
-                    <a href="Entrar.html">Entrar</a> <!-- LOGIN -->
-                </div>
-                <img src="../assets/icons/logo-desktop.svg" alt="Logo Quebrada Lounge">
-             </nav>
-             <button>
-                Promoções
-             </button>
-        </div>
-        <div id="menu-nav"> <!-- NAVEGAÇÃO -->
-            <nav>
-                <ul>
-                    <li> <!-- HOME -->
-                        <a href="../index.html"> 
-                            <img src="../assets/icons/inicio-icon.svg" alt="Icone da página home">
-                            <p>Inicio</p>
-                        </a>
-                    </li>
-                    <li> <!-- PRODUCTS -->
-                        <a href="#"> 
-                            <img src="../assets/icons/produtos-icon.png" alt="Icone da página home">
-                            <p>Produtos</p>
-                        </a>
-                    </li>
-                    <li> <!-- LOCATION -->
-                        <a href="../pages/localizacao.html">
-                            <img src="../assets/icons/localizacao-icon.png" alt="Icone da página home">
-                            <p>Localização</p>
-                        </a>
-                    </li>
-                    <li> <!-- SHOWS -->
-                        <a href="../pages/shows.html"> 
-                            <img src="../assets/icons/shows-icon.png" alt="Icone da página home">
-                            <p>Shows</p>
-                        </a>
-                    </li>
-                    <li> <!-- Contact us -->
-                        <a href="../pages/fale-conosco.html"> 
-                            <img src="../assets/icons/faleCosnosco.png" alt="Icone da página home">
-                            <p>Fale conoscos</p>
-                        </a>
-                    </li>
-                    <li> <!-- KNOW US -->
-                        <a href="../pages/nos-conheca.html"> 
-                            <img src="../assets/icons/nosConheca.png" alt="Icone da página home">
-                            <p>Nos conheça</p>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div id="menu-footer"> <!-- Rodapé Menu-lateral -->
-            <p>Nos siga no instagram</p>
-            <a href="https://www.instagram.com/lider_quebradaloungebar/" target="_blank">@lider_quebradaloungebar</a>
-        </div>
+      <div id="menu-header">
+        <!-- Cabeçalho Menu-Lateral -->
+        <nav>
+          <div>
+            <img
+              src="../assets/icons/perfil-icon.svg"
+              alt="Logo Quebrada Lounge"
+            />
+            <a href="Entrar.html">Entrar</a>
+            <!-- LOGIN -->
+          </div>
+          <img
+            src="../assets/icons/logo-desktop.svg"
+            alt="Logo Quebrada Lounge"
+          />
+        </nav>
+        <button>Promoções</button>
+      </div>
+      <div id="menu-nav">
+        <!-- NAVEGAÇÃO -->
+        <nav>
+          <ul>
+            <li>
+              <!-- HOME -->
+              <a href="../index.html">
+                <img
+                  src="../assets/icons/inicio-icon.svg"
+                  alt="Icone da página home"
+                />
+                <p>Inicio</p>
+              </a>
+            </li>
+            <li>
+              <!-- PRODUCTS -->
+              <a href="#">
+                <img
+                  src="../assets/icons/produtos-icon.png"
+                  alt="Icone da página home"
+                />
+                <p>Produtos</p>
+              </a>
+            </li>
+            <li>
+              <!-- LOCATION -->
+              <a href="../pages/localizacao.html">
+                <img
+                  src="../assets/icons/localizacao-icon.png"
+                  alt="Icone da página home"
+                />
+                <p>Localização</p>
+              </a>
+            </li>
+            <li>
+              <!-- SHOWS -->
+              <a href="../pages/shows.html">
+                <img
+                  src="../assets/icons/shows-icon.png"
+                  alt="Icone da página home"
+                />
+                <p>Shows</p>
+              </a>
+            </li>
+            <li>
+              <!-- Contact us -->
+              <a href="../pages/fale-conosco.html">
+                <img
+                  src="../assets/icons/faleCosnosco.png"
+                  alt="Icone da página home"
+                />
+                <p>Fale conoscos</p>
+              </a>
+            </li>
+            <li>
+              <!-- KNOW US -->
+              <a href="../pages/nos-conheca.html">
+                <img
+                  src="../assets/icons/nosConheca.png"
+                  alt="Icone da página home"
+                />
+                <p>Nos conheça</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="menu-footer">
+        <!-- Rodapé Menu-lateral -->
+        <p>Nos siga no instagram</p>
+        <a
+          href="https://www.instagram.com/lider_quebradaloungebar/"
+          target="_blank"
+          >@lider_quebradaloungebar</a
+        >
+      </div>
     </div>
 
     <!-- Formulário cadastre-se -->
     <div id="form-cadastreSe">
-        
-        <form action="#" class="formulario">
-            <fieldset>
-                <legend>Cadastre-se</legend>
-                <p>Venha fazer parte e tenha em suas mãos preços competitivos e grandes ofertas.</p>
+      <form action="#" class="formulario">
+        <fieldset>
+          <legend>Cadastre-se</legend>
+          <p>
+            Venha fazer parte e tenha em suas mãos preços competitivos e grandes
+            ofertas.
+          </p>
 
-                <div class="agrupamento-lateral-inputs">
-                    <div class="input-wrapper">
-                        <label class="label-escondido" for="name-input-cadastreSe">Nome</label>
-                        <input id="name-input-cadastreSe" type="text" placeholder="Nome" required>
-                    </div>
-                    <div class="input-wrapper">
-                        <label class="label-escondido" for="sobrenome-input-cadastreSe">Sobrenome</label>
-                        <input id="sobrenome-input-cadastreSe" type="text" placeholder="Sobrenome" required>
-                    </div>
-                </div>
-                <div class="input-wrapper">
-                    <label class="label-escondido" for="cpf-input-cadastreSe">CPF</label>
-                    <input id="cpf-input-cadastreSe" type="number" placeholder="CPF" required>
-                </div>
-                <div class="input-wrapper">
-                    <label class="label-escondido" for="email-input-cadastreSe">E-mail</label>
-                    <input id="email-input-cadastreSe" type="email" placeholder="E-mail" required>
-                </div>
-                <div class="input-wrapper">
-                    <label class="label-escondido" for="email-input-cadastreSe">Número de celular</label>
-                    <input id="phone-input-cadastreSe" type="celular" placeholder="Número de celular" required>
-                </div>
-                <div class="agrupamento-lateral-inputs">
-                    <div class="input-wrapper">
-                        <label class="label-escondido" for="senha-input-cadastreSe">Senha</label>
-                        <input id="senha-input-cadastreSe" type="password" placeholder="Senha" required>
-                    </div>
-                    <div class="input-wrapper">
-                        <label class="label-escondido" for="confirmarSenha-input-cadastreSe">Confirmar senha</label>
-                        <input id="confirmarSenha-input-cadastreSe" type="password" placeholder="Confirmar senha" required>
-                    </div>
-                </div>
-
-            </fieldset>
-
-            <div class="agrupamento-lateral-button">
-                <button class="button-global">
-                    Cadastrar
-                </button>
-
-                <div class="hyperlink-formulario">
-                    <a href="entrar.html">Já tem uma conta? Entre aqui</a>
-                </div>
+          <div class="agrupamento-lateral-inputs">
+            <div class="input-wrapper">
+              <label class="label-escondido" for="name-input-cadastreSe"
+                >Nome</label
+              >
+              <input
+                id="name-input-cadastreSe"
+                type="text"
+                placeholder="Nome"
+                required
+              />
             </div>
+            <div class="input-wrapper">
+              <label class="label-escondido" for="sobrenome-input-cadastreSe"
+                >Sobrenome</label
+              >
+              <input
+                id="sobrenome-input-cadastreSe"
+                type="text"
+                placeholder="Sobrenome"
+                required
+              />
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <label class="label-escondido" for="cpf-input-cadastreSe"
+              >CPF</label
+            >
+            <input
+              id="cpf-input-cadastreSe"
+              type="number"
+              placeholder="CPF"
+              required
+            />
+          </div>
+          <div class="input-wrapper">
+            <label class="label-escondido" for="email-input-cadastreSe"
+              >E-mail</label
+            >
+            <input
+              id="email-input-cadastreSe"
+              type="email"
+              placeholder="E-mail"
+              required
+            />
+          </div>
+          <div class="input-wrapper">
+            <label class="label-escondido" for="email-input-cadastreSe"
+              >Número de celular</label
+            >
+            <input
+              id="phone-input-cadastreSe"
+              type="celular"
+              placeholder="Número de celular"
+              required
+            />
+          </div>
+          <div class="agrupamento-lateral-inputs">
+            <div class="input-wrapper">
+              <label class="label-escondido" for="senha-input-cadastreSe"
+                >Senha</label
+              >
+              <input
+                id="senha-input-cadastreSe"
+                type="password"
+                placeholder="Senha"
+                required
+              />
+            </div>
+            <div class="input-wrapper">
+              <label
+                class="label-escondido"
+                for="confirmarSenha-input-cadastreSe"
+                >Confirmar senha</label
+              >
+              <input
+                id="confirmarSenha-input-cadastreSe"
+                type="password"
+                placeholder="Confirmar senha"
+                required
+              />
+            </div>
+          </div>
+        </fieldset>
 
-        </form>
+        <div class="agrupamento-lateral-button">
+          <button class="button-global">Cadastrar</button>
+
+          <div class="hyperlink-formulario">
+            <a href="entrar.html">Já tem uma conta? Entre aqui</a>
+          </div>
+        </div>
+      </form>
     </div>
 
     <!-- Footer -->
     <footer>
+      <div id="icone-flutuante">
+        <a href="">
+          <span>Entre em contato</span>
+          <img
+            src="../assets/icons/whatsapp-icon.svg"
+            alt="Icone do WhatsApp"
+          />
+        </a>
+      </div>
 
-            <div id="icone-flutuante">
-                <a href="">
-                    <span>Entre em contato</span>
-                    <img src="../assets/icons/whatsapp-icon.svg" alt="Icone do WhatsApp">
-                </a>
-            </div>
+      <section>
+        <nav>
+          <div class="text-wrapper">
+            <h3>HORÁRIO DE ATENDIEMNTO</h3>
+            <p>De Qua. a Dom. das 18:00h ás 23:30h</p>
+          </div>
+          <div class="text-wrapper">
+            <h3>NOS SIGA NO INSTAGRAM</h3>
+            <a href="#">@lider_quebradaloungebar</a>
+          </div>
+          <div class="text-wrapper">
+            <h3>LOCALIZAÇÃO</h3>
+            <p>Rua Horma, 158 - São Paulo - SP CEP: 02984-000</p>
+          </div>
+        </nav>
+        <div class="footer-payment">
+          <h3>FORMAS DE PAGAMENTO</h3>
+          <div class="footer-payment-icons">
+            <img
+              src="../assets/icons/payment-icon-mastercard.png"
+              alt="Bandeira MasterCard"
+            />
+            <img
+              src="../assets/icons/payment-icon-visa.png"
+              alt="Bandeira Visa"
+            />
+            <img
+              src="../assets/icons/payment-icon-pix.png"
+              alt="Bandeira Pix"
+            />
+            <img
+              src="../assets/icons/payment-icon-elo.png"
+              alt="Bandeira Elo"
+            />
+            <img
+              src="../assets/icons/payment-icon-american.png"
+              alt="Bandeira American Express"
+            />
+          </div>
+        </div>
+      </section>
 
-            <section>
-                <nav>
-                    <div class="text-wrapper">
-                        <h3>HORÁRIO DE ATENDIEMNTO</h3>
-                        <p>De Qua. a Dom. das 18:00h ás 23:30h</p>
-                    </div>
-                    <div class="text-wrapper">
-                        <h3>NOS SIGA NO INSTAGRAM</h3>
-                        <a href="#">@lider_quebradaloungebar</a>
-                    </div>
-                    <div class="text-wrapper">
-                        <h3>LOCALIZAÇÃO</h3>
-                        <p>Rua Horma, 158 - São Paulo - SP CEP: 02984-000</p>
-                    </div>
-                </nav>
-                <div class="footer-payment">
-                    <h3>FORMAS DE PAGAMENTO</h3>
-                    <div class="footer-payment-icons">
-                        <img src="../assets/icons/payment-icon-mastercard.png" alt="Bandeira MasterCard">
-                        <img src="../assets/icons/payment-icon-visa.png" alt="Bandeira Visa">
-                        <img src="../assets/icons/payment-icon-pix.png" alt="Bandeira Pix">
-                        <img src="../assets/icons/payment-icon-elo.png" alt="Bandeira Elo">
-                        <img src="../assets/icons/payment-icon-american.png" alt="Bandeira American Express">
-                    </div>
-                </div>
-            </section>
-
-            <div class="mobile-app">
-                <h3>BAIXE NOSSO APLICATIVO </h3>
-                <ul>
-                    <img src="../assets/icons/apple-store-badge.svg" alt="Badge da App Store">
-                    <img src="../assets/icons/google-play-badge.svg" alt="Badge do Google Play Store">
-                </ul>
-            </div>
-
+      <div class="mobile-app">
+        <h3>BAIXE NOSSO APLICATIVO</h3>
+        <ul>
+          <img
+            src="../assets/icons/apple-store-badge.svg"
+            alt="Badge da App Store"
+          />
+          <img
+            src="../assets/icons/google-play-badge.svg"
+            alt="Badge do Google Play Store"
+          />
+        </ul>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

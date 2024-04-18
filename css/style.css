@@ -26,7 +26,12 @@ html {
 
 /* Classes globais */
 
-.deskHeaderHiden { /* Deixa o Header Desktop oculto a baixo de 1000px */
+.deskHeaderHiden {
+  /* Deixa o Header Desktop oculto a baixo de 1000px */
+  display: none;
+}
+
+.frame-hide {
   display: none;
 }
 
@@ -1545,14 +1550,9 @@ footer .footer-payment-icons {
   }
 }
 
-#slick-slide00,
-#slick-slide01,
-#slick-slide02 {
-  transform: scale(1);
-}
-
 .slick-slide {
   transform: scale(0.85);
+
   transition: all 400ms ease-in-out;
 }
 
@@ -1561,6 +1561,12 @@ footer .footer-payment-icons {
   transition: all 400ms ease-in-out;
 }
 .slick-center {
+  transform: scale(1);
+}
+
+#slick-slide00,
+#slick-slide01,
+#slick-slide02 {
   transform: scale(1);
 }
 
@@ -1677,11 +1683,32 @@ footer .footer-payment-icons {
   }
 }
 
+@media screen and (min-width: 816px) {
+  /* Criado por conta do menu de navegação por categoria de produtos*/
+  #slider-categoria-produtos {
+    width: fit-content;
+    margin: 25px auto 0;
+    a {
+      width: 100px;
+    }
+
+    a:first-child,
+    a:last-child {
+      margin: 0;
+    }
+  }
+}
+
 @media screen and (min-width: 1000px) {
   /* Header */
-  .mobileHeaderHidem { /* Oculta elementos HEADER MOBILE */
+  .mobileHeaderHiden {
+    /* Oculta elementos HEADER MOBILE */
     display: none;
   }
+  .deskHeaderHiden {
+    display: block;
+  }
+
   header {
     padding: 0;
     nav {
@@ -1689,47 +1716,45 @@ footer .footer-payment-icons {
       display: flex;
       flex-direction: column;
       margin: 0 16%;
+      /* Navegação 1 */
       div {
-        /* Navegação 1 */
         grid-template-columns: auto 1fr auto;
         align-items: center;
         gap: 25px;
       }
 
-      ul {
-        /* Navegação 2 */
+      /* Navegação 2 */
+      .navegacaoHeaderDesktop {
         width: 100%;
         display: flex;
         justify-content: space-between;
         list-style: none;
-        
+
         li {
-            margin-bottom: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            a {
-              color: #000;
-              font-family: Poppins;
-              font-size: clamp(14px, 1vw, 20px);
-              font-weight: 600;
-              text-decoration: none;
-            }
-            
-            hr {
-              background-color: #000;
-              border: 0;
-              width: 20px;
-              height: 2px;
-              transition: all 300ms;
-            }
+          margin-bottom: 30px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          a {
+            color: #000;
+            font-family: Poppins;
+            font-size: clamp(14px, 1vw, 20px);
+            font-weight: 600;
+            text-decoration: none;
+          }
+
+          hr {
+            background-color: #000;
+            border: 0;
+            width: 20px;
+            height: 2px;
+            transition: all 300ms;
+          }
         }
 
         li:hover hr {
           width: 100%;
         }
-
-         
       }
     }
   }
@@ -1814,6 +1839,15 @@ footer .footer-payment-icons {
       -moz-filter: brightness(60%);
     }
   }
+  #img-chamativa-shows {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+  #img-shows-home {
+    width: 900px;
+    border-radius: 22px;
+  }
 }
 .frame-contendo-VerTodosOsProdutos:hover img {
   scale: 1.05;
@@ -1863,7 +1897,6 @@ footer .footer-payment-icons {
   transition: ease-in-out 400ms;
 }
 
-
 /* modal 18anos */
 #container-modal-18anos {
   z-index: 1000;
@@ -1881,11 +1914,16 @@ footer .footer-payment-icons {
 #modal-18anos {
   text-align: center;
   background-color: var(--cor-primaria);
-  width: 406px;
+  height: fit-content;
+  height: 370px;
+  max-height: 370px;
+  max-width: 400px;
   padding: 25px;
   border-radius: 22px;
+  margin: 15px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.364);
-  scale: 1.5;
+  scale: 0;
+  transition: ease-in-out 500ms;
 }
 
 #img-modal-18anos {
@@ -1898,9 +1936,13 @@ footer .footer-payment-icons {
   margin-bottom: 15px;
   font-family: poppins;
   font-weight: 400;
+  font-size: clamp(13px, 2vw, 16px);
 }
 #container-button-modal-18-anos {
   margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .button-modal-18anos {
   padding: 10px 20px;
@@ -1908,18 +1950,19 @@ footer .footer-payment-icons {
   background: #000;
   border: none;
   color: white;
-  margin: 0 10px;
+  margin: 0 20px;
   transition: 300ms;
   cursor: pointer;
+  scale: 1.3;
 }
 .button-modal-18anos:hover {
-  scale: 1.1;
+  scale: 1.4;
   transition: 300ms;
   background-color: rgb(63, 63, 63);
-  
 }
 #text2-modal-18anos {
   margin-bottom: 30px;
   font-family: sans-serif;
   font-weight: 400;
+  font-size: clamp(13px, 2vw, 16px);
 }

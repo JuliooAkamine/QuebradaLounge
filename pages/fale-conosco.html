@@ -19,33 +19,95 @@
 </head>
 
 <body>
-    <div id="container-modal-18anos">
-        <div id="modal-18anos">
-          <img id="img-modal-18anos" src="../assets/favicon.svg" alt="" />
-          <p id="text1-modal-18anos">Sua idade é superior a <b>18 anos?</b></p>
-          <div id="container-button-modal-18-anos">
-            <button class="button-modal-18anos">Sim</button>
-            <button class="button-modal-18anos">Não</button>
-          </div>
-          <p id="text2-modal-18anos">A venda de bebidas alcoólicas é proibida para menores de 18 anos.</p>
-        </div>
-        </div>
+   
     <header>
-        <h1><img id="logo-img-mobile" src="../assets/icons/Letreiro.png" alt="logo-quebrada-lounge-mobile"></h1>
-
+        <h1 class="mobileHeaderHiden">
+          <!-- Logo Mobile -->
+          <img
+            id="logo-img-mobile"
+            src="../assets/icons/Letreiro.png"
+            alt="logo-quebrada-lounge-mobile"
+          />
+        </h1>
+  
         <nav>
-            <div>
-
-                <img src="../assets/icons/Menu Hamburguer.png" alt="Icone de menu Hamburguer" onclick="openNav()">
-                <form action="#">
-                    <label for="barra-pesquisa" class="label-escondido">Pesquise o produto</label>
-                    <input id="barra-pesquisa" type="text" name="barra-pesquisa" placeholder="Pesquisar...">
-                </form>
-                <a href="carrinho.html"><img src="../assets/icons/Icone-Carrinho.png" alt="Icone de carrinho"></a>
-
+          <div>
+            <!-- Navegação 1  -->
+            <!-- Logo Desktop -->
+            <h1 class="deskHeaderHiden">
+              <img
+                src="../assets/icons/logo-desktop.svg"
+                alt="Quebrada Loung & Bar"
+              />
+            </h1>
+  
+            <!-- Botão menu hamburguer -->
+            <img
+              src="../assets/icons/Menu Hamburguer.png"
+              alt="Icone de menu Hamburguer"
+              onclick="openNav()"
+              class="mobileHeaderHiden"
+            />
+            <!-- Input de pesquisa -->
+            <form action="#">
+              <label for="barra-pesquisa" class="label-escondido"
+                >Pesquise o produto</label
+              >
+              <input
+                id="barra-pesquisa"
+                type="text"
+                name="barra-pesquisa"
+                placeholder="Pesquisar..."
+              />
+            </form>
+            <!-- Botão carrinho -->
+            <!-- Mobile -->
+            <a href="../pages/carrinho.html" class="mobileHeaderHiden"
+              ><img src="../assets/icons/Icone-Carrinho.png" alt="Icone de carrinho"
+            /></a>
+            <!-- Desktop -->
+            <div class="profile-wrapper deskHeaderHiden">
+              <a href="../pages/Entrar.html">
+                <img src="../assets/icons/PROFILE-ICON.png" alt="ícone de perfil" />
+                <p>Olá, Faça seu login</p>
+              </a>
+              <a href="../pages/carrinho.html">
+                <img
+                  src="../assets/icons/carrinho-sem-nome.svg"
+                  alt="ícone de carrinho"
+                />
+              </a>
             </div>
+          </div>
+          <!-- Navegação 2 -->
+          <ul class="navegacaoHeaderDesktop deskHeaderHiden">
+            <li>
+              <a href="../index.html">HOME</a>
+              <hr />
+            </li>
+            <li>
+              <a href="destaques.html">PRODUTOS</a>
+              <hr />
+            </li>
+            <li>
+              <a href="localizacao.html">LOCALIZAÇÃO</a>
+              <hr />
+            </li>
+            <li>
+              <a href="shows.html">SHOWS</a>
+              <hr />
+            </li>
+            <li>
+              <a href="nos-conheca.html">NOS CONHEÇA</a>
+              <hr />
+            </li>
+            <li>
+              <a href="fale-conosco.html">FALE CONOSCO</a>
+              <hr />
+            </li>
+          </ul>
         </nav>
-    </header>
+      </header>
 
     <!-- MENU LATERAL-SLIDER -->
     <div id="fechar-menu" onclick="closeNav()"></div>

@@ -27,11 +27,23 @@
     <title>Quebrada Lounge & Bar</title>
   </head>
 
-  <body>
+  <body id="body">
     <!-- modal 18anos -->
-    
-    <header>
-      <h1 class="mobileHeaderHidem"> <!-- Logo Mobile -->
+    <div id="container-modal-18anos">
+      <div id="modal-18anos">
+        <img id="img-modal-18anos" src="../assets/favicon.svg" alt="" />
+        <p id="text1-modal-18anos">Sua idade é superior a <b>18 anos?</b></p>
+        <div id="container-button-modal-18-anos">
+          <button onclick="modal()" class="button-modal-18anos">Sim</button>
+          <button onclick="nao()" class="button-modal-18anos">Não</button>
+        </div>
+        <p id="text2-modal-18anos">A venda de bebidas alcoólicas é proibida para menores de 18 anos.</p>
+      </div>
+      </div>
+
+    <header id="header">
+      <h1 class="mobileHeaderHiden">
+        <!-- Logo Mobile -->
         <img
           id="logo-img-mobile"
           src="assets/icons/Letreiro.png"
@@ -55,7 +67,7 @@
             src="assets/icons/Menu Hamburguer.png"
             alt="Icone de menu Hamburguer"
             onclick="openNav()"
-            class="mobileHeaderHidem"
+            class="mobileHeaderHiden"
           />
           <!-- Input de pesquisa -->
           <form action="#">
@@ -71,11 +83,11 @@
           </form>
           <!-- Botão carrinho -->
           <!-- Mobile -->
-          <a href="pages/carrinho.html" class="mobileHeaderHidem"
+          <a href="pages/carrinho.html" class="mobileHeaderHiden"
             ><img src="assets/icons/Icone-Carrinho.png" alt="Icone de carrinho"
           /></a>
           <!-- Desktop -->
-          <div class="profile-wrapper deskHeaderHiden" >
+          <div class="profile-wrapper deskHeaderHiden">
             <a href="pages/Entrar.html">
               <img src="assets/icons/PROFILE-ICON.png" alt="ícone de perfil" />
               <p>Olá, Faça seu login</p>
@@ -89,16 +101,31 @@
           </div>
         </div>
         <!-- Navegação 2 -->
-        <ul class="deskHeaderHiden">
+        <ul class="navegacaoHeaderDesktop deskHeaderHiden">
           <li>
             <a href="#">HOME</a>
             <hr />
           </li>
-          <li><a href="pages/destaques.html">PRODUTOS</a> <hr></li>
-          <li><a href="pages/localizacao.html">LOCALIZAÇÃO</a> <hr></li>
-          <li><a href="pages/shows.html">SHOWS</a> <hr></li>
-          <li><a href="pages/nos-conheca.html">NOS CONHEÇA</a> <hr></li>
-          <li><a href="pages/">FALE CONOSCO</a> <hr></li>
+          <li>
+            <a href="pages/destaques.html">PRODUTOS</a>
+            <hr />
+          </li>
+          <li>
+            <a href="pages/localizacao.html">LOCALIZAÇÃO</a>
+            <hr />
+          </li>
+          <li>
+            <a href="pages/shows.html">SHOWS</a>
+            <hr />
+          </li>
+          <li>
+            <a href="pages/nos-conheca.html">NOS CONHEÇA</a>
+            <hr />
+          </li>
+          <li>
+            <a href="pages/fale-conosco.html">FALE CONOSCO</a>
+            <hr />
+          </li>
         </ul>
       </nav>
     </header>
@@ -206,7 +233,7 @@
     <!-- Inicio do conteúdo do site
     -->
     <!-- carrosel -->
-    <main>
+    <main id="main">
       <div class="carrosel">
         <div>
           <a href="pages/prodCervejas.html">
@@ -232,7 +259,7 @@
             <img
               class="imgbanner"
               id="carrosel-img3"
-              src="assets/Banners/Banner-Pormoções.png"
+              src="assets/Banners/Banner-Promocoes.png"
               alt="foto-ilustrativa-promoções"
             />
           </a>
@@ -381,7 +408,7 @@
           </div>
         </div>
       </div>
-    </main>
+    </main >
 
     <!-- FOOTER -->
     <footer class="#">
