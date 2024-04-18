@@ -31,8 +31,7 @@
     <!-- modal 18anos -->
     
     <header>
-      <h1 class="frame-hide">
-        <!-- HIDEN -->
+      <h1 class="mobileHeaderHidem"> <!-- Logo Mobile -->
         <img
           id="logo-img-mobile"
           src="assets/icons/Letreiro.png"
@@ -44,7 +43,7 @@
         <div>
           <!-- Navegação 1  -->
           <!-- Logo Desktop -->
-          <h1>
+          <h1 class="deskHeaderHiden">
             <img
               src="assets/icons/logo-desktop.svg"
               alt="Quebrada Loung & Bar"
@@ -56,9 +55,8 @@
             src="assets/icons/Menu Hamburguer.png"
             alt="Icone de menu Hamburguer"
             onclick="openNav()"
-            class="frame-hide"
+            class="mobileHeaderHidem"
           />
-          <!-- HIDEN -->
           <!-- Input de pesquisa -->
           <form action="#">
             <label for="barra-pesquisa" class="label-escondido"
@@ -73,12 +71,11 @@
           </form>
           <!-- Botão carrinho -->
           <!-- Mobile -->
-          <a href="pages/carrinho.html" class="frame-hide"
+          <a href="pages/carrinho.html" class="mobileHeaderHidem"
             ><img src="assets/icons/Icone-Carrinho.png" alt="Icone de carrinho"
           /></a>
-          <!-- HIDEN -->
           <!-- Desktop -->
-          <div class="profile-wrapper">
+          <div class="profile-wrapper deskHeaderHiden" >
             <a href="pages/Entrar.html">
               <img src="assets/icons/PROFILE-ICON.png" alt="ícone de perfil" />
               <p>Olá, Faça seu login</p>
@@ -91,8 +88,8 @@
             </a>
           </div>
         </div>
-        <ul>
-          <!-- Navegação 2 -->
+        <!-- Navegação 2 -->
+        <ul class="deskHeaderHiden">
           <li>
             <a href="#">HOME</a>
             <hr />

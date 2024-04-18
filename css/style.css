@@ -26,7 +26,7 @@ html {
 
 /* Classes globais */
 
-.frame-hide {
+.deskHeaderHiden { /* Deixa o Header Desktop oculto a baixo de 1000px */
   display: none;
 }
 
@@ -1679,6 +1679,9 @@ footer .footer-payment-icons {
 
 @media screen and (min-width: 1000px) {
   /* Header */
+  .mobileHeaderHidem { /* Oculta elementos HEADER MOBILE */
+    display: none;
+  }
   header {
     padding: 0;
     nav {
@@ -1701,7 +1704,7 @@ footer .footer-payment-icons {
         list-style: none;
         
         li {
-            padding-bottom: 30px;
+            margin-bottom: 30px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1709,9 +1712,7 @@ footer .footer-payment-icons {
               color: #000;
               font-family: Poppins;
               font-size: clamp(14px, 1vw, 20px);
-              font-style: normal;
-              font-weight: 500;
-              line-height: normal;
+              font-weight: 600;
               text-decoration: none;
             }
             
@@ -1720,7 +1721,12 @@ footer .footer-payment-icons {
               border: 0;
               width: 20px;
               height: 2px;
+              transition: all 300ms;
             }
+        }
+
+        li:hover hr {
+          width: 100%;
         }
 
          
