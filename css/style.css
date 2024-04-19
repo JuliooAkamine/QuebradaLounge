@@ -1413,6 +1413,24 @@ footer .footer-payment-icons {
 }
 
 /* PÁGINA CARRINHO */
+#container-button-carrinho{
+  display: flex;
+  justify-content: end;
+
+}
+#adicao, #subtracao{
+  cursor: pointer;
+}
+#limparLocalStorage{
+padding: 15px;
+border: none;
+background-color: black;
+color: #fff787;
+font-family: poppins;
+border-radius: 20px;
+cursor: pointer;
+}
+
 #carrinho {
   display: flex;
   flex-direction: column;

@@ -12,6 +12,18 @@ function addProductToCart(event) {
 
     // Recuperar o carrinho atual do localStorage, ou iniciar um novo carrinho se não existir
     var carrinho = localStorage.getItem('carrinho') ? JSON.parse(localStorage.getItem('carrinho')) : [];
+    
+    // Verifica se o produto já está no carrinho
+    var produtoExistente = carrinho.find(function(produto) {
+        return produto.title === novoProduto.title;
+    });
+    
+    if (produtoExistente) {
+        // Se o produto já estiver no carrinho, exibe uma mensagem ou executa outra ação desejada
+        alert('Este produto já está no carrinho.');
+        return; // Não adiciona o produto novamente ao carrinho
+    }
+
     carrinho.push(novoProduto);
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
 
@@ -23,12 +35,15 @@ function addProductToCart(event) {
     }, 5000);
 }
 
+
 document.addEventListener('DOMContentLoaded', function() {
     var carrinho = localStorage.getItem('carrinho');
     carrinho = JSON.parse(carrinho) || [];
 
     var containerProdutos = document.getElementById('produtos-carrinho');
     containerProdutos.innerHTML = '';  // Limpa o conteúdo anterior
+
+    
 
     
 
@@ -46,9 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     <span class="product-price-carrinho">${produto.price}</span>
                 </div>
                 <div class="card-produto-quantidadeUni">
-                    <img src="../assets/icons/minus-icon.svg" alt="ícone de subtração">
-                    <span>1</span>
-                    <img src="../assets/icons/plus-icon.svg" alt="ícone de adição">
+                    <img onclick="subtrair()" id="subtracao" src="../assets/icons/minus-icon.svg" alt="ícone de subtração">
+                    <span id="contador-itens-carrinho">1</span>
+                    <img onclick="adicionar()"  id="adicao" src="../assets/icons/plus-icon.svg" alt="ícone de adição">
                 </div>
                 <div class="card-produto-subtotal">
                     <h6>Subtotal</h6>
@@ -84,9 +99,9 @@ function removeItemFromCart(index) {
                     <span class="product-price-carrinho">${produto.price}</span>
                 </div>
                 <div class="card-produto-quantidadeUni">
-                    <img src="../assets/icons/minus-icon.svg" alt="ícone de subtração">
-                    <span>1</span>
-                    <img src="../assets/icons/plus-icon.svg" alt="ícone de adição">
+                    <img onclick="subtrair()" id="subtracao" src="../assets/icons/minus-icon.svg" alt="ícone de subtração">
+                    <span id="contador-itens-carrinho">1</span>
+                    <img onclick="adicionar()"  id="adicao" src="../assets/icons/plus-icon.svg" alt="ícone de adição">
                 </div>
                 <div class="card-produto-subtotal">
                     <h6>Subtotal</h6>
@@ -96,3 +111,35 @@ function removeItemFromCart(index) {
         `;
     });
 }
+
+var contagem = document.getElementById('contador-itens-carrinho')
+var incrementar = document.getElementById('adicao')
+var decrementar = document.getElementById('subtracao')
+var contador = 0
+
+function adicionar(){
+    contador++
+    console.log(contador)
+    document.getElementById('contador-itens-carrinho').innerHTML = contador
+
+    var subtotal = document.getElementById('subtotal')
+    
+
+    subtotal.innerHTML = subtotalnumero
+    
+}
+
+function subtrair() {
+    if (contador > 0) {
+        contador--
+        document.getElementById('contador-itens-carrinho').innerHTML = contador
+    }}
+
+
+
+ // Função para limpar o localStorage
+ function limparLocalStorage() {
+    localStorage.clear();
+    location.reload()
+}
+
