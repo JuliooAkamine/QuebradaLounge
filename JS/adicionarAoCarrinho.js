@@ -117,23 +117,18 @@ var incrementar = document.getElementById('adicao')
 var decrementar = document.getElementById('subtracao')
 var contador = 0
 
-function adicionar(){
-    contador++
-    console.log(contador)
-    document.getElementById('contador-itens-carrinho').innerHTML = contador
+// function adicionar(){
+//     contador++;
+//     document.getElementById('contador-itens-carrinho').textContent = contador;
 
-    var subtotal = document.getElementById('subtotal')
-    
+   
+// }
 
-    subtotal.innerHTML = subtotalnumero
-    
-}
-
-function subtrair() {
-    if (contador > 0) {
-        contador--
-        document.getElementById('contador-itens-carrinho').innerHTML = contador
-    }}
+// function subtrair() {
+//     if (contador > 0) {
+//         contador--
+//         document.getElementById('contador-itens-carrinho').innerHTML = contador
+//     }}
 
 
 
