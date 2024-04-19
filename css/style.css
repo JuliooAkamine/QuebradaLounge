@@ -1446,6 +1446,7 @@ footer .footer-payment-icons {
     border-radius: 0px 0px 0px 16.5px;
     background: #ed5c5c;
     padding: 3px 6px;
+    cursor: pointer;
 
     position: absolute;
     top: -2.25px;
