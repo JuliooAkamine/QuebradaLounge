@@ -11,6 +11,8 @@ $(document).ready(function () {
     
   
 })
+
+// Slick Center
 function slickfy() {
     $(document).ready(function () {
         $('.produtos').slick({
@@ -42,14 +44,32 @@ $(window).resize(function(){
     }
 })
 
-$(document).ready(function () {
-    $('.slider').slick({
-        autoplay: false,
-        autoplaySpeed: 4000,
-        dots: false,
-        arrows: true,
-    }); 
+// Slick carossel 2
+function slickfy2() {
+    $(document).ready(function () {
+        $('.slider').slick({
+            autoplay: false,
+            autoplaySpeed: 4000,
+            dots: false,
+            arrows: true,
+            mobileFirst: true,
+                responsive: [
+                    {
+                        breakpoint: 865,
+                        settings: "unslick"
+                    }
+                ]
+        }); 
+    })
+}
+slickfy2()
+$(window).resize(function(){
+    var $windowWidth = $(window).width();
+    if ($windowWidth < 10000) { /* Adicionar o máximo de @media que iremos usar em nossa página */
+        slickfy2();
+    }
 })
+
 /* Função que quando clica aparece o menu lateral */
 function openNav() {
     document.getElementById("sidenav-overlay").style.width = "70%";
