@@ -78,9 +78,16 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   background-color: var(--cor-primaria);
   width: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
+}
+
+main {
+  flex-grow: 1;
 }
 
 /* PARTE TOPO */
@@ -155,77 +162,125 @@ header input::placeholder {
 }
 
 /* PARTE FOOTER */
+#icone-flutuante {
+  position: absolute;
+  top: -30px;
+  right: 8px;
+}
+
+#icone-flutuante a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-decoration: none;
+
+  color: #000;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+#icone-flutuante a img {
+  transition: 500ms;
+}
+
+#icone-flutuante a:hover img {
+  transform: scale(1.1);
+  filter: drop-shadow(4px 4px 8px);
+}
+
 footer {
   margin-top: 75px;
+  padding: 4%;
   position: relative;
 
   background-color: #171612;
   color: #fff;
-
-  padding: 13px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  gap: 20px;
 }
 
-footer section {
-  text-align: center;
+.container-footer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
+  width: fit-content;
+  margin: auto;
 }
 
 footer nav {
-  max-width: 182px;
-
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: 12px;
+
+  .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    p, a {
+      font-family: Raleway;
+      font-size: 12px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    a:hover {
+     color: #f9e80053;
+    }
+  }
 }
 
-footer h3 {
-  color: #fff;
-  text-align: center;
-  font-family: Poppins;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+ .footer-payment {
+  h3 {
+    text-align: center;
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
 }
-
-footer .text-wrapper a,
-footer .text-wrapper p {
-  color: #fff;
-  font-family: Raleway;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-footer .text-wrapper a::before {
-  content: url(../assets/icons/instagram-icon.svg);
-  margin-right: 4px;
-}
-
-footer .footer-payment {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-footer .footer-payment-icons {
+.footer-payment-icons {
   width: 225px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 0 16px;
+  gap: 5px 16px;
+
+  img {
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    width: 22%;
+  }
+}
+
+.mobile-app {
+  h3 {
+    text-align: center;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
 }
 
 /* PARTE DO OVERLAY DO MENU */
@@ -585,6 +640,7 @@ footer .footer-payment-icons {
 
 #icone-flutuante a img {
   transition: 500ms;
+  width: 38px;
 }
 
 #icone-flutuante a:hover img {
