@@ -968,7 +968,7 @@ footer nav {
 .img-destaque:nth-child(3) {
   grid-area: img3;
   width: 100%;
-  aspect-ratio: 20/17;
+  aspect-ratio: 15/17;
   object-fit: cover;
   object-position: 50% 15%;
   border-radius: 22px;
