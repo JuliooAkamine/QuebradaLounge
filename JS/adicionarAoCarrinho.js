@@ -1,3 +1,58 @@
+function renderizarCarrinho() {
+    var carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    var containerProdutos = document.getElementById('produtos-carrinho');
+    containerProdutos.innerHTML = '';  // Limpa o conteúdo anterior
+
+    var totalCompra = 0;
+
+    carrinho.forEach(function(produto, index) {
+        var contador = produto.contador; // Recupera o contador para cada produto
+
+        // Calcula o subtotal para cada produto
+        var precoUnitario = parseFloat(produto.price.replace('R$', '').replace(',', '.'));
+        var subtotal = precoUnitario * contador;
+
+        // Adiciona o subtotal ao total da compra
+        totalCompra += subtotal;
+
+        containerProdutos.innerHTML += `
+            <div class="card-produto-carrinho">
+            
+                <div class="icone-lixeira" onclick="removeItemFromCart(${index})"><img src="../assets/icons/icons-lixo.svg" alt="Remover item"></div>
+                <div class="card-produto-img">
+                    <img src="${produto.image}" alt="Imagem do produto">
+                </div>
+                <div class="card-produto-descricao">
+                    <p class="product-title-carrinho">${produto.title}</p>
+                </div>
+                <div class="card-produto-precoUni">
+                    <span class="product-price-carrinho">${produto.price}</span>
+                </div>
+                <div class="card-produto-quantidadeUni">
+                    <img onclick="subtrair(${index})" id="subtracao" src="../assets/icons/minus-icon.svg" alt="ícone de subtração">
+                    <span class="contador-itens-carrinho">${contador}</span>
+                    <img onclick="adicionar(${index})"  id="adicao" src="../assets/icons/plus-icon.svg" alt="ícone de adição">
+                </div>
+                <div class="card-produto-subtotal">
+                    <h6>Subtotal</h6>
+                    <span class="subtotal">R$ ${subtotal.toFixed(2)}</span>
+                </div>
+                
+            </div>
+            
+            
+        `;
+    });
+
+    // Atualiza o elemento HTML com o valor total da compra
+    document.getElementById('valor-total').textContent = 'R$ ' + totalCompra.toFixed(2);
+}
+
+document.addEventListener('DOMContentLoaded', renderizarCarrinho);
+
+
+
+
 function addProductToCart(event) {
     var cardProduto = event.target.closest('.card-produto');
     var imagem = cardProduto.querySelector('.product-image').src;
@@ -7,7 +62,8 @@ function addProductToCart(event) {
     var novoProduto = {
         title: productTitle,
         image: imagem,
-        price: productPrice
+        price: productPrice,
+        contador: 1  // Inicializa o contador como zero
     };
 
     // Recuperar o carrinho atual do localStorage, ou iniciar um novo carrinho se não existir
@@ -33,47 +89,15 @@ function addProductToCart(event) {
     setTimeout(function(){
         botao.style.right = '-550px';
     }, 5000);
+    
+    // Limpa o conteúdo anterior do carrinho e renderiza novamente
+    renderizarCarrinho();
+
+    
 }
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    var carrinho = localStorage.getItem('carrinho');
-    carrinho = JSON.parse(carrinho) || [];
 
-    var containerProdutos = document.getElementById('produtos-carrinho');
-    containerProdutos.innerHTML = '';  // Limpa o conteúdo anterior
-
-    
-
-    
-
-    carrinho.forEach(function(produto, index) {
-        containerProdutos.innerHTML += `
-            <div class="card-produto-carrinho">
-                <div class="icone-lixeira" onclick="removeItemFromCart(${index})"><img src="../assets/icons/icons-lixo.svg" alt="Remover item"></div>
-                <div class="card-produto-img">
-                    <img src="${produto.image}" alt="Imagem do produto">
-                </div>
-                <div class="card-produto-descricao">
-                    <p class="product-title-carrinho">${produto.title}</p>
-                </div>
-                <div class="card-produto-precoUni">
-                    <span class="product-price-carrinho">${produto.price}</span>
-                </div>
-                <div class="card-produto-quantidadeUni">
-                    <img onclick="subtrair()" id="subtracao" src="../assets/icons/minus-icon.svg" alt="ícone de subtração">
-                    <span id="contador-itens-carrinho">1</span>
-                    <img onclick="adicionar()"  id="adicao" src="../assets/icons/plus-icon.svg" alt="ícone de adição">
-                </div>
-                <div class="card-produto-subtotal">
-                    <h6>Subtotal</h6>
-                    <span id="subtotal">${produto.price}</span>
-                </div>
-            </div>
-        `;
-    });
-    
-});
 
 
 function removeItemFromCart(index) {
@@ -82,59 +106,57 @@ function removeItemFromCart(index) {
     localStorage.setItem('carrinho', JSON.stringify(carrinho)); // Atualiza o carrinho no localStorage
 
     // Re-renderiza a lista de produtos no carrinho após a remoção
-    var containerProdutos = document.getElementById('produtos-carrinho');
-    containerProdutos.innerHTML = '';  // Limpa o conteúdo anterior
+    renderizarCarrinho();
+}
 
-    carrinho.forEach(function(produto, index) {
-        containerProdutos.innerHTML += `
-            <div class="card-produto-carrinho">
-                <div class="icone-lixeira" onclick="removeItemFromCart(${index})"><img src="../assets/icons/icons-lixo.svg" alt="Remover item"></div>
-                <div class="card-produto-img">
-                    <img src="${produto.image}" alt="Imagem do produto">
-                </div>
-                <div class="card-produto-descricao">
-                    <p class="product-title-carrinho">${produto.title}</p>
-                </div>
-                <div class="card-produto-precoUni">
-                    <span class="product-price-carrinho">${produto.price}</span>
-                </div>
-                <div class="card-produto-quantidadeUni">
-                    <img onclick="subtrair()" id="subtracao" src="../assets/icons/minus-icon.svg" alt="ícone de subtração">
-                    <span id="contador-itens-carrinho">1</span>
-                    <img onclick="adicionar()"  id="adicao" src="../assets/icons/plus-icon.svg" alt="ícone de adição">
-                </div>
-                <div class="card-produto-subtotal">
-                    <h6>Subtotal</h6>
-                    <span id="subtotal">${produto.price}</span>
-                </div>
-            </div>
-        `;
+
+
+
+function adicionar(index) {
+    var carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    var produto = carrinho[index];
+    produto.contador++;
+    atualizarProdutoNoCarrinho(produto);
+}
+
+function subtrair(index) {
+    var carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    var produto = carrinho[index];
+    if (produto.contador > 0) {
+        produto.contador--;
+        atualizarProdutoNoCarrinho(produto);
+    }
+}
+
+function atualizarProdutoNoCarrinho(produto) {
+    var carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    var index = carrinho.findIndex(function(item) {
+        return item.title === produto.title;
     });
+    carrinho[index] = produto;
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    renderizarCarrinho();
 }
 
-var contagem = document.getElementById('contador-itens-carrinho')
-var incrementar = document.getElementById('adicao')
-var decrementar = document.getElementById('subtracao')
-var contador = 0
 
-// function adicionar(){
-//     contador++;
-//     document.getElementById('contador-itens-carrinho').textContent = contador;
+function atualizarSubtotal(index, contador) {
+    var precoUnitarioText = document.querySelectorAll('.product-price-carrinho')[index].textContent;
+    var precoUnitario = parseFloat(precoUnitarioText.replace('R$', '').replace(',', '.')); // Remover 'R$' e substituir ',' por '.' para tornar o preço um número válido
+    if (!isNaN(precoUnitario)) {
+        var subtotal = precoUnitario * contador;
+        document.querySelectorAll('.subtotal')[index].textContent = 'R$ ' + subtotal.toFixed(2); // Formatando o subtotal como 'R$ X.XX'
+    } else {
+        document.querySelectorAll('.subtotal')[index].textContent = 'Preço inválido';
+    }
+}
 
-   
-// }
+// Chamada para renderizar o carrinho quando a página é carregada
+document.addEventListener('DOMContentLoaded', renderizarCarrinho);
 
-// function subtrair() {
-//     if (contador > 0) {
-//         contador--
-//         document.getElementById('contador-itens-carrinho').innerHTML = contador
-//     }}
-
-
-
- // Função para limpar o localStorage
- function limparLocalStorage() {
+// Função para limpar o localStorage
+function limparLocalStorage() {
     localStorage.clear();
-    location.reload()
+    location.reload();
 }
+
 

@@ -13,7 +13,7 @@
     <!-- LINK COM O CSS PRINCIPAL -->
     <link rel="stylesheet" href="../css/style.css">
     <script src="../JS/script.js"></script>
-    <script src="../JS/adicionarAoCarrinho.js"></script>
+    
 
     <title>Carrinho</title>
 </head>
@@ -175,11 +175,40 @@
     <main>
       
         <div id="carrinho">
-          <div id="container-button-carrinho"><button onclick="limparLocalStorage()" id="limparLocalStorage" >Limpar carrinho</button></div>
+          <!-- <div id="container-button-carrinho"><button onclick="limparLocalStorage()" id="limparLocalStorage" >Limpar carrinho</button></div> -->
+          
+          <div id="grid-produtos">
+            
             <div id="produtos-carrinho">
-                
+             
+              
+              
+              </div>
+              <div id="container-geral-pagamento">
+                <div id="container-pagamento">
+                  <h3>Método de Pagamento</h3>
+                  <label>
+                      <input type="radio" name="metodo-pagamento" value="cartao"> Cartão de Crédito
+                  </label>
+                  <br>
+                  <label>
+                      <input type="radio" name="metodo-pagamento" value="pix"> PIX
+                  </label>
+                  <br>
+                  <label>
+                      <input type="radio" name="metodo-pagamento" value="dinheiro"> Dinheiro
+                  </label>
+                  <br>
+                  
+                  <div id="pagamento">
+                    <div id="total-compra">Total da Compra: <span id="valor-total"></span></div>
+                    <button>Realizar Pagamento</button>
+                  </div>
+                          
+                        
+              </div>
             </div>
-        </div>
+            
     </main>
 
     <!-- FOOTER -->
@@ -226,7 +255,7 @@
       </div>
   
   </footer>
-
+  <script src="../JS/adicionarAoCarrinho.js"></script>
 </body>
 
 </html>
