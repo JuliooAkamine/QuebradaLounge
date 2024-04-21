@@ -84,6 +84,7 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
+  animation: fedeIn 300ms ease-in;
 }
 
 main {
@@ -2237,4 +2238,15 @@ cursor: pointer;
   font-family: sans-serif;
   font-weight: 400;
   font-size: clamp(13px, 2vw, 16px);
+}
+
+/* Animação de entra em página */
+@keyframes fedeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
