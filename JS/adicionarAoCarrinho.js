@@ -1,3 +1,4 @@
+//Adiciona o item a cada clique
 function renderizarCarrinho() {
     var carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
     var containerProdutos = document.getElementById('produtos-carrinho');
@@ -50,9 +51,7 @@ function renderizarCarrinho() {
 
 document.addEventListener('DOMContentLoaded', renderizarCarrinho);
 
-
-
-
+//Função para adicionar o item no carrinho
 function addProductToCart(event) {
     var cardProduto = event.target.closest('.card-produto');
     var imagem = cardProduto.querySelector('.product-image').src;
@@ -96,10 +95,7 @@ function addProductToCart(event) {
     
 }
 
-
-
-
-
+//função para remover o item do carrinho
 function removeItemFromCart(index) {
     var carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
     carrinho.splice(index, 1); // Remove o item no índice especificado
@@ -109,16 +105,14 @@ function removeItemFromCart(index) {
     renderizarCarrinho();
 }
 
-
-
-
+//função para o contador do carrinho +
 function adicionar(index) {
     var carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
     var produto = carrinho[index];
     produto.contador++;
     atualizarProdutoNoCarrinho(produto);
 }
-
+//Função para o contador do carrinho -
 function subtrair(index) {
     var carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
     var produto = carrinho[index];

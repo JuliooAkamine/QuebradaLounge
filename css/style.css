@@ -1,6 +1,9 @@
 html {
   scroll-behavior: smooth;
 }
+.mobileHeaderHiden{
+  cursor: pointer;
+}
 
 * {
   /* Zera os espaçamentos de todos os elemntos */
@@ -381,6 +384,7 @@ footer nav {
   font-family: Poppins;
   font-size: 18px;
   font-weight: 700;
+  cursor: pointer;
 
   border: none;
   border-radius: 12px;
@@ -953,7 +957,9 @@ footer nav {
     line-height: normal;
   }
 }
-
+#products-destaque{
+  text-align: center;
+}
 .grid-compre-aqui {
   max-width: 400px;
   margin: 0 auto;
@@ -1196,7 +1202,7 @@ footer nav {
   width: 70px;
   right:  0;
   bottom: 20px;
-  margin-left: 93%;
+  margin-left: 90%;
 }
 
 /* Slider de categorias de produtos */
@@ -1548,12 +1554,14 @@ footer nav {
 #limparLocalStorage {
   padding: 15px;
   border: none;
-  background-color: black;
-  color: #fff787;
+  background-color: white;
+  color: black;
+  font-weight: 600;
   font-family: poppins;
   border-radius: 20px;
   cursor: pointer;
-  display: none;
+  border: 2px solid black;
+ 
 }
 
 #carrinho {
@@ -1743,7 +1751,15 @@ footer nav {
 }
 
 @media screen and (max-width: 425px) {
+  #menu-footer{
+    width: 80%;
+    a{
+      font-size: 10px;
+    }
+  }
+  
   #modal-addtocart {
+    
     font-size: 12px;
   }
 
@@ -2037,6 +2053,9 @@ footer nav {
   }
 }
 @media screen and (max-width: 1000px) {
+  #voltaraoinicio{
+    margin-left: 88%;
+  }
   #container-button-carrinho {
     margin: 0 auto;
     width: 100%;
@@ -2097,6 +2116,9 @@ footer nav {
 
 @media screen and (min-width: 1000px) {
   /* aba destaque */
+  #voltaraoinicio{
+    margin-left: 94%;
+  }
   .titulo-categotia-produto {
     h2 {
       width: 340px;
@@ -2155,6 +2177,7 @@ footer nav {
   .mobileHeaderHiden {
     /* Oculta elementos HEADER MOBILE */
     display: none;
+   
   }
   .deskHeaderHiden {
     display: block;
@@ -2361,20 +2384,25 @@ footer nav {
 /* Modal produto adicionado ao carrinho */
 
 #modal-addtocart {
+  
   position: fixed;
   background-color: white;
-
+  scale: 0.7;
   bottom: 80%;
-  max-width: 400px;
+  max-width: 350px;
 
   scale: 0.8;
   font-family: poppins;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: -5px 5px rgba(0, 0, 0, 0.412);
+  padding: 0px 5px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.412);
   right: -510px;
   z-index: 1000;
   transition: ease-in-out 400ms;
+  h1{
+    font-weight: 500;
+    scale: 0.7;
+  }
 }
 
 /* modal 18anos */

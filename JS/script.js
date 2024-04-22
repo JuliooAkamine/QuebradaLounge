@@ -3,7 +3,7 @@
 //Carrosel slick
 $(document).ready(function () {
     $('.carrosel').slick({
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 4000,
         dots: true,
         arrows: true,
@@ -51,7 +51,7 @@ function slickfy2() {
             autoplay: false,
             autoplaySpeed: 4000,
             dots: false,
-            arrows: true,
+            arrows: false,
             mobileFirst: true,
                 responsive: [
                     {
