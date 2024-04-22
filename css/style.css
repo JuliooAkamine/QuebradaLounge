@@ -52,6 +52,10 @@ html {
   display: none;
 }
 
+.btn-hiden {
+  text-align: center;
+}
+
 .hidden {
   opacity: 0;
   transition: all 700ms;
@@ -1039,6 +1043,7 @@ footer nav {
 
   background: #171612;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  min-height: 64px;
   p,
   span {
     color: #fffde2;
@@ -1319,7 +1324,6 @@ footer nav {
   }
 
   a {
-    border: 2px solid black;
     padding: 10px;
     border-radius: 10px;
     background: white;
@@ -2012,7 +2016,6 @@ footer nav {
 
     a {
       font-size: 16px;
-      border: 2px solid black;
       padding: 10px;
       border-radius: 10px;
       background: white;
@@ -2053,6 +2056,7 @@ footer nav {
   }
 }
 @media screen and (max-width: 1000px) {
+
   #voltaraoinicio{
     margin-left: 88%;
   }
@@ -2115,6 +2119,9 @@ footer nav {
 }
 
 @media screen and (min-width: 1000px) {
+  .btn-hiden {
+    display: none;
+  }
   /* aba destaque */
   #voltaraoinicio{
     margin-left: 94%;
