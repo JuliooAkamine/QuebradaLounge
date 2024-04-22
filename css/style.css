@@ -1084,6 +1084,9 @@ footer nav {
   line-height: normal;
   transition: 300ms;
 }
+#text-show-home:hover{
+ scale: 1.1;
+}
 #img-chamativa-shows {
   position: absolute;
 }

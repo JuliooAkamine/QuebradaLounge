@@ -88,7 +88,7 @@ function addProductToCart(event) {
     botao.style.right = '0px';
     setTimeout(function(){
         botao.style.right = '-550px';
-    }, 5000);
+    }, 1500);
     
     // Limpa o conteúdo anterior do carrinho e renderiza novamente
     renderizarCarrinho();
