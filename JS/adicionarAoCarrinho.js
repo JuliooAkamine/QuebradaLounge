@@ -84,10 +84,19 @@ function addProductToCart(event) {
 
     // Animação do botão (ajustar conforme sua necessidade)
     var botao = document.querySelector('#modal-addtocart');
+    var linhaCarragando = document.querySelector('#linha-carregando')
     botao.style.right = '0px';
     setTimeout(function(){
+        linhaCarragando.style.width = "100%"
+        linhaCarragando.style.transition = "1800ms"
+    }, 500) /* Tempo que vai acionar a animação de 100% */
+    setTimeout(function(){
         botao.style.right = '-550px';
-    }, 1500);
+    }, 2500); /* Tempo que ira ocultar modal*/
+    setTimeout(function(){
+        linhaCarragando.style.width = "0%"
+        linhaCarragando.style.transition = "0ms"
+    }, 3000) /* Tempo para ocultar barra de carregamento e zerar transição. */
     
     // Limpa o conteúdo anterior do carrinho e renderiza novamente
     renderizarCarrinho();
