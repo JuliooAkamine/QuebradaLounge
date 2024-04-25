@@ -2,6 +2,7 @@
 function renderizarCarrinho() {
     var carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
     var containerProdutos = document.getElementById('produtos-carrinho');
+    var recibo = document.getElementById('recibo-container')
     containerProdutos.innerHTML = '';  // Limpa o conteúdo anterior
 
     var totalCompra = 0;
@@ -43,6 +44,31 @@ function renderizarCarrinho() {
             
             
         `;
+
+        recibo.innerHTML += `
+        <div class="card-produto-carrinho">
+        
+            <div class="icone-lixeira" onclick="removeItemFromCart(${index})"><img src="../assets/icons/icons-lixo.svg" alt="Remover item"></div>
+            <div class="card-produto-img">
+                <img src="${produto.image}" alt="Imagem do produto">
+            </div>
+            <div class="card-produto-descricao">
+                <p class="product-title-carrinho">${produto.title}</p>
+            </div>
+            <div class="card-produto-precoUni">
+                <span class="product-price-carrinho">${produto.price}</span>
+            </div>
+        
+            <div class="card-produto-subtotal">
+                <h6>Subtotal</h6>
+                <span class="subtotal">R$ ${subtotal.toFixed(2)}</span>
+            </div>
+            
+        </div>
+        
+        
+    `
+
     });
 
     // Atualiza o elemento HTML com o valor total da compra
@@ -162,4 +188,9 @@ function limparLocalStorage() {
     location.reload();
 }
 
+var pagar = document.getElementById("payment")
+
+pagar.addEventListener('click', function(){
+   document.getElementById('carrinhocontainer').style.display = 'none'
+})
 

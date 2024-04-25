@@ -1,5 +1,5 @@
 html {
-  scroll-behavior: smooth;
+  scroll-behavior:smooth;
 }
 .mobileHeaderHiden{
   cursor: pointer;
@@ -2526,6 +2526,28 @@ footer nav {
   font-weight: 400;
   font-size: clamp(13px, 2vw, 16px);
 }
+
+/* recibo na aba carrinho quando pagar */
+
+#recibo-container{
+  h1{
+    font-size: clamp(12px,4vw,26px);
+  }
+  display: flex;
+  justify-content: center;
+  font-family: poppins;
+  padding: 15px;
+  flex-wrap: wrap;
+  
+
+  border: 2px solid #000;
+ 
+  margin: 4%;
+  background-color: white;
+  max-height: 310px;
+  border-radius: 10px;
+}
+
 
 /* Animação de entra em página */
 @keyframes fedeIn {

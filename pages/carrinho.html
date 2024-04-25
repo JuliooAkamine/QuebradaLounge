@@ -172,7 +172,7 @@
         </div>
     </div>
 
-    <main>
+    <main id="carrinhocontainer">
       
         <div id="carrinho">
            <div id="container-button-carrinho"><button onclick="limparLocalStorage()" id="limparLocalStorage" >Limpar carrinho</button></div> 
@@ -202,7 +202,7 @@
                   
                   <div id="pagamento">
                     <div id="total-compra">Total da Compra: <span id="valor-total"></span></div>
-                    <button>Realizar Pagamento</button>
+                    <button id="payment">Realizar Pagamento</button>
                   </div>
                           
                         
@@ -210,6 +210,12 @@
             </div>
             
     </main>
+
+    <div id="recibo-container">
+        <div>
+          <h1>Dados do seu pedido</h1>
+        </div>
+    </div>
 
     <!-- FOOTER -->
     <footer>
