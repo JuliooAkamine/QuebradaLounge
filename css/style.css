@@ -805,24 +805,27 @@ footer nav {
 }
 .chamativaShow > button {
   /* Botão "Ver mais" */
-  background-color: #f2d43d;
+  background-color: #f2de79;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
   border: none;
   border-radius: 22px;
   height: 30px;
   padding: 0 25px;
-  color: #fff;
+  color: #000;
   font-family: sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   cursor: pointer;
+  transition: 300ms;
 }
 
 .chamativaShow > button:hover {
-  background-color: #c2ab35;
+  background-color: var(--background-forms);
+  color: #232323;
+  scale: 1.05;
 }
 
 .blocoFotoDoShow {
@@ -2073,6 +2076,22 @@ footer nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 100px;
+
+    p {
+      text-align: left;
+    }
+  }
+
+  .agrupamentoDoShow:nth-child(even) {
+    p {
+      grid-column: 1;
+      grid-row: 1;
+      text-align: end;
+    }
+
+    section {
+      grid-column: 2;
+    }
   }
 
   .agrupamentoDoShow > p {
