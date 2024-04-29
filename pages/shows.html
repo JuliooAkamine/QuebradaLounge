@@ -232,24 +232,24 @@
                 
               </div>
               <button id="showsBtnVerTudo">
-                  VER TUDO
+                Ver todos os eventos
               </button>
         </div>
         
         <div id="section-agendarShow"> <!-- SEÇÃO AGENDE SEU SHOW -->
-            <div class="texto-agendeSeuShow">
+            <!-- <div class="texto-agendeSeuShow">
                 <h4>Agende seu shows</h4>
                 <p>Bem-vindo ao nosso serviço de agendamento de shows! Facilitamos para artistas e bandas a reserva do palco em nosso estabelecimento, tornando o processo simples e conveniente através de nosso formulário de informações personalizado.</p>
-            </div>
+            </div> -->
+            <button onclick="abrirAgendamento()">Clique aqui e agende seu show em nosso espaço</button>
 
             <!-- Formulário de agendar seu shows -->
-
-            <!-- 
-                Fazer reformulação no formulário do figma antes de passar para estruturação
-             -->
-            <div id="form-agenda">
+            <div id="form-agenda" class="hidenAgenda">
         
-                <form action="#" class="formulario">
+                <form action="#" id="formAgenda" class="formulario">
+                  <div id="btn-fechar-form" >
+                    <img src="../assets/icons/CLOSEICON.svg" alt="íconde de fechar" onclick="fecharAgendamento()">
+                  </div>
                     <fieldset>
                         <legend>Agendamento</legend>
                         

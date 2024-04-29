@@ -134,3 +134,22 @@ function nao(){
    document.write('<h1>Desculpe você não tem idade suficiente para acessar este site.</h1>')
   
 }
+
+/* Funções para abrir e fechar modal do formulário de agendamento */
+function abrirAgendamento() {
+    document.getElementById("form-agenda").classList.remove('hidenAgenda')
+    document.getElementById('formAgenda').style.animationName = "zoomIn"
+
+    // Oculta a barra de rolagem do corpo da página
+    document.body.style.overflow = "hidden";
+
+}
+function fecharAgendamento() {
+    document.getElementById('formAgenda').style.animationName = "zoomOut"
+    setTimeout(function(){
+        document.getElementById("form-agenda").classList.add('hidenAgenda')
+            // Restaura a barra de rolagem do corpo da página
+            document.body.style.overflowX = "clip";
+            document.body.style.overflowY = "auto";
+    }, 300)
+}
