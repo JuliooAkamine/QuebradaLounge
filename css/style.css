@@ -216,7 +216,7 @@ header input::placeholder {
 
 footer {
   margin-top: 75px;
-  padding: 4%;
+  padding: 50px 4%;
   position: relative;
 
   background-color: #171612;
@@ -2004,9 +2004,9 @@ footer nav {
     
   }
   /* Collun nos badges da App Store e Play Store */
-  .mobile-app ul {
+  /* .mobile-app ul {
     flex-direction: column;
-  }
+  } */
   /* Criado por conta do menu de navegação por categoria de produtos*/
   #slider-categoria-produtos {
     width: fit-content;
