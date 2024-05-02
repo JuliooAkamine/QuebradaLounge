@@ -2759,6 +2759,12 @@ footer nav {
 .itens-carrinho {
   margin-bottom: 20px;
   width: 100%;
+  overflow: auto;
+  height: 350px;
+  border: 2px solid black;
+  padding: 15px;
+  border-radius: 10px;
+  
 }
 
 .item-carrinho {
@@ -2831,4 +2837,33 @@ footer nav {
 #total-compra-text {
   max-width: 138.45px;
   font-weight: 300;
+}
+
+
+#text-container-carrinho-aviso{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  background: #ff0000;
+  color: white;
+  font-weight: 600;
+  font-size: clamp(12px,2vw,18px);
+
+}
+
+
+.material-symbols-outlined {
+  padding: 0px 5px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 600,
+  'GRAD' 0,
+  'opsz' 25
+}
+
+.itens-carrinho::-webkit-scrollbar-track{
+ border-radius: 0 6px 6px 0px;
 }
