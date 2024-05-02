@@ -1695,7 +1695,26 @@ footer nav {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  a {
+    background-color: #171612;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border: 0;
+    border-radius: 22px;
+    color: #fff;
+    font-size: clamp(16px, 3vw, 18px);
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 0;
+    transition: 300ms;
+  }
+
+  a:hover {
+    background-color: #2e2d27;
+  }
 }
+
 .card-produto-carrinho {
   position: relative;
 

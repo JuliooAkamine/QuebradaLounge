@@ -9,7 +9,7 @@ function renderizarCarrinho() {
 
     if (carrinho.length === 0) {
         // Se o carrinho estiver vazio, exibe a mensagem
-        containerProdutos.innerHTML = '<img id="carrinhovazioimg" src="../assets/icons/carrinho vazio.png" alt=""> <p id="text-carrinhovazio">Desculpe, não há nenhum item no carrinho.</p>';
+        containerProdutos.innerHTML = '<img id="carrinhovazioimg" src="../assets/icons/carrinho vazio.png" alt=""> <p id="text-carrinhovazio">Desculpe, não há nenhum item no carrinho.</p><a href="destaques.html">Ir para produtos</a>';
         // Esconde o botão de limpar carrinho
         document.getElementById('container-geral-pagamento').style.display = 'none';
        
