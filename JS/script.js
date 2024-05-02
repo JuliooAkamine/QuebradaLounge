@@ -122,7 +122,9 @@ document.getElementById('main').style.filter = 'blur(2px)'
 document.getElementById('header').style.filter = 'blur(2px)'
 
 function modal(){
-    document.getElementById('container-modal-18anos').style.display = 'none'
+    // document.getElementById('container-modal-18anos').style.display = 'none'
+document.getElementById('container-modal-18anos').style.transition = '200ms'
+document.getElementById('container-modal-18anos').style.scale = '0'
 document.getElementById('body').style.overflowY = 'scroll'
 document.getElementById('main').style.filter = 'blur(0)'
 document.getElementById('header').style.filter = 'blur(0)'
