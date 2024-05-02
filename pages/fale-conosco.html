@@ -20,158 +20,161 @@
 
 <body>
    
-    <header>
-        <h1 class="mobileHeaderHiden">
-          <!-- Logo Mobile -->
-          <img
-            id="logo-img-mobile"
-            src="../assets/icons/Letreiro.png"
-            alt="logo-quebrada-lounge-mobile"
-          />
-        </h1>
-  
-        <nav>
-          <div>
-            <!-- Navegação 1  -->
-            <!-- Logo Desktop -->
-            <h1 class="deskHeaderHiden">
-              <img
-                src="../assets/icons/logo-desktop.svg"
-                alt="Quebrada Loung & Bar"
-              />
-            </h1>
-  
-            <!-- Botão menu hamburguer -->
+  <header>
+    <h1 class="mobileHeaderHiden">
+      <!-- Logo Mobile -->
+      <a href="../index.html">
+        <img
+          id="logo-img-mobile"
+          src="../assets/icons/Letreiro.png"
+          alt="logo-quebrada-lounge-mobile"
+        />
+      </a>
+    </h1>
+
+    <nav>
+      <div>
+        <!-- Navegação 1  -->
+        <!-- Logo Desktop -->
+        <h1 class="deskHeaderHiden">
+          <a href="../index.html">
             <img
-              src="../assets/icons/Menu Hamburguer.png"
-              alt="Icone de menu Hamburguer"
-              onclick="openNav()"
-              class="mobileHeaderHiden"
+              src="../assets/icons/logo-desktop.svg"
+              alt="Quebrada Loung & Bar"
             />
-            <!-- Input de pesquisa -->
-            <form action="#">
-              <label for="barra-pesquisa" class="label-escondido"
-                >Pesquise o produto</label
-              >
-              <input
-                id="barra-pesquisa"
-                type="text"
-                name="barra-pesquisa"
-                placeholder="Pesquisar..."
-              />
-            </form>
-            <!-- Botão carrinho -->
-            <!-- Mobile -->
-            <a href="../pages/carrinho.html" class="mobileHeaderHiden"
-              ><img src="../assets/icons/Icone-Carrinho.png" alt="Icone de carrinho"
-            /></a>
-            <!-- Desktop -->
-            <div class="profile-wrapper deskHeaderHiden">
-              <a href="../pages/Entrar.html">
-                <img src="../assets/icons/PROFILE-ICON.png" alt="ícone de perfil" />
-                <p>Olá, Faça seu login</p>
-              </a>
-              <a href="../pages/carrinho.html">
-                <img
-                  src="../assets/icons/carrinho-sem-nome.svg"
-                  alt="ícone de carrinho"
-                />
-              </a>
-            </div>
-          </div>
-          <!-- Navegação 2 -->
-          <ul class="navegacaoHeaderDesktop deskHeaderHiden">
-            <li>
-              <a href="../index.html">HOME</a>
-              <hr />
-            </li>
-            <li>
-              <a href="destaques.html">PRODUTOS</a>
-              <hr />
-            </li>
-            <li>
-              <a href="localizacao.html">LOCALIZAÇÃO</a>
-              <hr />
-            </li>
-            <li>
-              <a href="shows.html">SHOWS</a>
-              <hr />
-            </li>
-            <li>
-              <a href="nos-conheca.html">NOS CONHEÇA</a>
-              <hr />
-            </li>
-            <li>
-              <a href="fale-conosco.html">FALE CONOSCO</a>
-              <hr />
-            </li>
-          </ul>
-        </nav>
-      </header>
+          </a>
+        </h1>
 
-    <!-- MENU LATERAL-SLIDER -->
-    <div id="fechar-menu" onclick="closeNav()"></div>
-
-    <div id="sidenav-overlay">
-        <div id="menu-header">
-             <nav>
-                <div>
-                    <img src="/assets/icons/perfil-icon.svg" alt="Logo Quebrada Lounge">
-                    <a href="Entrar.html">Entrar</a> <!-- LOGIN -->
-                </div>
-                <img src="/assets/icons/logo-desktop.svg" alt="Logo Quebrada Lounge">
-             </nav>
-             <button>
-                Promoções
-             </button>
+        <!-- Botão menu hamburguer -->
+        <img
+          src="../assets/icons/Menu Hamburguer.png"
+          alt="Icone de menu Hamburguer"
+          onclick="openNav()"
+          class="mobileHeaderHiden"
+        />
+        <!-- Input de pesquisa -->
+        <form action="#">
+          <label for="barra-pesquisa" class="label-escondido"
+            >Pesquise o produto</label
+          >
+          <input
+            id="barra-pesquisa"
+            type="text"
+            name="barra-pesquisa"
+            placeholder="Pesquisar..."
+          />
+        </form>
+        <!-- Botão carrinho -->
+        <!-- Mobile -->
+        <a href="../pages/carrinho.html" class="mobileHeaderHiden"
+          ><img src="../assets/icons/carrinho-sem-nome.svg" alt="Icone de carrinho"
+        /></a>
+        <!-- Desktop -->
+        <div class="profile-wrapper deskHeaderHiden">
+          <a href="../pages/Entrar.html">
+            <img src="../assets/icons/PROFILE-ICON.png" alt="ícone de perfil" />
+            <p>Olá, Faça seu login</p>
+          </a>
+          <a href="../pages/carrinho.html">
+            <img
+              src="../assets/icons/carrinho-sem-nome.svg"
+              alt="ícone de carrinho"
+            />
+          </a>
         </div>
-        <div id="menu-nav">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="../index.html"> <!-- HOME -->
-                            <img src="/assets/icons/inicio-icon.png" alt="Icone da página home">
-                            <p>Inicio</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="destaques.html"> <!-- PRODUCTS -->
-                            <img src="/assets/icons/produtos-icon.png" alt="Icone da página home">
-                            <p>Produtos</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="localizacao.html"> <!-- LOCATION -->
-                            <img src="/assets/icons/localizacao-icon.png" alt="Icone da página home">
-                            <p>Localização</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="shows.html"> <!-- SHOWS -->
-                            <img src="/assets/icons/shows-icon.png" alt="Icone da página home">
-                            <p>Shows</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="fale-conosco.html"> <!-- Contact us -->
-                            <img src="/assets/icons/faleCosnosco.png" alt="Icone da página home">
-                            <p>Fale conoscos</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="nos-conheca.html"> <!-- KNOW US -->
-                            <img src="/assets/icons/nosConheca.png" alt="Icone da página home">
-                            <p>Nos conheça</p>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div id="menu-footer">
-            <p>Nos siga no instagram</p>
-            <a href="https://www.instagram.com/lider_quebradaloungebar/" target="_blank">@lider_quebradaloungebar</a>
-        </div>
+      </div>
+      <!-- Navegação 2 -->
+      <ul class="navegacaoHeaderDesktop deskHeaderHiden">
+        <li>
+          <a href="../index.html">HOME</a>
+          <hr />
+        </li>
+        <li>
+          <a href="destaques.html">PRODUTOS</a>
+          <hr />
+        </li>
+        <li>
+          <a href="shows.html">SHOWS</a>
+          <hr />
+        </li>
+        <li>
+          <a href="nos-conheca.html">NOS CONHEÇA</a>
+          <hr />
+        </li>
+        <li>
+          <a href="fale-conosco.html">FALE CONOSCO</a>
+          <hr />
+        </li>
+      </ul>
+    </nav>
+  </header>
+<!-- 
+    !!MENU LATERAL!!
+    Overlay slider in-out
+    **Aplicação de fundo opaco
+-->
+<div id="fechar-menu" onclick="closeNav()"></div>
+<div id="sidenav-overlay"> <!-- Menu lateral -->
+<div id="menu-header">
+  <!-- Cabeçalho Menu-Lateral -->
+  <nav>
+    <div>
+      <img src="../assets/icons/perfil-icon.svg" alt="Logo Quebrada Lounge" />
+      <a href="Entrar.html">Entrar</a>
+      <!-- LOGIN -->
     </div>
+    <a href="../index.html"><img src="../assets/icons/logo-desktop.svg" alt="Logo Quebrada Lounge" /></a>
+  </nav>
+  <button>Promoções</button>
+</div>
+<div id="menu-nav">
+  <!-- NAVEGAÇÃO -->
+  <nav>
+    <ul>
+      <li>
+        <!-- HOME -->
+        <a href="/index.html">
+          <img src="../assets/icons/inicio-icon.png" alt="Icone da página home" />
+          <p>Inicio</p>
+        </a>
+      </li>
+      <li>
+        <!-- PRODUCTS -->
+        <a href="../pages/destaques.html">
+          <img src="../assets/icons/produtos-icon.png" alt="Icone da página home" />
+          <p>Produtos</p>
+        </a>
+      </li>
+      <li>
+        <!-- SHOWS -->
+        <a href="/pages/shows.html">
+          <img src="../assets/icons/shows-icon.png" alt="Icone da página home" />
+          <p>Shows</p>
+        </a>
+      </li>
+      <li>
+        <!-- Contact us -->
+        <a href="/pages/fale-conosco.html">
+          <img src="../assets/icons/faleCosnosco.png" alt="Icone da página home" />
+          <p>Fale conoscos</p>
+        </a>
+      </li>
+      <li>
+        <!-- KNOW US -->
+        <a href="/pages/nos-conheca.html">
+          <img src="../assets/icons/nosConheca.png" alt="Icone da página home" />
+          <p>Nos conheça</p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<div id="menu-footer">
+  <!-- Rodapé Menu-lateral -->
+  <p>Nos siga no instagram</p>
+  <a href="https://www.instagram.com/lider_quebradaloungebar/" target="_blank">@lider_quebradaloungebar</a>
+</div>
+</div>
 
     <main>
         <div id="bloco-banner">
