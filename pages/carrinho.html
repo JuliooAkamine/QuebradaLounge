@@ -18,7 +18,7 @@
     <title>Carrinho</title>
 </head>
 
-<body>
+<body id="carrinhobody">
     
   <header>
     <h1 class="mobileHeaderHiden">
@@ -179,7 +179,7 @@
     <main id="carrinhocontainer">
       
         <div id="carrinho">
-           <div id="container-button-carrinho"><button onclick="limparLocalStorage()" id="limparLocalStorage" >Limpar carrinho</button></div> 
+           <div id="container-button-carrinho" ><button onclick="limparLocalStorage()" id="limparLocalStorage"   >Limpar carrinho</button></div> 
           
           <div id="grid-produtos">
             
@@ -206,7 +206,7 @@
                   
                   <div id="pagamento">
                     <div id="total-compra">Total da Compra: <span id="valor-total"></span></div>
-                    <button id="payment">Realizar Pagamento</button>
+                    <button id="payment" onclick="abrirModalRecibo()">Realizar Pagamento</button>
                   </div>
                           
                         
@@ -215,14 +215,22 @@
             
     </main>
 
-    <div id="recibo-container">
-        <div>
-          <h1>Dados do seu pedido</h1>
-        </div>
-    </div>
+    <div id="recibo-modal" class="modal">
+      <div class="modal-content">
+          <span class="close" onclick="fecharModalRecibo()">&times;</span>
+          <h2>Dados do seu pedido</h2>
+          <div id="itens-carrinho" class="itens-carrinho">
+              <!-- Aqui serão exibidos os itens do carrinho -->
+          </div>
+          <div id="total-compra-recibo" class="total-compra-recibo">Total da Compra: <span id="valor-total-recibo"></span>
+            <div><button id="btn-payment">pagar</button></div></div>
+       
+      </div>
+  </div>
+  
 
     <!-- FOOTER -->
-    <footer>
+    <footer id="footerid">
       <div class="container-footer">
         <div id="icone-flutuante">
             <a href="">

@@ -1,7 +1,7 @@
 html {
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
-.mobileHeaderHiden{
+.mobileHeaderHiden {
   cursor: pointer;
 }
 
@@ -36,6 +36,7 @@ html {
 
 ::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.547); /* Cor do fundo da barra de rolagem */
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -464,7 +465,6 @@ footer nav {
   margin: 50px 4%;
 }
 
-
 .hidenAgenda {
   display: none;
 }
@@ -504,7 +504,7 @@ footer nav {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-#form-agenda>.formulario {
+#form-agenda > .formulario {
   position: fixed;
   top: 20%;
   right: 4%;
@@ -516,13 +516,21 @@ footer nav {
 }
 
 @keyframes zoomIn {
-  from {transform: scale(0)}
-  to {transform: scale(1)}
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 @keyframes zoomOut {
-  from {transform: scale(1)}
-  to {transform: scale(0)}
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
 }
 
 .formulario fieldset {
@@ -930,7 +938,7 @@ footer nav {
 }
 
 #showsBtnVerTudo {
-  background-color: #F2DE79;
+  background-color: #f2de79;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   color: #000;
   font-weight: 600;
@@ -949,12 +957,11 @@ footer nav {
   opacity: 0.8;
 }
 
-
-#section-agendarShow>button {
+#section-agendarShow > button {
   width: 100%;
   border: none;
   padding: 18px 4%;
-  color: #FFF;
+  color: #fff;
   font-family: Poppins;
   font-size: 13px;
   font-style: normal;
@@ -965,7 +972,7 @@ footer nav {
   cursor: pointer;
 }
 
-#section-agendarShow>button:hover {
+#section-agendarShow > button:hover {
   opacity: 0.9;
 }
 
@@ -1024,7 +1031,7 @@ footer nav {
     line-height: normal;
   }
 }
-#products-destaque{
+#products-destaque {
   text-align: center;
 }
 .grid-compre-aqui {
@@ -1258,17 +1265,17 @@ footer nav {
 }
 
 /* Produto/Destaque */
-#setainicio{
+#setainicio {
   width: 70px;
   background-color: white;
   border-radius: 50%;
   padding: 3px;
 }
-#voltaraoinicio{
+#voltaraoinicio {
   display: none;
-  position:sticky;
+  position: sticky;
   width: 70px;
-  right:  0;
+  right: 0;
   bottom: 20px;
 }
 
@@ -1502,19 +1509,19 @@ footer nav {
   scale: 1.05;
 }
 
-.nav-categoria-produto>a {
+.nav-categoria-produto > a {
   margin-right: 15px;
   display: flex;
   width: 85px;
   height: 254px;
   flex-direction: column;
   justify-content: center;
-  padding: 23px ;
+  padding: 23px;
 
   border-radius: 0px 50px 50px 0px;
   background: #171612;
 
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-family: Poppins;
   font-size: 13px;
@@ -1523,7 +1530,7 @@ footer nav {
   border: 2px solid black;
 }
 
-.nav-categoria-produto>a:hover {
+.nav-categoria-produto > a:hover {
   background-color: #fff;
   color: #000;
   font-weight: 700;
@@ -1661,7 +1668,6 @@ footer nav {
   border-radius: 20px;
   cursor: pointer;
   border: 2px solid black;
- 
 }
 
 #carrinho {
@@ -1872,13 +1878,13 @@ footer nav {
 }
 
 @media screen and (max-width: 425px) {
-  #menu-footer{
+  #menu-footer {
     width: 80%;
-    a{
+    a {
       font-size: 10px;
     }
   }
-  
+
   #modal-addtocart {
     font-size: 12px;
   }
@@ -1888,6 +1894,11 @@ footer nav {
       padding: 15px 5px;
       font-size: 12px;
     }
+  }
+}
+@media screen and (max-width: 470px) {
+  .item-carrinho {
+    flex-direction: column;
   }
 }
 
@@ -2020,7 +2031,8 @@ footer nav {
   }
 
   /* DESTAQUES */
-  .nav-categoria-produto, #slider-categoria-produtos {
+  .nav-categoria-produto,
+  #slider-categoria-produtos {
     overflow: hidden;
   }
 
@@ -2034,23 +2046,23 @@ footer nav {
   .nav-categoria-produto::-webkit-scrollbar,
   #slider-categoria-produtos::-webkit-scrollbar {
     height: 10px;
-}
+  }
 }
 
 @media screen and (min-width: 865px) {
   /* aba destaque */
- 
-  .card-promo-img-principal:hover{
-    img{
-    scale: 1.1;
-    transition: 800ms;
+
+  .card-promo-img-principal:hover {
+    img {
+      scale: 1.1;
+      transition: 800ms;
     }
   }
-  .slider-destaque-promo{
+  .slider-destaque-promo {
     transition: 300ms;
   }
-  .slider-destaque-promo:hover{
-    scale: 1.030;
+  .slider-destaque-promo:hover {
+    scale: 1.03;
   }
   /* Collun nos badges da App Store e Play Store */
   /* .mobile-app ul {
@@ -2092,7 +2104,6 @@ footer nav {
         max-width: 270px;
         border-radius: 0;
         overflow: hidden;
-        
 
         img {
           width: 100%;
@@ -2218,8 +2229,7 @@ footer nav {
   }
 }
 @media screen and (max-width: 1000px) {
-
-  #voltaraoinicio{
+  #voltaraoinicio {
     margin-left: 88%;
   }
   #container-button-carrinho {
@@ -2269,7 +2279,7 @@ footer nav {
     display: none;
   }
   /* aba destaque */
-  #voltaraoinicio{
+  #voltaraoinicio {
     margin-left: 94%;
   }
   .titulo-categotia-produto {
@@ -2342,7 +2352,6 @@ footer nav {
   .mobileHeaderHiden {
     /* Oculta elementos HEADER MOBILE */
     display: none;
-   
   }
   .deskHeaderHiden {
     display: block;
@@ -2511,7 +2520,7 @@ footer nav {
     margin: auto;
   }
 
-  .nav-categoria-produto>a {
+  .nav-categoria-produto > a {
     margin: 0;
   }
 
@@ -2552,7 +2561,6 @@ footer nav {
 /* Modal produto adicionado ao carrinho */
 
 #modal-addtocart {
-  
   position: fixed;
   background-color: white;
   scale: 0.7;
@@ -2562,13 +2570,13 @@ footer nav {
   scale: 0.8;
   font-family: poppins;
   border-radius: 3px;
-  -webkit-box-shadow: 0px 0px 114px 17px rgba(0,0,0,1);
-  -moz-box-shadow: 0px 0px 114px 17px rgba(0,0,0,1);
-  box-shadow: 0px 0px 114px 17px rgba(0,0,0,1);
+  -webkit-box-shadow: 0px 0px 114px 17px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 114px 17px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 114px 17px rgba(0, 0, 0, 1);
   right: -510px;
   z-index: 1000;
   transition: ease-in-out 700ms;
-  h1{
+  h1 {
     font-weight: 500;
     scale: 0.7;
   }
@@ -2652,25 +2660,23 @@ footer nav {
 
 /* recibo na aba carrinho quando pagar */
 
-#recibo-container{
-  h1{
-    font-size: clamp(12px,4vw,26px);
+#recibo-container {
+  h1 {
+    font-size: clamp(12px, 4vw, 26px);
   }
   display: flex;
   justify-content: center;
   font-family: poppins;
   padding: 15px;
   flex-wrap: wrap;
-  
 
   border: 2px solid #000;
- 
+
   margin: 4%;
   background-color: white;
   max-height: 310px;
   border-radius: 10px;
 }
-
 
 /* Animação de entra em página */
 @keyframes fedeIn {
@@ -2681,4 +2687,130 @@ footer nav {
   100% {
     opacity: 1;
   }
+}
+
+/* Estilos para o modal de recibo */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-family: poppins;
+}
+#recibo-modal {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 8% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  position: relative;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  scale: 1.5;
+  transition: 300ms;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  scale: 1.7;
+}
+.close:hover {
+  scale: 1.7;
+}
+
+.itens-carrinho {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.item-carrinho {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+.item-carrinho img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+.total-compra-recibo {
+  font-weight: bold;
+  margin-top: 20px;
+  display: flex;
+  div {
+    width: 100%;
+    justify-content: flex-end;
+    display: flex;
+
+    button {
+      width: 100px;
+      font-family: poppins;
+      background: #111;
+      color: #fff787;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 300ms;
+    }
+    button:hover {
+      scale: 1.05;
+    }
+  }
+}
+
+.opcoes-pagamento {
+  /* Adicione estilos conforme necessário */
+}
+
+.esconder {
+  display: none;
+}
+
+#text-carrinhovazio {
+  font-size: clamp(16px, 3vw, 32px);
+  text-align: center;
+  font-family: poppins;
+}
+
+#carrinhocontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#carrinhovazioimg {
+  width: 20%;
+  margin: 0 auto;
 }

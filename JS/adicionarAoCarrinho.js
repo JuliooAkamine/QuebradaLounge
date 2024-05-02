@@ -7,6 +7,17 @@ function renderizarCarrinho() {
 
     var totalCompra = 0;
 
+    if (carrinho.length === 0) {
+        // Se o carrinho estiver vazio, exibe a mensagem
+        containerProdutos.innerHTML = '<img id="carrinhovazioimg" src="../assets/icons/carrinho vazio.png" alt=""> <p id="text-carrinhovazio">Desculpe, não há nenhum item no carrinho.</p>';
+        // Esconde o botão de limpar carrinho
+        document.getElementById('container-geral-pagamento').style.display = 'none';
+        // Sai da função
+        document.getElementById('limparLocalStorage').style.display = 'none';
+        // Sai da função
+        return;
+    }
+
     carrinho.forEach(function(produto, index) {
         var contador = produto.contador; // Recupera o contador para cada produto
 
@@ -45,29 +56,7 @@ function renderizarCarrinho() {
             
         `;
 
-        recibo.innerHTML += `
-        <div class="card-produto-carrinho">
         
-            <div class="icone-lixeira" onclick="removeItemFromCart(${index})"><img src="../assets/icons/icons-lixo.svg" alt="Remover item"></div>
-            <div class="card-produto-img">
-                <img src="${produto.image}" alt="Imagem do produto">
-            </div>
-            <div class="card-produto-descricao">
-                <p class="product-title-carrinho">${produto.title}</p>
-            </div>
-            <div class="card-produto-precoUni">
-                <span class="product-price-carrinho">${produto.price}</span>
-            </div>
-        
-            <div class="card-produto-subtotal">
-                <h6>Subtotal</h6>
-                <span class="subtotal">R$ ${subtotal.toFixed(2)}</span>
-            </div>
-            
-        </div>
-        
-        
-    `
 
     });
 
@@ -194,3 +183,64 @@ pagar.addEventListener('click', function(){
    document.getElementById('carrinhocontainer').style.display = 'none'
 })
 
+
+// Função para abrir o modal de recibo
+function abrirModalRecibo() {
+
+    document.getElementById('carrinhobody').style.overflow = "hidden";
+    document.getElementById('footerid').style.width = "100%"
+    document.getElementById('footerid').style.position = "absolute"
+    document.getElementById('footerid').style.bottom = "0"
+    // Mostrar o modal de recibo
+    document.getElementById('recibo-modal').style.display = "flex";
+    document.getElementById('recibo-modal').style.overflow = "hidden";
+
+    // Recuperar os itens do carrinho do localStorage
+    var carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    var itensCarrinhoContainer = document.getElementById('itens-carrinho');
+    
+    itensCarrinhoContainer.innerHTML = ''; // Limpar o conteúdo anterior
+
+    // Loop através dos itens do carrinho e exibir suas informações
+    carrinho.forEach(function(produto) {
+        itensCarrinhoContainer.innerHTML += `
+            <div class="item-carrinho">
+                <img src="${produto.image}" alt="Imagem do produto">
+                <div>
+                    <p>${produto.title}</p>
+                    <p>Preço: ${produto.price}</p>
+                </div>
+            </div>
+        `;
+    });
+
+    // Exibir o total da compra
+    var totalCompra = calcularTotalCompra(carrinho);
+    document.getElementById('valor-total-recibo').textContent = 'R$ ' + totalCompra.toFixed(2);
+    document.querySelector('.itens-carrinho').style.overflow = 'auto'
+    document.querySelector('.itens-carrinho').style.height = '350px'
+    
+}
+
+// Função auxiliar para calcular o total da compra
+function calcularTotalCompra(carrinho) {
+    var total = 0;
+    carrinho.forEach(function(produto) {
+        var precoUnitario = parseFloat(produto.price.replace('R$', '').replace(',', '.'));
+        total += precoUnitario * produto.contador;
+    });
+    return total;
+}
+
+  
+// Função para fechar o modal de recibo
+function fecharModalRecibo() {
+    document.getElementById('carrinhobody').style.overflow = "";
+    document.getElementById('footerid').style.width = ""
+    document.getElementById('footerid').style.position = "relative"
+    document.getElementById('footerid').style.bottom = ""
+    document.getElementById('recibo-modal').style.display = "none";
+    document.getElementById('carrinhocontainer').style.display = "block";
+}
+
+  
