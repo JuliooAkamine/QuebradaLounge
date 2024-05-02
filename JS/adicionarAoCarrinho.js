@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', renderizarCarrinho);
 // Função para limpar o localStorage
 function limparLocalStorage() {
     localStorage.clear();
-    location.reload();
+    renderizarCarrinho()
 }
 
 var pagar = document.getElementById("payment")
@@ -244,3 +244,4 @@ function fecharModalRecibo() {
 }
 
   
+
