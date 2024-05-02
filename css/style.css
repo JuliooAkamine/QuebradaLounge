@@ -2038,6 +2038,7 @@ footer nav {
   #slider-categoria-produtos:hover,
   #slider-categoria-produtos:active {
     overflow-x: auto;
+    overflow: hidden;
   }
 
   .nav-categoria-produto::-webkit-scrollbar,
