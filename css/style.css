@@ -911,6 +911,7 @@ footer nav {
   filter: grayscale(21%) brightness(102%) saturate(211%) contrast(78%);
   -webkit-filter: grayscale(21%) brightness(102%) saturate(211%) contrast(78%);
   -moz-filter: grayscale(21%) brightness(102%) saturate(211%) contrast(78%);
+  filter: blur(0.5px);
 }
 
 .blocoFotoDoShow > img {
@@ -926,13 +927,15 @@ footer nav {
   /* POSICIONAMENTO A BAIXO DO BLOCO RELATIVO A ELE */
   overflow: hidden;
   position: absolute;
-  bottom: 12px;
-  left: 6px;
-  right: 6px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 
-  padding: 11px;
-  border-radius: 11px;
-  background: #f2de79;
+  padding: 15px 11px;
+/*   border-radius: 11px; */
+  background: rgba(0, 0, 0, 0.575);
+  backdrop-filter: blur(2px);
+  color: var(--background-forms);
 
   font-family: sans-serif;
   font-size: 14px;
@@ -950,7 +953,6 @@ footer nav {
 }
 
 #btns-final-shows {
-  margin-top: 30px;
   display: flex;
   gap: 15px;
   justify-content: center;
@@ -961,6 +963,7 @@ footer nav {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     color: var(--background-forms);
     font-weight: 600;
+    font-family: "Poppins", sans-serif;
     padding: 7px 24px;
     border: none;
     border-radius: 22px;
