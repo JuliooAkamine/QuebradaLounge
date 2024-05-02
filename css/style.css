@@ -867,14 +867,14 @@ footer nav {
 }
 .chamativaShow > button {
   /* Botão "Ver mais" */
-  background-color: #f2de79;
+  background-color: #171612;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
   border: none;
   border-radius: 22px;
   height: 30px;
   padding: 0 25px;
-  color: #000;
+  color: var(--background-forms);
   font-family: sans-serif;
   font-size: 12px;
   font-style: normal;
@@ -885,8 +885,7 @@ footer nav {
 }
 
 .chamativaShow > button:hover {
-  background-color: var(--background-forms);
-  color: #232323;
+  background-color: #363636;
   scale: 1.05;
 }
 
@@ -950,24 +949,26 @@ footer nav {
   font-weight: 500;
 }
 
-#showsBtnVerTudo {
-  background-color: #f2de79;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  color: #000;
-  font-weight: 600;
-  padding: 7px 24px;
-  border: none;
-  border-radius: 22px;
-  cursor: pointer;
+#btns-final-shows {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
 
-  position: relative;
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%, 50%);
-}
-
-#showsBtnVerTudo:hover {
-  opacity: 0.8;
+  button {
+    background-color: #171612;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    color: var(--background-forms);
+    font-weight: 600;
+    padding: 7px 24px;
+    border: none;
+    border-radius: 22px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #363636;
+  }
 }
 
 #section-agendarShow > button {
