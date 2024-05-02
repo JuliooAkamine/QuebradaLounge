@@ -50,8 +50,8 @@ function slickfy2() {
         $('.slider').slick({
             autoplay: false,
             autoplaySpeed: 4000,
-            dots: true,
-            arrows: false,
+            dots: false,
+            arrows: true,
             mobileFirst: true,
                 responsive: [
                     {

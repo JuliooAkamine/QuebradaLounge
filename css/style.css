@@ -35,11 +35,11 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(255, 255, 255); /* Cor do fundo da barra de rolagem */
+  background-color: rgba(0, 0, 0, 0.547); /* Cor do fundo da barra de rolagem */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #b8b6b6; /* Cor do indicador de rolagem */
+  background-color: rgba(0, 0, 0, 0.547); /* Cor do indicador de rolagem */
   border-radius: 15px; /* Arredonda a borda do indicador */
 }
 
@@ -1261,16 +1261,15 @@ footer nav {
 #setainicio{
   width: 70px;
   background-color: white;
-  border-radius: 10000px;
+  border-radius: 50%;
   padding: 3px;
-  
 }
 #voltaraoinicio{
+  display: none;
   position:sticky;
   width: 70px;
   right:  0;
   bottom: 20px;
-  margin-left: 90%;
 }
 
 /* Slider de categorias de produtos */
@@ -1341,7 +1340,7 @@ footer nav {
 }
 
 #slider-categoria-produtos::-webkit-scrollbar {
-  display: none;
+  height: 0;
 }
 
 /* Titulos de categorias de produtos */
@@ -1407,12 +1406,14 @@ footer nav {
 
 /* Nesta parte vai ser usado este mesmo layout para todos os dispositivos (Somente alimentar HTML) */
 .nav-categoria-produto {
+  padding: 15px 5px;
   display: flex;
   gap: 13px;
 
   overflow-x: scroll;
 
   .card-produto {
+    transition: 500ms;
     position: relative;
     div:first-child {
       text-align: center;
@@ -1429,6 +1430,7 @@ footer nav {
         width: 75%;
         aspect-ratio: 3/2;
         object-fit: contain;
+        transition: 300ms;
       }
     }
 
@@ -1496,6 +1498,37 @@ footer nav {
   }
 }
 
+.card-produto:hover {
+  scale: 1.05;
+}
+
+.nav-categoria-produto>a {
+  margin-right: 15px;
+  display: flex;
+  width: 85px;
+  height: 254px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 23px ;
+
+  border-radius: 0px 50px 50px 0px;
+  background: #171612;
+
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 300ms;
+  border: 2px solid black;
+}
+
+.nav-categoria-produto>a:hover {
+  background-color: #fff;
+  color: #000;
+  font-weight: 700;
+}
+
 .card-produto:first-child {
   margin-left: 4%;
 }
@@ -1505,7 +1538,7 @@ footer nav {
 }
 
 .nav-categoria-produto::-webkit-scrollbar {
-  display: none;
+  height: 0;
 }
 
 /* CARD DE DESTQUES E PROMOÇÕES */
@@ -1985,6 +2018,23 @@ footer nav {
   .card-produto-precoUni {
     justify-self: flex-start;
   }
+
+  /* DESTAQUES */
+  .nav-categoria-produto, #slider-categoria-produtos {
+    overflow: hidden;
+  }
+
+  .nav-categoria-produto:hover,
+  .nav-categoria-produto:active,
+  #slider-categoria-produtos:hover,
+  #slider-categoria-produtos:active {
+    overflow-x: auto;
+  }
+
+  .nav-categoria-produto::-webkit-scrollbar,
+  #slider-categoria-produtos::-webkit-scrollbar {
+    height: 10px;
+}
 }
 
 @media screen and (min-width: 865px) {
@@ -2001,7 +2051,6 @@ footer nav {
   }
   .slider-destaque-promo:hover{
     scale: 1.030;
-    
   }
   /* Collun nos badges da App Store e Play Store */
   /* .mobile-app ul {
@@ -2458,9 +2507,12 @@ footer nav {
   }
   /* Categoria produto */
   .nav-categoria-produto {
-    width: 974px;
+    width: 1035px;
     margin: auto;
-    gap: 25px;
+  }
+
+  .nav-categoria-produto>a {
+    margin: 0;
   }
 
   .card-produto:first-child,
