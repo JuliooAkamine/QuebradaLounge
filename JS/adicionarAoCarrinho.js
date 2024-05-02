@@ -12,7 +12,7 @@ function renderizarCarrinho() {
         containerProdutos.innerHTML = '<img id="carrinhovazioimg" src="../assets/icons/carrinho vazio.png" alt=""> <p id="text-carrinhovazio">Desculpe, não há nenhum item no carrinho.</p>';
         // Esconde o botão de limpar carrinho
         document.getElementById('container-geral-pagamento').style.display = 'none';
-        // Sai da função
+       
         document.getElementById('limparLocalStorage').style.display = 'none';
         // Sai da função
         return;

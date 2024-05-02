@@ -2719,6 +2719,7 @@ footer nav {
 
   h2 {
     text-align: center;
+    padding: 5px;
   }
 }
 
@@ -2768,12 +2769,15 @@ footer nav {
   font-weight: bold;
   margin-top: 20px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   div {
     width: 100%;
     justify-content: flex-end;
     display: flex;
 
     button {
+      padding: 10px 0px;
       width: 100px;
       font-family: poppins;
       background: #111;
@@ -2787,10 +2791,6 @@ footer nav {
       scale: 1.05;
     }
   }
-}
-
-.opcoes-pagamento {
-  /* Adicione estilos conforme necessário */
 }
 
 .esconder {
@@ -2811,4 +2811,12 @@ footer nav {
 #carrinhovazioimg {
   width: 20%;
   margin: 0 auto;
+}
+
+#total-compra-text {
+  width: 300px;
+  font-weight: 300;
+}
+#valor-total-recibo {
+  width: 250px;
 }
