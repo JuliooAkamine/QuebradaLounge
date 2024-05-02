@@ -1630,13 +1630,10 @@ footer nav {
 
       s {
         color: rgba(255, 255, 255, 0.51);
-        text-align: center;
         font-family: Poppins;
         font-size: 12px;
-        font-style: normal;
         font-weight: 400;
-        line-height: normal;
-
+        text-decoration: line-through;
         margin-right: 10px;
       }
 
