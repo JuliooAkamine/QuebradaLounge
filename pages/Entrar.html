@@ -13,6 +13,7 @@
     <!-- LINK COM O CSS PRINCIPAL -->
     <link rel="stylesheet" href="../css/style.css">
     <script src="../JS/script.js"></script>
+    <script src="../JS/autenticaçãoUsuario.js"></script>
     
     <title>Entrar com sua conta</title>
 
@@ -184,18 +185,18 @@
     
                 <div class="input-wrapper">
                     <label class="label-escondido" for="email-input-entrar">E-mail</label>
-                    <input id="email-input-entrat" type="email" placeholder="E-mail" required>
+                    <input id="email-input-entrar" type="email" placeholder="E-mail" required>
                 </div>
                 <div class="input-wrapper">
                     <label for="senha-input-entrar" class="label-escondido">Senha</label>
-                    <input type="password" name="senha-input-entrar" id="" placeholder="Senha" required>
+                    <input type="password" name="senha-input-entrar" id="loginpassword" placeholder="Senha" required>
                 </div>
 
                 <a href="#" class="link-style-none">Esqueci minha senha</a>
             </fieldset>
 
             <div class="agrupamento-lateral-button">
-                <button class="button-global">
+                <button onclick="autenticacaologin()" type="submit" id="btn-login" class="button-global">
                     Entrar
                 </button>
 
